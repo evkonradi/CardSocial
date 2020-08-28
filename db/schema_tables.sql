@@ -30,15 +30,15 @@ CREATE TABLE card_social_db.user (
   id INT NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(45) NOT NULL,
   last_name VARCHAR(45) NOT NULL,
-  nickname VARCHAR(45) NOT NULL,
+  nickname VARCHAR(45) NULL,
   home_address VARCHAR(150) NULL,
   business_name VARCHAR(100) NULL,
   business_address VARCHAR(150) NULL,
-  position VARCHAR(60) NOT NULL,
+  position VARCHAR(60) NULL,
   personal_phone VARCHAR(10) NULL,
   business_phone VARCHAR(10) NULL,
   business_phone_ext VARCHAR(5) NULL,
-  personal_email VARCHAR(60) NULL,
+  personal_email VARCHAR(60) NOT NULL,
   business_email VARCHAR(60) NULL,
   junk_email VARCHAR(60) NULL,
   business_url VARCHAR(100) NULL,
@@ -48,7 +48,9 @@ CREATE TABLE card_social_db.user (
   twitter_url VARCHAR(100) NULL,
   bio VARCHAR(300) NULL,
   slogan VARCHAR(100) NULL,
-  PRIMARY KEY (id));
+  pwd VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY user_personal_email_unique (personal_email));
 
 
 CREATE TABLE card_social_db.card (
