@@ -30,6 +30,7 @@ CREATE TABLE card_social_db.user (
   id INT NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(45) NOT NULL,
   last_name VARCHAR(45) NOT NULL,
+  nickname VARCHAR(45) NOT NULL,
   home_address VARCHAR(150) NULL,
   business_name VARCHAR(100) NULL,
   business_address VARCHAR(150) NULL,
