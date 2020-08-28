@@ -61,7 +61,7 @@ CREATE TABLE card_social_db.card (
   card_icon_id INTEGER,
   show_first_name BOOLEAN NOT NULL,
   show_last_name BOOLEAN NOT NULL,
-  show_nickname1 BOOLEAN NOT NULL,
+  show_nickname BOOLEAN NOT NULL,
   show_home_address BOOLEAN NOT NULL,
   show_business_name BOOLEAN NOT NULL,
   show_business_address BOOLEAN NOT NULL,
