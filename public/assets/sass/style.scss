@@ -103,7 +103,7 @@ $white: #f2f2f2;
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: $purple;
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -178,7 +178,7 @@ $white: #f2f2f2;
   footer {
     border-top: 1px solid #ccc;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     padding: 1%;
     font-size: 110%;
   }

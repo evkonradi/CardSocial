@@ -15,8 +15,12 @@
         <a href="/">Card Social</a>
       </h1>
       <nav>
-        <a href="/login">Enter</a>
-        {{!-- <button id="logout" class="btn-no-style">logout</button> --}}
+        {{#if loggedIn}}
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
       </nav>
     </header>
     <main>
