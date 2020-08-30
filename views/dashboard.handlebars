@@ -1,6 +1,18 @@
+<header>
+    <h1>
+        <a href="/">Card Social</a>
+    </h1>
+    <nav>
+        <a href="#dashboard">dashboard</a>
+        <a href="#rolodex">rolodex</a>
+        <a href="#mycards">my cards</a>
+        <a href="#newcard">new card</a>
+        <a href="/logout">logout</a>
+    </nav>
+</header>
+
 <h2>Welcome Back, {{ username }}</h2>
-
-
+<section id="dashboard">
 <div class=“user-info”>
 <form class="user-info">
     <div>
@@ -76,21 +88,30 @@
         <button type="submit">save</button>
     </div>
 </div>
+</section>
 
+<section id="rolodex">
 <div class="rolodex">
     <h2>Rolodex</h2>
-    <div>
+    <div class="user-card">
         <h4>saved user cards will go here</h4>
     </div>
 </div>
+</section>
 
+<section id="mycards">
 <div class="saved-cards">
     <h2>My Cards</h2>
-    <div>
-        <h4>my cards will go here</h4>
+    <div class="card">
+        <h4>click to edit</h4>
+    </div>
+    <div class="card-code">
+        <h4>card code will generate here</h4>
     </div>
 </div>
+</section>
 
+<section id="newcard">
 <div class="build-card">
     <h2>New Card</h2>
     <div>
@@ -170,3 +191,4 @@
         <button type="submit">make new card</button>
     </div>
 </div>
+</section>
