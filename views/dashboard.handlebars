@@ -15,6 +15,8 @@
 <section id="dashboard">
 <div class=“user-info”>
 <form class="user-info">
+    {{!-- image container needs to be stylized and have option to upload url
+    social accounts could be saved here and represented as icons in template --}}
 <div class="row">
     <div class="col">
       <input type="text" class="form-control" placeholder="Image">
@@ -91,6 +93,7 @@
     <h2>Rolodex</h2>
     <div class="user-card">
         <h4>saved user cards will go here</h4>
+{{!-- would need this function to repeat depending on amount of saved users --}}
         <img src= {{usercard}} class="rounded-circle">
     </div>
 </div>
@@ -101,6 +104,7 @@
     <h2>My Cards</h2>
     <div class="row">
 {{!-- card option that includes link - this could go to a page with just that number or generate QR code --}}
+{{!-- may need to created another handlebars template so this can be a repeating option like above ^^^ --}}
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -136,6 +140,9 @@
     <div>
         <h4>template to create card goes here</h4>
     </div>
+{{!-- these need to be changed so they do not have input function but rather a radial click to use on card | this information should be populated from initial dashboard info above ^^^--}}
+{{!-- need to add in placeholders for styling options --}}
+{{!-- be nice to represent social options as icons that are clickable with stored info above --}}
     <form class="user-info">
     <div>
         <label for="image">image</label>
