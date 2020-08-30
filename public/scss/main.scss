@@ -18,20 +18,20 @@ $white: #f2f2f2;
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: $light-orange;
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: $dark-orange;
   }
   
   button {
     background-color: $purple;
     border: 0;
     padding: 1%;
-    color: white;
+    color: $white;
     font-weight: bold;
     transition: background-color .1s;
     cursor: pointer;
@@ -39,7 +39,7 @@ $white: #f2f2f2;
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: $dark-orange;
   }
   
   .post-list {
@@ -112,7 +112,7 @@ $white: #f2f2f2;
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: $purple;
   }
   
   .delete-post-btn {
