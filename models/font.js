@@ -28,8 +28,8 @@ Font.init(
     },
     font_decoration: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {len: [0,2]}
+        allowNull: true
+        //validate: {len: [0,2]}
     },
   },
   {
