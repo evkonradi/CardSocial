@@ -48,7 +48,7 @@ CREATE TABLE card_social_db.user (
   twitter_url VARCHAR(100) NULL,
   bio VARCHAR(300) NULL,
   slogan VARCHAR(100) NULL,
-  pwd VARCHAR(50) NOT NULL,
+  pwd VARCHAR(255) NOT NULL,
   PRIMARY KEY (id),
   UNIQUE KEY user_personal_email_unique (personal_email));
 

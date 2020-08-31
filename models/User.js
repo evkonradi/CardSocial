@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 // create our User model
 class User extends Model {
   checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
+    return bcrypt.compareSync(loginPw, this.pwd);
   }
 }
 
@@ -108,11 +108,11 @@ User.init(
     // TABLE CONFIGURATION OPTIONS GO HERE (https://sequelize.org/v5/manual/models-definition.html#configuration))
     hooks: {
       async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        newUserData.pwd = await bcrypt.hash(newUserData.pwd, 10);
         return newUserData;
       },
       async beforeUpdate(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        updatedUserData.pwd = await bcrypt.hash(updatedUserData.pwd, 10);
         return updatedUserData;
       }
     },
