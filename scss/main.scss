@@ -15,6 +15,7 @@ $white: #f2f2f2;
     margin: 0;
     font-family: sans-serif;
     color: #333;
+    flex-wrap: wrap;
   }
 
   .connection-login {
@@ -25,6 +26,37 @@ $white: #f2f2f2;
     background-color: $peach;
     position: center;
     padding: 15px 15px;
+    text-align: center;
+  }
+
+  .user-field {
+    display: flex;
+    flex-direction: column;
+    border-color: $purple;
+    border-radius: 5px;
+    background-color: $white;
+    position: center;
+    padding: 15px 15px;
+  }
+
+  .saved-cards {
+    display: flex;
+    flex-direction: column;
+    border-color: $purple;
+    border-radius: 5px;
+    background-color: $peach;
+    position: center;
+    padding: 15px 15px;
+  }
+
+  h2 {
+    color: $dark-orange;
+    text-align: center;
+  }
+
+  h1 {
+    color: $dark-orange;
+    text-align: right;
   }
   
   a {
@@ -98,11 +130,12 @@ $white: #f2f2f2;
   
   header {
     background-color: $purple;
-    // border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2% 2%;
+    position: -webkit-sticky;
+    position: sticky;
   }
   
   header h1 {

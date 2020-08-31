@@ -7,7 +7,8 @@ body, html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333; }
+  color: #333;
+  flex-wrap: wrap; }
 
 .connection-login {
   display: flex;
@@ -16,7 +17,34 @@ body, html {
   border-radius: 5px;
   background-color: #F2BB9B;
   position: center;
+  padding: 15px 15px;
+  text-align: center; }
+
+.user-field {
+  display: flex;
+  flex-direction: column;
+  border-color: #400135;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  position: center;
   padding: 15px 15px; }
+
+.saved-cards {
+  display: flex;
+  flex-direction: column;
+  border-color: #400135;
+  border-radius: 5px;
+  background-color: #F2BB9B;
+  position: center;
+  padding: 15px 15px; }
+
+h2 {
+  color: #F24405;
+  text-align: center; }
+
+h1 {
+  color: #F24405;
+  text-align: right; }
 
 a {
   text-decoration: none;
@@ -81,7 +109,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 2%; }
+  padding: 2% 2%;
+  position: -webkit-sticky;
+  position: sticky; }
 
 header h1 {
   font-size: 1em; }
