@@ -15,7 +15,7 @@ body, html {
 
 a {
   text-decoration: none;
-  color: #F24405;
+  color: #F2BB9B;
   font-weight: bold;
   transition: color .1s; }
 
@@ -34,6 +34,11 @@ button {
 
 button:hover {
   background-color: #F24405; }
+
+.card {
+  border: 1px solid #F2620F;
+  border-radius: 5px;
+  padding: 1%; }
 
 textarea, input {
   padding: .5%;
@@ -93,8 +98,11 @@ main {
   color: #400135; }
 
 footer {
-  border-top: 1px solid #ccc;
+  background-color: #400135;
   display: flex;
-  justify-content: right;
-  padding: 1%;
+  justify-content: center;
+  padding: 2%;
   font-size: 110%; }
+
+footer p {
+  color: #F2BB9B; }
