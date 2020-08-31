@@ -1,1 +1,220 @@
-<h2>Hello, this is the DASHBOARD page.</h2>
+<header>
+    <h1>
+        <a href="/">Card Social</a>
+    </h1>
+    <nav>
+        <a href="#dashboard">dashboard</a>
+        <a href="#rolodex">rolodex</a>
+        <a href="#mycards">my cards</a>
+        <a href="#newcard">new card</a>
+        <a href="/logout">logout</a>
+    </nav>
+</header>
+
+<h2>Welcome Back, {{ username }}</h2>
+<section id="dashboard">
+<div class=“user-info”>
+<form class="user-info">
+    {{!-- image container needs to be stylized and have option to upload url
+    social accounts could be saved here and represented as icons in template --}}
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Image">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Social">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First Name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Business Name">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last Name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Business Address">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Nickname">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Business Phone">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Home Address">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Business Email">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Personal Phone">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Business Website">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Personal Email">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Business Slogan">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Junk Email">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Short Bio">
+    </div>
+</div>
+</form>
+    <div>
+        <button type="submit">save</button>
+    </div>
+</div>
+</section>
+
+<section id="rolodex">
+<div class="rolodex">
+    <h2>Rolodex</h2>
+    <div class="user-card">
+        <h4>saved user cards will go here</h4>
+{{!-- would need this function to repeat depending on amount of saved users --}}
+        <img src= {{usercard}} class="rounded-circle">
+    </div>
+</div>
+</section>
+
+<section id="mycards">
+<div class="saved-cards">
+    <h2>My Cards</h2>
+    <div class="row">
+{{!-- card option that includes link - this could go to a page with just that number or generate QR code --}}
+{{!-- may need to created another handlebars template so this can be a repeating option like above ^^^ --}}
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Business Card</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">CARD CODE</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- secondary option for card that includes image --}}
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Card Code</p>
+  </div>
+</div>
+</div>
+</section>
+
+<section id="newcard">
+<div class="build-card">
+    <h2>New Card</h2>
+    <div>
+        <h4>template to create card goes here</h4>
+    </div>
+{{!-- these need to be changed so they do not have input function but rather a radial click to use on card | this information should be populated from initial dashboard info above ^^^--}}
+{{!-- need to add in placeholders for styling options --}}
+{{!-- be nice to represent social options as icons that are clickable with stored info above --}}
+    <form class="user-info">
+    <div>
+        <label for="image">image</label>
+        <input type="url" id="image" />
+    </div>
+    <div>
+        <label for="social">social</label>
+        <input type="url" id="social" />
+    </div>
+    <div>
+        <label for="bio">short bio</label>
+        <input type="text" id="bio" />
+    </div>
+    <div>
+        <label for="firstname">first name</label>
+        <input type="text" id="firstname" />
+    </div>
+    <div>
+        <label for="lastname">last name</label>
+        <input type="text" id="lastname" />
+    </div>
+    <div>
+        <label for="nickname">nickname</label>
+        <input type="text" id="nickname" />
+    </div>
+    <div>
+        <label for="home-address">home address</label>
+        <input type="text" id="home-address" />
+    </div>
+    <div>
+        <label for="personal-phone">personal phone</label>
+        <input type="value" id="personal-phone" />
+    </div>
+    <div>
+        <label for="personal-email">personal email</label>
+        <input type="email" id="personal-email" />
+    </div>
+        <div>
+        <label for="junk-email">junk email</label>
+        <input type="email" id="junk-email" />
+    </div>
+    <div>
+        <label for="business-name">business name</label>
+        <input type="text" id="business-name" />
+    </div>
+    <div>
+        <label for="business-address">business address</label>
+        <input type="text" id="business-address" />
+    </div>
+    <div>
+        <label for="business-phone">business phone</label>
+        <input type="value" id="business-phone" />
+    </div>
+    <div>
+        <label for="business-ext">phone ext.</label>
+        <input type="value" id="business-ext" />
+    </div>
+    <div>
+        <label for="business-email">business email</label>
+        <input type="email" id="business-email" />
+    </div>
+    <div>
+        <label for="business-url">business website</label>
+        <input type="url" id="business-url" />
+    </div>
+     <div>
+        <label for="business-slogan">business slogan</label>
+        <input type="text" id="business-slogan" />
+    </div>
+    </form>
+    <div>
+        <button type="submit">make new card</button>
+    </div>
+</div>
+</section>
