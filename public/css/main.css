@@ -2,6 +2,7 @@
   box-sizing: border-box; }
 
 body, html {
+  display: block;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -9,9 +10,13 @@ body, html {
   color: #333; }
 
 .connection-login {
+  display: flex;
+  flex-direction: column;
   border-color: #400135;
   border-radius: 5px;
-  border: 1px solid #F2620F; }
+  background-color: #F2BB9B;
+  position: center;
+  padding: 15px 15px; }
 
 a {
   text-decoration: none;
@@ -65,7 +70,11 @@ form label {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-image: url("../images/dark_background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
 
 header {
   background-color: #400135;

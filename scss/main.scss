@@ -9,6 +9,7 @@ $white: #f2f2f2;
   }
   
   body, html {
+    display: block;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -17,9 +18,13 @@ $white: #f2f2f2;
   }
 
   .connection-login {
+    display: flex;
+    flex-direction: column;
     border-color: $purple;
     border-radius: 5px;
-    border: 1px solid $light-orange;
+    background-color: $peach;
+    position: center;
+    padding: 15px 15px;
   }
   
   a {
@@ -85,6 +90,10 @@ $white: #f2f2f2;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    background-image: url("../images/dark_background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
   
   header {
