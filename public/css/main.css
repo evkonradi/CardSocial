@@ -42,6 +42,8 @@ body, html {
   flex-direction: column;
   border-radius: 5px;
   background-color: #F2BB9B;
+  position: center;
+  text-align: center;
   justify-content: center; }
 
 .build-card {
@@ -95,10 +97,6 @@ textarea, input {
   border: 1px solid #400135;
   margin: 5%; }
 
-textarea:focus, input:focus {
-  outline: none;
-  border: 1px solid #3486eb; }
-
 textarea {
   min-width: 40%;
   min-height: 100px; }
@@ -115,13 +113,11 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   background-image: url("../images/dark_background.png");
   background-size: cover;
-  background-position: center;
   background-attachment: fixed; }
 
 header {
