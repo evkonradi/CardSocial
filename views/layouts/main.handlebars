@@ -11,7 +11,17 @@
 
 <body>
   <div class="wrapper">
+
     <header>
+      <h1>
+        <a href="/">Card Social</a>
+      </h1>
+
+       {{#if loggedIn}}
+       {{/if}}
+
+    </header>
+<!--    <header>
       <h1>
         <a href="/">Card Social</a>
       </h1>
@@ -36,7 +46,7 @@
         <a href="/login">login</a>
         {{/if}}
       </nav>
-    </header>
+    </header>-->
     <main>
       {{{ body }}}
     </main>
