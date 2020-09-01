@@ -19,6 +19,9 @@
     <div class="col">
       <input type="text" class="form-control" placeholder="Business Name" value="{{profile.business_name}}">
     </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Position" value="{{profile.position}}">
+    </div>
 </div>
 <div class="row">
     <div class="col">
@@ -35,13 +38,16 @@
     <div class="col">
       <input type="text" class="form-control" placeholder="Business Phone" type="tel" id="business_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{format_phone profile.business_phone}}">
     </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Business Phone Ext." id="business_phone_ext" value="{{profile.business_phone_ext}}">
+    </div>
 </div>
 <div class="row">
     <div class="col">
       <input type="text" class="form-control" placeholder="Home Address" value="{{profile.home_address}}">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Business Email" value="{{profile.business_email}}">
+      <input type="text" class="form-control" placeholder="Business Email" type="email" value="{{profile.business_email}}">
     </div>
 </div>
 <div class="row">
@@ -49,12 +55,12 @@
       <input type="text" class="form-control" placeholder="Personal Phone" type="tel" id="personal_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{format_phone profile.personal_phone}}">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Business Website" value="{{profile.business_url}}">
+      <input type="text" class="form-control" placeholder="Business Website" type="url" value="{{profile.business_url}}">
     </div>
 </div>
 <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Personal Email" value="{{profile.personal_email}}">
+      <input type="text" class="form-control" placeholder="Personal Email" type="email" value="{{profile.personal_email}}">
     </div>
     <div class="col">
       <input type="text" class="form-control" placeholder="Business Slogan" value="{{profile.slogan}}">
@@ -62,10 +68,26 @@
 </div>
 <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Junk Email" value="{{profile.junk_email}}">
+      <input type="text" class="form-control" placeholder="Junk Email" type = "email" value="{{profile.junk_email}}">
     </div>
     <div class="col">
       <input type="text" class="form-control" placeholder="Short Bio" value="{{profile.bio}}">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="LinkedIn url" type="url" value="{{profile.linkedin_url}}">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Instagram url" type="url" value="{{profile.instagram_url}}">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Facebook url" type="url" value="{{profile.facebook_url}}">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Twitter url" type="url" value="{{profile.twitter_url}}">
     </div>
 </div>
 </form>
