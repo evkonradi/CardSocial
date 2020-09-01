@@ -36,6 +36,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     Card.create({
         card_code: createCode(),
+        card_title: req.body.card_title,
         user_id: req.body.user_id,
         font_id: req.body.font_id,
         background_id: req.body.background_id,

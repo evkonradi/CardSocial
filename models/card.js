@@ -24,6 +24,10 @@ Card.init(
         unique: true,
         validate: {len: [5, 7]}
     },
+    card_title: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
