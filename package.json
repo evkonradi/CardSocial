@@ -33,6 +33,5 @@
     "sass": "^1.26.10",
     "sequelize": "^6.3.4"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
