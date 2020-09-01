@@ -17,16 +17,43 @@ $white: #f2f2f2;
     color: #333;
     flex-wrap: wrap;
   }
+  
+  .row {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .row.center-xs {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+
+  .col-xs-6 {
+    box-sizing: border-box;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    // max-width: 50%;
+    padding: 1rem;
+  }
 
   .connection-login {
     display: flex;
     flex-direction: column;
-    border-color: $purple;
     border-radius: 5px;
     background-color: $peach;
     position: center;
     padding: 15px 15px;
     text-align: center;
+    justify-content: center;
   }
 
   .user-field {
@@ -49,6 +76,18 @@ $white: #f2f2f2;
     padding: 15px 15px;
   }
 
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: $peach;
+    justify-content: center;
+  }
+
+  h3 {
+    color: $purple;
+    size: 2.5em;
+  }
   h2 {
     color: $dark-orange;
     text-align: center;
@@ -74,7 +113,7 @@ $white: #f2f2f2;
   button {
     background-color: $purple;
     border: 0;
-    padding: 1%;
+    padding: 1.5%;
     color: $white;
     font-weight: bold;
     transition: background-color .1s;
@@ -93,9 +132,10 @@ $white: #f2f2f2;
   }
   
   textarea, input {
-    padding: .5%;
+    padding: .75%;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid $purple;
+    margin: 5%;
   }
   
   textarea:focus, input:focus {
@@ -114,6 +154,10 @@ $white: #f2f2f2;
   
   form label {
     display: block;
+  }
+
+  .signup-form {
+    justify-content: center;
   }
   
   .wrapper {

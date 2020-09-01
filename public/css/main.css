@@ -10,15 +10,38 @@ body, html {
   color: #333;
   flex-wrap: wrap; }
 
+.row {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.row.center-xs {
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.col-xs-6 {
+  box-sizing: border-box;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  padding: 1rem; }
+
 .connection-login {
   display: flex;
   flex-direction: column;
-  border-color: #400135;
   border-radius: 5px;
   background-color: #F2BB9B;
   position: center;
   padding: 15px 15px;
-  text-align: center; }
+  text-align: center;
+  justify-content: center; }
 
 .user-field {
   display: flex;
@@ -37,6 +60,17 @@ body, html {
   background-color: #F2BB9B;
   position: center;
   padding: 15px 15px; }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #F2BB9B;
+  justify-content: center; }
+
+h3 {
+  color: #400135;
+  size: 2.5em; }
 
 h2 {
   color: #F24405;
@@ -59,7 +93,7 @@ a:hover {
 button {
   background-color: #400135;
   border: 0;
-  padding: 1%;
+  padding: 1.5%;
   color: #f2f2f2;
   font-weight: bold;
   transition: background-color .1s;
@@ -75,9 +109,10 @@ button:hover {
   padding: 1%; }
 
 textarea, input {
-  padding: .5%;
+  padding: .75%;
   border-radius: 5px;
-  border: 1px solid #ccc; }
+  border: 1px solid #400135;
+  margin: 5%; }
 
 textarea:focus, input:focus {
   outline: none;
@@ -92,6 +127,9 @@ form > div {
 
 form label {
   display: block; }
+
+.signup-form {
+  justify-content: center; }
 
 .wrapper {
   width: 100%;
