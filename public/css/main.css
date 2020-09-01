@@ -44,8 +44,9 @@ body, html {
   background-color: #F2BB9B;
   position: center;
   text-align: center;
-  justify-content: center;
-  width: 70%; }
+  justify-content: space-around;
+  width: 70%;
+  margin: auto; }
 
 .build-card {
   display: flex;
