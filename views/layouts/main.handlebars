@@ -11,32 +11,27 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <h1>
+        {{#if loggedIn}}  
+        <header>
+      <h2>
         <a href="/">Card Social</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-<header>
-    <h1>
+        </h2>
+        <a href="/login">login</a>
+        </header>
+        {{else}}
+        <header>
+        <h2>
         <a href="/">Card Social</a>
-    </h1>
-    <nav>
+        </h2>
+        <nav>
         <a href="#dashboard">dashboard</a>
         <a href="#rolodex">rolodex</a>
         <a href="#mycards">my cards</a>
         <a href="#newcard">new card</a>
         <a href="/logout">logout</a>
-    </nav>
-</header>
-        {{else}}
-        <h1>
-        <a href="/">Card Social</a>
-        </h1>
-        <a href="/login">login</a>
+        </nav>
+        </header>
         {{/if}}
-      </nav>
-    </header>
     <main>
       {{{ body }}}
     </main>

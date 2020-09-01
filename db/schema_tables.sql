@@ -1,11 +1,11 @@
--- USE card_social_db;
+USE card_social_db;
 
--- DROP TABLE IF EXISTS card_social_db.rolodex;
--- DROP TABLE IF EXISTS card_social_db.card;
--- DROP TABLE IF EXISTS card_social_db.card_background;
--- DROP TABLE IF EXISTS card_social_db.card_font;
--- DROP TABLE IF EXISTS card_social_db.card_icon;
--- DROP TABLE IF EXISTS card_social_db.user;
+DROP TABLE IF EXISTS card_social_db.rolodex;
+DROP TABLE IF EXISTS card_social_db.card;
+DROP TABLE IF EXISTS card_social_db.card_background;
+DROP TABLE IF EXISTS card_social_db.card_font;
+DROP TABLE IF EXISTS card_social_db.card_icon;
+DROP TABLE IF EXISTS card_social_db.user;
 
 -- CREATE TABLE card_social_db.card_background (
 -- id INT NOT NULL AUTO_INCREMENT,

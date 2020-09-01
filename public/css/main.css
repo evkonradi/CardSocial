@@ -109,7 +109,6 @@ header {
   background-color: #400135;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 2% 2%;
   position: -webkit-sticky;
   position: sticky; }
