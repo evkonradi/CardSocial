@@ -51,7 +51,7 @@ $white: #f2f2f2;
     padding: 5%;
   }
 
-  .login-form {
+  .start-form {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -59,6 +59,7 @@ $white: #f2f2f2;
     position: center;
     text-align: center;
     justify-content: center;
+    width: 70%;
   }
 
   .build-card {
@@ -106,7 +107,7 @@ $white: #f2f2f2;
     border: 1px solid $purple;
     border-radius: 5px;
     padding: 3%;
-    margin: 3%;
+    margin: 5%;
     width: 300px;
     height: 150px;
     box-shadow: 0 3px 6px 0 $purple;
@@ -117,7 +118,7 @@ $white: #f2f2f2;
     padding: .75%;
     border-radius: 5px;
     border: 1px solid $purple;
-    margin: 5%;
+    margin: 1.5%;
   }
   
   textarea {
@@ -131,6 +132,7 @@ $white: #f2f2f2;
   
   form label {
     display: block;
+    padding-bottom: 1%;
   }
 
   .signup-form {
@@ -166,7 +168,7 @@ $white: #f2f2f2;
   
   main {
     flex: 1;
-    padding: 2% 4%;
+    padding: 5%;
   }
 
   // BUTTON STYLES
@@ -181,6 +183,7 @@ $white: #f2f2f2;
     cursor: pointer;
     border-radius: 5px;
     text-transform: uppercase;
+    margin-top: 2%;
   }
   
   button:hover {
