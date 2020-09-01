@@ -12,28 +12,28 @@ Card.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
-Card.hasOne(Font, {
-    foreignKey: 'card_id',
+Font.hasMany(Card, {
+    foreignKey: 'font_id',
 });
 
-Font.belongsTo(Card, {
-    foreignKey: 'card_id',
+Card.belongsTo(Font, {
+    foreignKey: 'font_id',
 });
 
-Card.hasOne(Background, {
-    foreignKey: 'card_id',
+Background.hasMany(Card, {
+    foreignKey: 'background_id',
 });
 
-Background.belongsTo(Card, {
-    foreignKey: 'card_id',
+Card.belongsTo(Background, {
+    foreignKey: 'background_id',
 });
 
-Card.hasOne(Icon, {
-    foreignKey: 'card_id',
+Icon.hasMany(Card, {
+    foreignKey: 'icon_id',
 });
 
-Icon.belongsTo(Card, {
-    foreignKey: 'card_id',
+Card.belongsTo(Icon, {
+    foreignKey: 'icon_id',
 });
 
 module.exports = { User, Font, Background, Icon, Card };

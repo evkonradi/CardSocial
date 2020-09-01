@@ -4,9 +4,9 @@ const bcrypt = require('bcrypt');
 
 // create our Card model
 class Card extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.pwd);
-  }
+//   checkPassword(loginPw) {
+//     return bcrypt.compareSync(loginPw, this.pwd);
+//   }
 }
 
 // Define Card table columns
@@ -32,7 +32,7 @@ Card.init(
             key: 'id'
         }
     },
-    card_font_id: {
+    font_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -40,7 +40,7 @@ Card.init(
             key: 'id'
         }
     },
-    card_background_id: {
+    background_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -48,7 +48,7 @@ Card.init(
             key: "id"
         }
     },
-    card_icon_id: {
+    icon_id: {
         type: DataTypes.INTEGER,
         allowNull: true,
         references: {
@@ -98,8 +98,7 @@ Card.init(
     },
     show_personal_email: {
         type: DataTypes.BOOLEAN,
-        allowNull: false,
-        unique: true,
+        allowNull: false
     },
     show_business_email: {
         type: DataTypes.BOOLEAN,
