@@ -4,9 +4,9 @@ const bcrypt = require('bcrypt');
 
 // Create our Background model
 class Background extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
+  // checkPassword(loginPw) {
+  //   return bcrypt.compareSync(loginPw, this.password);
+  // }
 }
 
 // Define table columns and configuration
@@ -18,6 +18,14 @@ Background.init(
         primaryKey: true,
         autoIncrement: true
     },
+    // card_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'Card',
+    //     key: 'id'
+    //   }
+    // },
     background_name: {
         type: DataTypes.STRING,
         allowNull: false
@@ -37,7 +45,7 @@ Background.init(
     // Use underscores instead of camel-casing
     underscored: true,
     // Define model name as lowercase in the database
-    modelName: 'backgrounds'
+    modelName: 'background'
   }
 );
 
