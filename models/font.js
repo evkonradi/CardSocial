@@ -4,9 +4,9 @@ const bcrypt = require('bcrypt');
 
 // Create our Font model
 class Font extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
+  // checkPassword(loginPw) {
+  //   return bcrypt.compareSync(loginPw, this.password);
+  // }
 }
 
 // Define table columns and configuration
@@ -18,6 +18,14 @@ Font.init(
         primaryKey: true,
         autoIncrement: true
     },
+    // card_id: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    //     references: {
+    //       model: 'Card',
+    //       key: 'id'
+    //     }
+    // },
     font_name: {
         type: DataTypes.STRING,
         allowNull: false
@@ -42,7 +50,7 @@ Font.init(
     // Use underscores instead of camel-casing
     underscored: true,
     // Define model name as lowercase in the database
-    modelName: 'fonts'
+    modelName: 'font'
   }
 );
 
