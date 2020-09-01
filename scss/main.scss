@@ -1,3 +1,4 @@
+$font-stack: Helvetica, sans-serif;
 $purple: #400135;
 $dark-orange: #F24405;
 $light-orange: #F2620F;
@@ -9,6 +10,7 @@ $white: #f2f2f2;
   }
   
   body, html {
+    font: 100% $font-stack;
     display: block;
     height: 100%;
     padding: 0;
@@ -42,11 +44,11 @@ $white: #f2f2f2;
   .saved-cards {
     display: flex;
     flex-direction: column;
-    border-color: $purple;
+    // border-color: $purple;
     // border-radius: 5px;
     background-color: $peach;
     position: center;
-    padding: 15px 15px;
+    padding: 5%;
   }
 
   .login-form {
@@ -94,9 +96,19 @@ $white: #f2f2f2;
   }
 
   .card {
-    border: 1px solid $light-orange;
+    .card-title {
+      color: $purple;
+      size: 24px;
+      text-transform: uppercase;
+    }
+    border: 1px solid $purple;
     border-radius: 5px;
-    padding: 1%;
+    padding: 3%;
+    margin: 3%;
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 3px 6px 0 $purple;
+    text-align: center;
   }
   
   textarea, input {
@@ -171,6 +183,7 @@ $white: #f2f2f2;
     transition: background-color .1s;
     cursor: pointer;
     border-radius: 5px;
+    text-transform: uppercase;
   }
   
   button:hover {

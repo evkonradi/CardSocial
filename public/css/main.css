@@ -2,6 +2,7 @@
   box-sizing: border-box; }
 
 body, html {
+  font: 100% Helvetica, sans-serif;
   display: block;
   height: 100%;
   padding: 0;
@@ -32,10 +33,9 @@ body, html {
 .saved-cards {
   display: flex;
   flex-direction: column;
-  border-color: #400135;
   background-color: #F2BB9B;
   position: center;
-  padding: 15px 15px; }
+  padding: 5%; }
 
 .login-form {
   display: flex;
@@ -76,9 +76,18 @@ a:hover {
   color: #F24405; }
 
 .card {
-  border: 1px solid #F2620F;
+  border: 1px solid #400135;
   border-radius: 5px;
-  padding: 1%; }
+  padding: 3%;
+  margin: 3%;
+  width: 300px;
+  height: 150px;
+  box-shadow: 0 3px 6px 0 #400135;
+  text-align: center; }
+  .card .card-title {
+    color: #400135;
+    size: 24px;
+    text-transform: uppercase; }
 
 textarea, input {
   padding: .75%;
@@ -139,7 +148,8 @@ button {
   font-weight: bold;
   transition: background-color .1s;
   cursor: pointer;
-  border-radius: 5px; }
+  border-radius: 5px;
+  text-transform: uppercase; }
 
 button:hover {
   background-color: #F24405; }

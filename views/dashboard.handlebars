@@ -29,7 +29,7 @@
       <input type="text" class="form-control" placeholder="Short Bio">
     </div>
 </form>
-    <div class="row">
+    <div class="row around-xs">
         <button type="submit">save</button>
     </div>
 </div>
@@ -49,7 +49,7 @@
 <section id="mycards">
 <div class="saved-cards">
     <h2>My Cards</h2>
-    <div class="row">
+    <div class="row around-xs">
 {{!-- card option that includes link - this could go to a page with just that number or generate QR code --}}
 {{!-- may need to created another handlebars template so this can be a repeating option like above ^^^ --}}
   <div class="col-sm-6">
@@ -57,18 +57,33 @@
       <div class="card-body">
         <h5 class="card-title">Business Card</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">CARD CODE</a>
       </div>
     </div>
+        <div class="row around-xs">
+        <button type="submit">card code</button>
+        </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
+        <div class="row around-xs">
+        <button type="submit">card code</button>
+        </div>
+  </div>
+    <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+     <div class="row around-xs">
+        <button type="submit">card code</button>
+        </div>
   </div>
 </div>
 </div>
@@ -108,8 +123,8 @@
       <input type="text" class="form-control" placeholder="Short Bio">
     </div>
 </form>
-    <div class="row">
-        <button type="submit">save</button>
+    <div class="row around-xs">
+        <button type="submit">create card</button>
     </div>
 </div>
 </section>
