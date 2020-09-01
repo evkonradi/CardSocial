@@ -24,7 +24,7 @@ body, html {
   display: flex;
   flex-direction: column;
   border-color: #400135;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   background-color: #f2f2f2;
   position: center;
   padding: 15px 15px; }
@@ -33,7 +33,6 @@ body, html {
   display: flex;
   flex-direction: column;
   border-color: #400135;
-  border-radius: 5px;
   background-color: #F2BB9B;
   position: center;
   padding: 15px 15px; }
@@ -44,6 +43,15 @@ body, html {
   border-radius: 5px;
   background-color: #F2BB9B;
   justify-content: center; }
+
+.build-card {
+  display: flex;
+  flex-direction: column;
+  border-color: #400135;
+  border-radius: 0 0 5px 5px;
+  background-color: #f2f2f2;
+  position: center;
+  padding: 15px 15px; }
 
 h3 {
   color: #400135;
