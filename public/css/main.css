@@ -48,6 +48,17 @@ body, html {
   width: 70%;
   margin: auto; }
 
+.user-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #F2BB9B;
+  position: center;
+  text-align: center;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto; }
+
 .build-card {
   display: flex;
   flex-direction: column;
