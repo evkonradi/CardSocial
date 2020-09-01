@@ -37,7 +37,10 @@
   Express - Node.js - Mysql - Sequilize - Express-handlebars - Express-session - Connect-session-sequelize
 
 
-  ## this is a video example:
+  ## Presentation URL
+  https://www.canva.com/design/DAEGB4dewtY/view
+
+  ## Video example URL
   
   
   
