@@ -14,58 +14,58 @@
 </div>
 <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First Name">
+      <input type="text" class="form-control" placeholder="First Name" value="{{profile.first_name}}">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Business Name">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last Name">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Address">
+      <input type="text" class="form-control" placeholder="Business Name" value="{{profile.business_name}}">
     </div>
 </div>
 <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Nickname">
+      <input type="text" class="form-control" placeholder="Last Name" value="{{profile.last_name}}">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Business Phone">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Home Address">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Email">
+      <input type="text" class="form-control" placeholder="Business Address" value="{{profile.business_address}}">
     </div>
 </div>
 <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Personal Phone">
+      <input type="text" class="form-control" placeholder="Nickname" value="{{profile.nickname}}">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Business Website">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Personal Email">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Slogan">
+      <input type="text" class="form-control" placeholder="Business Phone" type="tel" id="business_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{format_phone profile.business_phone}}">
     </div>
 </div>
 <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Junk Email">
+      <input type="text" class="form-control" placeholder="Home Address" value="{{profile.home_address}}">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Short Bio">
+      <input type="text" class="form-control" placeholder="Business Email" value="{{profile.business_email}}">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Personal Phone" type="tel" id="personal_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{format_phone profile.personal_phone}}">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Business Website" value="{{profile.business_url}}">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Personal Email" value="{{profile.personal_email}}">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Business Slogan" value="{{profile.slogan}}">
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Junk Email" value="{{profile.junk_email}}">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Short Bio" value="{{profile.bio}}">
     </div>
 </div>
 </form>
@@ -198,3 +198,6 @@
     </div>
 </div>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="/js/dashboard.js"></script>

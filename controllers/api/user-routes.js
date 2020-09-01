@@ -101,25 +101,4 @@ router.put('/user', withAuth, (req, res) => {
       });
 });
 
-// GET /api/users/1
-router.get('/user', withAuth, (req, res) => {
-    User.findOne({
-      attributes: { exclude: ['pwd'] },
-      where: {
-        id: req.session.user_id
-      }
-    })
-      .then(dbUserData => {
-        if (!dbUserData) {
-          res.status(404).json({ message: 'No user found with this id' });
-          return;
-        }
-        res.json(dbUserData);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
-
 module.exports = router;
