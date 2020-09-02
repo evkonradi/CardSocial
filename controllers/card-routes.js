@@ -2,12 +2,12 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { User, Card, Font, Icon, Background } = require('../models');
 
-router.get('/', (req, res) => {
+router.get('/:card_code', (req, res) => {
 
     Card.findOne({
         attributes: { exclude: ['pwd'] },
         where: {
-          card_code: req.body.card_code
+          card_code: req.params.card_code
         },
         include: [
             {
@@ -27,9 +27,8 @@ router.get('/', (req, res) => {
         ]
       })
         .then(dbUserData => {
-            res.json(dbUserData);
-            //const card = dbUserData.get({ plain: true });
-            //res.render('usercard', {card});
+            const card = dbUserData.get({ plain: true });
+            res.render('usercard', card);
         })
         .catch(err => {
           console.log(err);

@@ -61,7 +61,6 @@ async function saveProfileHandler(event) {
     });
   
     if (response.ok) {
-        console.log('success');
         document.location.replace('/dashboard', {loggedIn: true});
     } else {
         alert(response.statusText);
