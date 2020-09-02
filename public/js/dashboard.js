@@ -23,6 +23,7 @@ async function saveProfileHandler(event) {
     event.preventDefault();
   
     let personalPhone = formatPhoneForSave(document.querySelector('#personalPhone').value.trim());
+    
     let businessPhone = formatPhoneForSave(document.querySelector('#businessPhone').value.trim());
     let personalEmail = document.querySelector('#personalEmail').value.trim();
     let businessEmail = document.querySelector('#businessEmail').value.trim();
