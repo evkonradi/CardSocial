@@ -1,7 +1,8 @@
+### CardSocial
 
 ## Description
   
-  Card Social was created for people who is in constant need on exchanging personal, social or/and business information.
+  Card Social was created for people who is in constant need of exchanging personal, social or/and business information.
   
   ## Table of Contents 
   
