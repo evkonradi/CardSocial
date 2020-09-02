@@ -52,7 +52,7 @@
 <section id="mycards">
 <div class="saved-cards">
     <h2>My Cards</h2>
-    <div class="row around-xs">
+  <div class="row around-xs">
 {{!-- card option that includes link - this could go to a page with just that number or generate QR code --}}
 {{!-- may need to created another handlebars template so this can be a repeating option like above ^^^ --}}
   <div class="col-sm-6">
@@ -91,37 +91,40 @@
 </div>
 </div>
 </section>
-
+<form class="user-info">
+    {{!-- image container needs to be stylized and have option to upload url
+    social accounts could be saved here and represented as icons in template --}}
 <section id="newcard">
 <div class="build-card">
     <h2>New Card</h2>
-<form class="user-info">
-    {{!-- these need to be changed so they do not have input function but rather a radial click to use on card | this information should be populated from initial dashboard info above ^^^--}}
-{{!-- need to add in placeholders for styling options --}}
-{{!-- be nice to represent social options as icons that are clickable with stored info above --}}
 <div class="row around-xs">
+  <div class="row center-xs">
     <div class="col-xs">
-      <div class="row">
-      <div class="col-xs">
-        <input type="text" class="form-control" placeholder="First Name">
-        <input type="text" class="form-control" placeholder="Last Name">
-        <input type="text" class="form-control" placeholder="Nickname">
-        <input type="text" class="form-control" placeholder="Social">
-        <input type="text" class="form-control" placeholder="Home Address"> 
-        <input type="text" class="form-control" placeholder="Personal Phone">  
-        <input type="text" class="form-control" placeholder="Personal Email">
-        <input type="text" class="form-control" placeholder="Junk Email">
-      </div>
-      <div class="col-xs">
-        <input type="text" class="form-control" placeholder="Business Name">
-        <input type="text" class="form-control" placeholder="Business Address">
-        <input type="text" class="form-control" placeholder="Business Phone">
-        <input type="text" class="form-control" placeholder="Business Email">
-        <input type="text" class="form-control" placeholder="Business Website">
-        <input type="text" class="form-control" placeholder="Business Slogan">
-        <input type="text" class="form-control" placeholder="Short Bio">
-      </div>
-      </div>
+  <form class="user-info">
+      <input type="text" class="form-control" placeholder="First Name" value="{{profile.first_name}}" id ="firstName">
+      <input type="text" class="form-control" placeholder="Last Name" value="{{profile.last_name}}" id ="lastName">
+      <input type="text" class="form-control" placeholder="Nickname" value="{{profile.nickname}}" id="nickname">
+      <input type="text" class="form-control" placeholder="LinkedIn url" type="url" value="{{profile.linkedin_url}}" id="linkedinUrl">
+      <input type="text" class="form-control" placeholder="Instagram url" type="url" value="{{profile.instagram_url}}" id="instagramUrl">
+      <input type="text" class="form-control" placeholder="Facebook url" type="url" value="{{profile.facebook_url}}" id="facebookUrl">
+      <input type="text" class="form-control" placeholder="Home Address" value="{{profile.home_address}}" id="homeAddress">
+      <input type="text" class="form-control" placeholder="Twitter url" type="url" value="{{profile.twitter_url}}" id="twitterUrl">
+      <input type="text" class="form-control" placeholder="Personal Phone" type="tel" id="personalPhone" value="{{format_phone profile.personal_phone}}">
+      <input type="text" class="form-control" placeholder="Personal Email" type="email" value="{{profile.personal_email}}" id="personalEmail">
+      <input type="text" class="form-control" placeholder="Junk Email" type = "email" value="{{profile.junk_email}}" id="junkEmail">
+    </div>
+    <div class="col-xs">
+      <input type="text" class="form-control" placeholder="Business Name" value="{{profile.business_name}}" id="businessName">
+      <input type="text" class="form-control" placeholder="Position" value="{{profile.position}}" id="position">
+      <input type="text" class="form-control" placeholder="Business Address" value="{{profile.business_address}}" id="businessAddress">
+      <input type="text" class="form-control" placeholder="Business Phone" type="tel" id="businessPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{format_phone profile.business_phone}}">
+      <input type="text" class="form-control" placeholder="Business Phone Ext." id="businessPhoneExt" value="{{profile.business_phone_ext}}">
+      <input type="text" class="form-control" placeholder="Business Email" type="email" value="{{profile.business_email}}" id="businessEmail">
+      <input type="text" class="form-control" placeholder="Business Website" type="url" value="{{profile.business_url}}" id="businessWebsite">
+      <input type="text" class="form-control" placeholder="Business Slogan" value="{{profile.slogan}}" id="slogan">
+      <input type="text" class="form-control" placeholder="Short Bio" value="{{profile.bio}}" id="bio">
+    </div>
+</div>
 </form>
     <div class="row around-xs">
         <button type="submit">create card</button>
