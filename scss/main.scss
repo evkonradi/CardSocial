@@ -1,4 +1,4 @@
-$font-stack: Helvetica, sans-serif;
+$font-stack: Helvetica, sans-serif, "Perpetua Titling MT", serif, Verdana, sans-serif;
 $purple: #400135;
 $dark-orange: #F24405;
 $light-orange: #F2620F;
@@ -105,12 +105,11 @@ $white: #f2f2f2;
     color: $peach;
     font-weight: bold;
     transition: color .1s;
-  }
   
-  a:hover {
-    color: $dark-orange;
+  &:hover { color: $dark-orange; }
   }
 
+  // CARD ELEMENTS
   .card {
     .card-title {
       color: $purple;
@@ -125,6 +124,50 @@ $white: #f2f2f2;
     height: 150px;
     box-shadow: 0 3px 6px 0 $purple;
     text-align: center;
+  }
+  .backgrounds {
+    display: inline-flex;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 1px;
+    border: 3px $white;
+  }
+
+  .light-background {
+    background-image: image-url("../images/light_card_background.png");
+  }
+
+  .white-background {
+    background-image: image-url("../images/white_background.png");
+  }
+
+  .orange-background {
+    background-color: $light-orange;
+  }
+
+  .orangebackground {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $light-orange;
+  }
+
+  .font-one {
+    p {
+      font-family: "Perpetua Titling MT", serif;
+    }
+  }
+
+  .font-two {
+    p {
+      font-family: Verdana, sans-serif;
+    }
+
   }
   
   textarea, input {
@@ -153,6 +196,10 @@ $white: #f2f2f2;
   }
   
   .wrapper {
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
     width: 100%;
     min-height: 100%;
     // max-width: 1200px;
@@ -164,8 +211,17 @@ $white: #f2f2f2;
     // background-position: center;
     background-attachment: fixed;
   }
-  
-  header {
+
+  header { 
+      nav {
+        display: inline-flex;
+        padding: .5%;
+        float: right;
+        align-items: flex-end;
+      }
+      .logo {
+        display: inline-flex;
+      }
     background-color: $purple;
     display: flex;
     justify-content: space-between;
@@ -176,7 +232,7 @@ $white: #f2f2f2;
   }
   
   header h1 {
-    font-size: 1em;
+    font-size: 1.5rem;
   }
   
   main {
@@ -187,6 +243,12 @@ $white: #f2f2f2;
   // BUTTON STYLES
 
   button {
+      .logout {
+      text-decoration: none;
+      color: $peach;
+      font-weight: bold;
+      transition: color .1s;
+    }
     background-color: $purple;
     border: 0;
     padding: 1.5%;

@@ -11,44 +11,26 @@
 
 <body>
   <div class="wrapper">
-
     <header>
-      <h1>
-        <a href="/">Card Social</a>
-      </h1>
+      <div class="row middle-xs">
+      <div class="logo">
+        <a href="/"><img id="logo" src="./images/CS_logo.png"></a>
+        <h1>
+          <a href="/">Card Social</a>
+        </h1>
+      </div>
       <nav>
         {{#if loggedIn}}
         <a href="/dashboard">dashboard</a>
+        {{!-- <a href="/logout">logout</a> --}}
         <button id="logout">logout</button>
         {{/if}}
         {{#unless loggedIn}}
         <a href="/login">login</a>
         {{/unless}}
       </nav>
+      </div>
     </header>
-    
-<!--      {{#if loggedIn}}
-        <header>
-        <h1>
-        <a href="/">Card Social</a>
-        </h1>
-        <a href="/login">login</a>
-        </header>
-        {{else}}
-        <header>
-    <h1>
-        <a href="/">Card Social</a>
-    </h1>
-    <nav>
-        <a href="#dashboard">dashboard</a>
-        <a href="#rolodex">rolodex</a>
-        <a href="#mycards">my cards</a>
-        <a href="#newcard">new card</a>
-        <a href="/logout">logout</a>
-    </nav>
-</header>
-        {{/if}}
--->
     <main>
       {{{ body }}}
     </main>
@@ -59,9 +41,9 @@
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  {{!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> --}}
 
   {{#if loggedIn}}
     <script src="/js/logout.js"></script>

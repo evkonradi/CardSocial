@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body, html {
-  font: 100% Helvetica, sans-serif;
+  font: 100% Helvetica, sans-serif, "Perpetua Titling MT", serif, Verdana, sans-serif;
   display: block;
   height: 100%;
   padding: 0;
@@ -86,9 +86,8 @@ a {
   color: #F2BB9B;
   font-weight: bold;
   transition: color .1s; }
-
-a:hover {
-  color: #F24405; }
+  a:hover {
+    color: #F24405; }
 
 .card {
   border: 1px solid #400135;
@@ -103,6 +102,38 @@ a:hover {
     color: #400135;
     size: 24px;
     text-transform: uppercase; }
+
+.backgrounds {
+  display: inline-flex; }
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 1px;
+  border: 3px #f2f2f2; }
+
+.light-background {
+  background-image: image-url("../images/light_card_background.png"); }
+
+.white-background {
+  background-image: image-url("../images/white_background.png"); }
+
+.orange-background {
+  background-color: #F2620F; }
+
+.orangebackground {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #F2620F; }
+
+.font-one p {
+  font-family: "Perpetua Titling MT", serif; }
+
+.font-two p {
+  font-family: Verdana, sans-serif; }
 
 textarea, input {
   padding: .75%;
@@ -133,6 +164,9 @@ form label {
   background-image: url("../images/dark_background.png");
   background-size: cover;
   background-attachment: fixed; }
+  .wrapper img {
+    width: 3rem;
+    height: 3rem; }
 
 header {
   background-color: #400135;
@@ -142,9 +176,16 @@ header {
   padding: 2% 2%;
   position: -webkit-sticky;
   position: sticky; }
+  header nav {
+    display: inline-flex;
+    padding: .5%;
+    float: right;
+    align-items: flex-end; }
+  header .logo {
+    display: inline-flex; }
 
 header h1 {
-  font-size: 1em; }
+  font-size: 1.5rem; }
 
 main {
   flex: 1;
@@ -161,6 +202,11 @@ button {
   border-radius: 5px;
   text-transform: uppercase;
   margin-top: 2%; }
+  button .logout {
+    text-decoration: none;
+    color: #F2BB9B;
+    font-weight: bold;
+    transition: color .1s; }
 
 button:hover {
   background-color: #F24405; }
