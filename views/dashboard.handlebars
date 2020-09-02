@@ -2,6 +2,7 @@
 <div class="user-field">
   <h1>Welcome Back, {{profile.first_name}}</h1>
 <form class="user-info">
+  <h2>User Info</h2>
     {{!-- image container needs to be stylized and have option to upload url
     social accounts could be saved here and represented as icons in template --}}
 <div class="row around-xs">
@@ -114,7 +115,7 @@
       <div class="col-sm-6">
         <div class="card">
             <div class="font-card">
-              <h5 class="card-title">Font Option</h5>
+              <h5 class="card-title">Font Options</h5>
             <div class="card-body">
               <p class="font-one">Perpetua Example<input type="radio" id="perpetua font" name="font" value="perpetua"></p>
               <p class="font-two">Verdana Example<input type="radio" id="verdana font" name="font" value="verdana"></p>
@@ -125,8 +126,11 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Icon Option</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <h5 class="card-title">Icon Options</h5>
+            <img class="circle"><i class="icon-one"></i><input type="radio" id="icon-one" name="icon" value="icon-one">
+            <img class="circle"><i class="icon-two"></i><input type="radio" id="icon-two" name="icon" value="icon-two">
+            <img class="circle"><i class="icon-three"></i><input type="radio" id="icon-three" name="icon" value="icon-three">
+            <img class="circle"><i class="icon-four"></i><input type="radio" id="icon-four" name="icon" value="icon-four">
           </div>
         </div>
       </div> 
