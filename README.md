@@ -36,7 +36,7 @@
   The technologies we used are:
   
   >**Front-end:**
-  > Handlebars - Sass - Node-Sass - Bootstraps - CSS - HTML - Javascript -Jquery
+  > Handlebars - Sass - Node-Sass - Bootstraps - CSS - HTML - Javascript - Jquery
 
   >**Back-end:**
   > Express - Node.js - Mysql - Sequilize - Express-handlebars - Express-session - Connect-session-sequelize
