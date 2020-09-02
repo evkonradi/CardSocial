@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 body, html {
-  font: 100% Helvetica, sans-serif;
+  font: 100% Helvetica, sans-serif, "Perpetua Titling MT", serif, Verdana, sans-serif;
   display: block;
   height: 100%;
   padding: 0;
@@ -130,10 +130,10 @@ a {
   background-color: #F2620F; }
 
 .font-one p {
-  font-family: Georgia, serif; }
+  font-family: "Perpetua Titling MT", serif; }
 
 .font-two p {
-  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+  font-family: Verdana, sans-serif; }
 
 textarea, input {
   padding: .75%;

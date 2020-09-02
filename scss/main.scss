@@ -1,4 +1,4 @@
-$font-stack: Helvetica, sans-serif;
+$font-stack: Helvetica, sans-serif, "Perpetua Titling MT", serif, Verdana, sans-serif;
 $purple: #400135;
 $dark-orange: #F24405;
 $light-orange: #F2620F;
@@ -159,13 +159,13 @@ $white: #f2f2f2;
 
   .font-one {
     p {
-      font-family: Georgia, serif;
+      font-family: "Perpetua Titling MT", serif;
     }
   }
 
   .font-two {
     p {
-      font-family: "Trebuchet MS", Helvetica, sans-serif;
+      font-family: Verdana, sans-serif;
     }
 
   }
