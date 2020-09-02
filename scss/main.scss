@@ -126,12 +126,18 @@ $white: #f2f2f2;
     text-align: center;
   }
 
+  .circle {
+    border-radius: 50%;
+    display: inline-block;
+    padding: 1px;
+  }
+
   .light-background {
-    background-image: url("../images/light_card_background.png");
+    background-image: image-url("../images/light_card_background.png");
   }
 
   .white-background {
-    background-image: url("../images/white_background.png");
+    background-image: image-url("../images/white_background.png");
   }
 
   .orange-background {

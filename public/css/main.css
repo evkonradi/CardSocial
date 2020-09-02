@@ -103,11 +103,16 @@ a {
     size: 24px;
     text-transform: uppercase; }
 
+.circle {
+  border-radius: 50%;
+  display: inline-block;
+  padding: 1px; }
+
 .light-background {
-  background-image: url("../images/light_card_background.png"); }
+  background-image: image-url("../images/light_card_background.png"); }
 
 .white-background {
-  background-image: url("../images/white_background.png"); }
+  background-image: image-url("../images/white_background.png"); }
 
 .orange-background {
   background-color: #F2620F; }
