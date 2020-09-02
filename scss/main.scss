@@ -83,6 +83,15 @@ $white: #f2f2f2;
     background-color: $white;
     position: center;
     padding: 15px 15px;
+    // height: fit-content;
+    flex-basis: auto;
+    // overflow-y: auto;
+  }
+
+  .newcard {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
   }
 
   h3 {
@@ -116,6 +125,13 @@ $white: #f2f2f2;
       size: 24px;
       text-transform: uppercase;
     }
+    h5{
+      text-align: center;
+    }
+    body {
+      display: flex;
+      align-content: space-around;
+    }
     border: 1px solid $purple;
     border-radius: 5px;
     padding: 3%;
@@ -123,19 +139,20 @@ $white: #f2f2f2;
     width: 300px;
     height: 150px;
     box-shadow: 0 3px 6px 0 $purple;
-    text-align: center;
   }
+
   .backgrounds {
     display: inline-flex;
   }
 
   .circle {
+    img {
     width: 70px;
     height: 70px;
+    }
     border-radius: 50%;
     display: inline-block;
-    padding: 1px;
-    border: 3px $white;
+    border: 1px solid $dark-orange;
   }
 
   .light-background {
@@ -151,7 +168,7 @@ $white: #f2f2f2;
   }
 
   .orangebackground {
-    width: 50px;
+    width: 70px;
     height: 50px;
     border-radius: 50%;
     background-color: $light-orange;
@@ -167,7 +184,10 @@ $white: #f2f2f2;
     p {
       font-family: Verdana, sans-serif;
     }
+  }
 
+  .font-card input {
+    float: right;
   }
   
   textarea, input {
@@ -175,10 +195,25 @@ $white: #f2f2f2;
     border-radius: 5px;
     border: 1px solid $purple;
     margin: 1.5%;
+    min-height: 5%;
+    position: relative;
+  }
+
+  label, input {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  label {
+  padding: .75%;
+  border-radius: 5px;
+  border: 1px solid $purple;
+  margin: 1.5%;
+  min-height: 5%;
+  position: relative;
   }
   
   textarea {
-    min-width: 40%;
+    min-width: 50%;
     min-height: 100px;
   }
   

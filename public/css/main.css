@@ -66,7 +66,13 @@ body, html {
   border-radius: 0 0 5px 5px;
   background-color: #f2f2f2;
   position: center;
-  padding: 15px 15px; }
+  padding: 15px 15px;
+  flex-basis: auto; }
+
+.newcard {
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto; }
 
 h3 {
   color: #400135;
@@ -96,23 +102,27 @@ a {
   margin: 5%;
   width: 300px;
   height: 150px;
-  box-shadow: 0 3px 6px 0 #400135;
-  text-align: center; }
+  box-shadow: 0 3px 6px 0 #400135; }
   .card .card-title {
     color: #400135;
     size: 24px;
     text-transform: uppercase; }
+  .card h5 {
+    text-align: center; }
+  .card body {
+    display: flex;
+    align-content: space-around; }
 
 .backgrounds {
   display: inline-flex; }
 
 .circle {
-  width: 70px;
-  height: 70px;
   border-radius: 50%;
   display: inline-block;
-  padding: 1px;
-  border: 3px #f2f2f2; }
+  border: 1px solid #F24405; }
+  .circle img {
+    width: 70px;
+    height: 70px; }
 
 .light-background {
   background-image: image-url("../images/light_card_background.png"); }
@@ -124,7 +134,7 @@ a {
   background-color: #F2620F; }
 
 .orangebackground {
-  width: 50px;
+  width: 70px;
   height: 50px;
   border-radius: 50%;
   background-color: #F2620F; }
@@ -135,14 +145,31 @@ a {
 .font-two p {
   font-family: Verdana, sans-serif; }
 
+.font-card input {
+  float: right; }
+
 textarea, input {
   padding: .75%;
   border-radius: 5px;
   border: 1px solid #400135;
-  margin: 1.5%; }
+  margin: 1.5%;
+  min-height: 5%;
+  position: relative; }
+
+label, input {
+  display: inline-block;
+  vertical-align: middle; }
+
+label {
+  padding: .75%;
+  border-radius: 5px;
+  border: 1px solid #400135;
+  margin: 1.5%;
+  min-height: 5%;
+  position: relative; }
 
 textarea {
-  min-width: 40%;
+  min-width: 50%;
   min-height: 100px; }
 
 form > div {

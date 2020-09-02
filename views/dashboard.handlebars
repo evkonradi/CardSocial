@@ -91,31 +91,34 @@
 </div>
 </div>
 </section>
-<form class="user-info">
+
     {{!-- image container needs to be stylized and have option to upload url
     social accounts could be saved here and represented as icons in template --}}
 <section id="newcard">
+<form class="user-info">
 <div class="build-card">
     <h2>New Card</h2>
     <div class="row around-xs">
       <div class="col-sm-6">
         <div class="card">
+              <h5 class="card-title">Select Background</h5>
           <div class="card-body">
-            <h5 class="card-title">Select Background</h5>
             <div class="backgrounds">
-              <img class="circle" src="./images/light_card_background.png" alt="peach background">
-              <img class="circle" src="./images/white_background.png" alt="white background">
-              <div class="orangebackground" alt="orange background"></div>
+              <img class="circle" src="./images/light_card_background.png" alt="peach background"><input type="radio" id="peach background" name="background" value="peach">
+              <img class="circle" src="./images/white_background.png" alt="white background"><input type="radio" id="white background" name="background" value="white">
+              <div class="orangebackground" alt="orange background"></div><input type="radio" id="orange background" name="background" value="orange">
             </div>
           </div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Font Option</h5>
-            <p class="font-one">Perpetua Example</p>
-            <p class="font-two">Verdana Example</p>
+            <div class="font-card">
+              <h5 class="card-title">Font Option</h5>
+            <div class="card-body">
+              <p class="font-one">Perpetua Example<input type="radio" id="perpetua font" name="font" value="perpetua"></p>
+              <p class="font-two">Verdana Example<input type="radio" id="verdana font" name="font" value="verdana"></p>
+            </div>
             </div>
         </div>
       </div>    
@@ -126,42 +129,43 @@
             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
           </div>
         </div>
-      </div>   
-    </div>  
+      </div> 
+    </div>     
 <div class="row around-xs">
   <div class="row center-xs">
     <div class="col-xs">
-  <form class="user-info">
-      <label>{{profile.first_name}}</label>
-      <label>{{profile.last_name}}</label>
-      <label>{{profile.nickname}}</label>
-      <label>{{profile.linkedin_url}}</label>
-      <label>{{profile.instagram_url}}</label>
-      <label>{{profile.facebook_url}}</label>
-      <label>{{profile.home_address}}</label>
-      <label>{{profile.twitter_url}}</label>
-      <label>{{format_phone profile.personal_phone}}</label>
-      <label>{{profile.personal_email}}</label>
-      <label>{{profile.junk_email}}</label>
+      <label>{{profile.first_name}}</label><input type="checkbox" id="profile.first_name">
+      <label>{{profile.last_name}}</label><input type="checkbox" id="profile.last_name">
+      <label>{{profile.nickname}}</label><input type="checkbox" id="profile.nickname">
+      <label>{{profile.home_address}}</label><input type="checkbox" id="profile.home_address">
+      <label>{{profile.linkedin_url}}</label><input type="checkbox" id="profile.linkedin_url">
+      <label>{{profile.instagram_url}}</label><input type="checkbox" id="profile.instagram_url">
+      <label>{{profile.facebook_url}}</label><input type="checkbox" id="profile.facebook_url">
+      <label>{{profile.twitter_url}}</label><input type="checkbox" id="profile.twitter_url">
+      <label>{{format_phone profile.personal_phone}}</label><input type="checkbox" id="profile.personal_phone">
+      <label>{{profile.personal_email}}</label><input type="checkbox" id="profile.personal_email">
+      <label>{{profile.junk_email}}</label><input type="checkbox" id="profile.junk_email">
     </div>
     <div class="col-xs">
-      <label>{{profile.business_name}}</label>
-      <label>{{profile.position}}</label>
-      <label>{{profile.business_address}}</label>
-      <label>{{format_phone profile.business_phone}}</label>
-      <label>{{profile.business_phone_ext}}</label>
-      <label>{{profile.business_email}}</label>
-      <label>{{profile.business_url}}</label>
-      <label>{{profile.slogan}}</label>
-      <label>{{profile.bio}}</label>
+      <label>{{profile.business_name}}</label><input type="checkbox" id="profile.business_name">
+      <label>{{profile.position}}</label><input type="checkbox" id="profile.position">
+      <label>{{profile.business_address}}</label><input type="checkbox" id="profile.business_address">
+      <label>{{format_phone profile.business_phone}}</label><input type="checkbox" id="profile.business_phone">
+      <label>{{profile.business_phone_ext}}</label><input type="checkbox" id="profile.business_phone_ext">
+      <label>{{profile.business_email}}</label><input type="checkbox" id="profile.business_email">
+      <label>{{profile.business_url}}</label><input type="checkbox" id="profile.business_url">
+      <label>{{profile.slogan}}</label><input type="checkbox" id="profile.slogan">
+      <label>{{profile.bio}}</label><input type="checkbox" id="profile.bio">
     </div>
+  </div>
 </div>
-</form>
     <div class="row around-xs">
         <button type="submit">create card</button>
     </div>
 </div>
 </section>
+</form>
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/js/dashboard.js"></script>
