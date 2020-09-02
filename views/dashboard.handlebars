@@ -1,107 +1,34 @@
 <section id="dashboard">
 <div class="user-field">
-  <h1>Welcome Back, {{ username }}</h1>
+  <h1>Welcome Back, {{profile.first_name}}</h1>
 <form class="user-info">
     {{!-- image container needs to be stylized and have option to upload url
     social accounts could be saved here and represented as icons in template --}}
 <div class="row around-xs">
   <div class="row center-xs">
     <div class="col-xs">
-      <input type="text" class="form-control" placeholder="First Name">
-      <input type="text" class="form-control" placeholder="Last Name">
-      <input type="text" class="form-control" placeholder="Nickname">
-      <input type="text" class="form-control" placeholder="Social">
-      <input type="text" class="form-control" placeholder="Home Address"> 
-      <input type="text" class="form-control" placeholder="Personal Phone">  
-      <input type="text" class="form-control" placeholder="Personal Email">
-      <input type="text" class="form-control" placeholder="Junk Email">
-    </div>
-    <div class="col-xs">
-      <input type="text" class="form-control" placeholder="Business Name">
-      <input type="text" class="form-control" placeholder="Business Address">
-      <input type="text" class="form-control" placeholder="Business Phone">
-      <input type="text" class="form-control" placeholder="Business Email">
-      <input type="text" class="form-control" placeholder="Business Website">
-      <input type="text" class="form-control" placeholder="Business Slogan">
-      <input type="text" class="form-control" placeholder="Short Bio">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
       <input type="text" class="form-control" placeholder="First Name" value="{{profile.first_name}}" id ="firstName">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Name" value="{{profile.business_name}}" id="businessName">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Position" value="{{profile.position}}" id="position">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
       <input type="text" class="form-control" placeholder="Last Name" value="{{profile.last_name}}" id ="lastName">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Address" value="{{profile.business_address}}" id="businessAddress">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
       <input type="text" class="form-control" placeholder="Nickname" value="{{profile.nickname}}" id="nickname">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Phone" type="tel" id="businessPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{format_phone profile.business_phone}}">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Phone Ext." id="businessPhoneExt" value="{{profile.business_phone_ext}}">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
+      <input type="text" class="form-control" placeholder="LinkedIn url" type="url" value="{{profile.linkedin_url}}" id="linkedinUrl">
+      <input type="text" class="form-control" placeholder="Instagram url" type="url" value="{{profile.instagram_url}}" id="instagramUrl">
+      <input type="text" class="form-control" placeholder="Facebook url" type="url" value="{{profile.facebook_url}}" id="facebookUrl">
       <input type="text" class="form-control" placeholder="Home Address" value="{{profile.home_address}}" id="homeAddress">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Email" type="email" value="{{profile.business_email}}" id="businessEmail">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
+      <input type="text" class="form-control" placeholder="Twitter url" type="url" value="{{profile.twitter_url}}" id="twitterUrl">
       <input type="text" class="form-control" placeholder="Personal Phone" type="tel" id="personalPhone" value="{{format_phone profile.personal_phone}}">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Website" type="url" value="{{profile.business_url}}" id="businessWebsite">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
       <input type="text" class="form-control" placeholder="Personal Email" type="email" value="{{profile.personal_email}}" id="personalEmail">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Business Slogan" value="{{profile.slogan}}" id="slogan">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
       <input type="text" class="form-control" placeholder="Junk Email" type = "email" value="{{profile.junk_email}}" id="junkEmail">
     </div>
-    <div class="col">
+    <div class="col-xs">
+      <input type="text" class="form-control" placeholder="Business Name" value="{{profile.business_name}}" id="businessName">
+      <input type="text" class="form-control" placeholder="Position" value="{{profile.position}}" id="position">
+      <input type="text" class="form-control" placeholder="Business Address" value="{{profile.business_address}}" id="businessAddress">
+      <input type="text" class="form-control" placeholder="Business Phone" type="tel" id="businessPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{format_phone profile.business_phone}}">
+      <input type="text" class="form-control" placeholder="Business Phone Ext." id="businessPhoneExt" value="{{profile.business_phone_ext}}">
+      <input type="text" class="form-control" placeholder="Business Email" type="email" value="{{profile.business_email}}" id="businessEmail">
+      <input type="text" class="form-control" placeholder="Business Website" type="url" value="{{profile.business_url}}" id="businessWebsite">
+      <input type="text" class="form-control" placeholder="Business Slogan" value="{{profile.slogan}}" id="slogan">
       <input type="text" class="form-control" placeholder="Short Bio" value="{{profile.bio}}" id="bio">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="LinkedIn url" type="url" value="{{profile.linkedin_url}}" id="linkedinUrl">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Instagram url" type="url" value="{{profile.instagram_url}}" id="instagramUrl">
-    </div>
-</div>
-<div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Facebook url" type="url" value="{{profile.facebook_url}}" id="facebookUrl">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Twitter url" type="url" value="{{profile.twitter_url}}" id="twitterUrl">
     </div>
 </div>
 </form>
