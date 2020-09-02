@@ -25,20 +25,20 @@
   
     
   ## Contributing
-  **Elena** Konradi - *Back-end*
-  **Jenniffer** Paczkowski - *Back-end*
-  **Sarah** Garrett - *Front-end*
-  **Alfonso** Barreto - *Front-end*
+  >**Back-end:**
+  Elena Konradi - Jenniffer Paczkowski.
+  >**Front-end:**
+  Sarah Garrett - Alfonso Barreto.
   
   
   ## Technology
   The technologies we used are:
   
   > Front-end
-  Handlebars - Sass - Node-Sass - Bootstraps - CSS - HTML - Javascript -Jquery
+  > Handlebars - Sass - Node-Sass - Bootstraps - CSS - HTML - Javascript -Jquery
 
   > Back-end
-  Express - Node.js - Mysql - Sequilize - Express-handlebars - Express-session - Connect-session-sequelize
+  > Express - Node.js - Mysql - Sequilize - Express-handlebars - Express-session - Connect-session-sequelize
 
 
   ## Presentation URL
