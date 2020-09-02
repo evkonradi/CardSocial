@@ -83,6 +83,7 @@ $white: #f2f2f2;
     background-color: $white;
     position: center;
     padding: 15px 15px;
+    height: fit-content;
   }
 
   h3 {
@@ -116,6 +117,13 @@ $white: #f2f2f2;
       size: 24px;
       text-transform: uppercase;
     }
+    h5{
+      text-align: center;
+    }
+    body {
+      display: flex;
+      align-content: space-around;
+    }
     border: 1px solid $purple;
     border-radius: 5px;
     padding: 3%;
@@ -123,7 +131,7 @@ $white: #f2f2f2;
     width: 300px;
     height: 150px;
     box-shadow: 0 3px 6px 0 $purple;
-    text-align: center;
+    // text-align: center;
   }
   .backgrounds {
     display: inline-flex;
@@ -167,18 +175,23 @@ $white: #f2f2f2;
     p {
       font-family: Verdana, sans-serif;
     }
+  }
 
+  .font-card input {
+    float: right;
   }
   
-  textarea, input {
+  textarea, input, label {
     padding: .75%;
     border-radius: 5px;
     border: 1px solid $purple;
     margin: 1.5%;
+    min-height: 5%;
+    position: relative;
   }
   
   textarea {
-    min-width: 40%;
+    min-width: 50%;
     min-height: 100px;
   }
   
