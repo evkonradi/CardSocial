@@ -109,6 +109,7 @@ $white: #f2f2f2;
   &:hover { color: $dark-orange; }
   }
 
+  // CARD ELEMENTS
   .card {
     .card-title {
       color: $purple;
@@ -123,6 +124,31 @@ $white: #f2f2f2;
     height: 150px;
     box-shadow: 0 3px 6px 0 $purple;
     text-align: center;
+  }
+
+  .light-background {
+    background-image: url("../images/light_card_background.png");
+  }
+
+  .white-background {
+    background-image: url("../images/white_background.png");
+  }
+
+  .orange-background {
+    background-color: $light-orange;
+  }
+
+  .font-one {
+    p {
+      font-family: Georgia, serif;
+    }
+  }
+
+  .font-two {
+    p {
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
   }
   
   textarea, input {
@@ -198,6 +224,12 @@ $white: #f2f2f2;
   // BUTTON STYLES
 
   button {
+      .logout {
+      text-decoration: none;
+      color: $peach;
+      font-weight: bold;
+      transition: color .1s;
+    }
     background-color: $purple;
     border: 0;
     padding: 1.5%;

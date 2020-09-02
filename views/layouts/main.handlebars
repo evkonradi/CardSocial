@@ -22,6 +22,7 @@
       <nav>
         {{#if loggedIn}}
         <a href="/dashboard">dashboard</a>
+        {{!-- <a href="/logout">logout</a> --}}
         <button id="logout">logout</button>
         {{/if}}
         {{#unless loggedIn}}
@@ -30,29 +31,6 @@
       </nav>
       </div>
     </header>
-    
-<!--      {{#if loggedIn}}
-        <header>
-        <h1>
-        <a href="/">Card Social</a>
-        </h1>
-        <a href="/login">login</a>
-        </header>
-        {{else}}
-        <header>
-    <h1>
-        <a href="/">Card Social</a>
-    </h1>
-    <nav>
-        <a href="#dashboard">dashboard</a>
-        <a href="#rolodex">rolodex</a>
-        <a href="#mycards">my cards</a>
-        <a href="#newcard">new card</a>
-        <a href="/logout">logout</a>
-    </nav>
-</header>
-        {{/if}}
--->
     <main>
       {{{ body }}}
     </main>

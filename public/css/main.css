@@ -103,6 +103,21 @@ a {
     size: 24px;
     text-transform: uppercase; }
 
+.light-background {
+  background-image: url("../images/light_card_background.png"); }
+
+.white-background {
+  background-image: url("../images/white_background.png"); }
+
+.orange-background {
+  background-color: #F2620F; }
+
+.font-one p {
+  font-family: Georgia, serif; }
+
+.font-two p {
+  font-family: "Trebuchet MS", Helvetica, sans-serif; }
+
 textarea, input {
   padding: .75%;
   border-radius: 5px;
@@ -170,6 +185,11 @@ button {
   border-radius: 5px;
   text-transform: uppercase;
   margin-top: 2%; }
+  button .logout {
+    text-decoration: none;
+    color: #F2BB9B;
+    font-weight: bold;
+    transition: color .1s; }
 
 button:hover {
   background-color: #F24405; }
