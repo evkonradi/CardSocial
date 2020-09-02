@@ -1,11 +1,11 @@
 //const { NULL } = require("node-sass");
 
 $('#businessPhone').keyup(function(){
-    $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
+    $(this).val($(this).val().match(/^\d{10}$/).replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
 });
 
 $('#personalPhone').keyup(function(){
-    $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
+    $(this).val($(this).val().match(/^\d{10}$/).replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
 });
 
 var formatPhoneForSave = function(phone) {
@@ -23,6 +23,7 @@ async function saveProfileHandler(event) {
     event.preventDefault();
   
     let personalPhone = formatPhoneForSave(document.querySelector('#personalPhone').value.trim());
+    
     let businessPhone = formatPhoneForSave(document.querySelector('#businessPhone').value.trim());
     let personalEmail = document.querySelector('#personalEmail').value.trim();
     let businessEmail = document.querySelector('#businessEmail').value.trim();
