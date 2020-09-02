@@ -86,9 +86,8 @@ a {
   color: #F2BB9B;
   font-weight: bold;
   transition: color .1s; }
-
-a:hover {
-  color: #F24405; }
+  a:hover {
+    color: #F24405; }
 
 .card {
   border: 1px solid #400135;
@@ -145,9 +144,16 @@ header {
   padding: 2% 2%;
   position: -webkit-sticky;
   position: sticky; }
+  header nav {
+    display: inline-flex;
+    padding: .5%;
+    float: right;
+    align-items: flex-end; }
+  header .logo {
+    display: inline-flex; }
 
 header h1 {
-  font-size: 1em; }
+  font-size: 1.5rem; }
 
 main {
   flex: 1;

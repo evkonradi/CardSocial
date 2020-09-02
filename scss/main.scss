@@ -105,10 +105,8 @@ $white: #f2f2f2;
     color: $peach;
     font-weight: bold;
     transition: color .1s;
-  }
   
-  a:hover {
-    color: $dark-orange;
+  &:hover { color: $dark-orange; }
   }
 
   .card {
@@ -168,13 +166,17 @@ $white: #f2f2f2;
     // background-position: center;
     background-attachment: fixed;
   }
-  
-  // .logo {
-  //   width: 1rem;
-  //   height: 1rem;
-  // }
 
   header { 
+      nav {
+        display: inline-flex;
+        padding: .5%;
+        float: right;
+        align-items: flex-end;
+      }
+      .logo {
+        display: inline-flex;
+      }
     background-color: $purple;
     display: flex;
     justify-content: space-between;
@@ -185,7 +187,7 @@ $white: #f2f2f2;
   }
   
   header h1 {
-    font-size: 1em;
+    font-size: 1.5rem;
   }
   
   main {
