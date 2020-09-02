@@ -153,6 +153,10 @@ $white: #f2f2f2;
   }
   
   .wrapper {
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
     width: 100%;
     min-height: 100%;
     // max-width: 1200px;
@@ -165,7 +169,12 @@ $white: #f2f2f2;
     background-attachment: fixed;
   }
   
-  header {
+  // .logo {
+  //   width: 1rem;
+  //   height: 1rem;
+  // }
+
+  header { 
     background-color: $purple;
     display: flex;
     justify-content: space-between;

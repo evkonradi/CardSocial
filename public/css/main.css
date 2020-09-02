@@ -133,6 +133,9 @@ form label {
   background-image: url("../images/dark_background.png");
   background-size: cover;
   background-attachment: fixed; }
+  .wrapper img {
+    width: 3rem;
+    height: 3rem; }
 
 header {
   background-color: #400135;
