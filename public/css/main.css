@@ -125,10 +125,15 @@ a {
     height: 70px; }
 
 .light-background {
-  background-image: image-url("./images/light_card_background.png"); }
+  background-image: url("/images/light_card_background.png"); 
+  background-size: cover;
+}
+
 
 .white-background {
-  background-image: image-url("./images/white_background.png"); }
+  background-image: url("/images/white_background.png"); 
+  background-size: cover;
+}
 
 .orange-background {
   background-color: #F2620F; }
@@ -532,3 +537,20 @@ footer p {
 .last-xs {
   -ms-flex-order: 1;
   order: 1; }
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.text-align-center{
+  text-align: center;
+}
+
+.li-display{
+  display: inline-block;
+  margin: 10px 20px 10px 20px;
+}
+
+.ul-padding{
+  padding-inline-start: 0px; 
+}

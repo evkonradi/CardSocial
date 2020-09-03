@@ -67,7 +67,22 @@ async function saveProfileHandler(event) {
         alert(response.statusText);
     }
 };
+
+var viewMyCardHandler = function(event){
+    var targetEl = event.target;
+
+    var closestEl = targetEl.closest("#cardCodeDiv");
+
+    if (closestEl){
+        if (closestEl.hasAttribute("data-card-code")) {
+            var cardCode = closestEl.getAttribute("data-card-code");
+            document.location.replace('/card/'+ cardCode);
+        } 
+    }
+};
   
 document.querySelector('#profileSave').addEventListener('click', saveProfileHandler);
+document.querySelector('#profileSave').addEventListener('click', saveProfileHandler);
+document.querySelector('#mycards-list').addEventListener("click", viewMyCardHandler);
 
 

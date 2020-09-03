@@ -45,7 +45,7 @@ INSERT INTO card_social_db.card
 (card_code, card_title, user_id, font_id, background_id, icon_id, show_first_name, show_last_name, show_nickname, show_home_address, show_business_name, show_business_address,
 show_position, show_personal_phone, show_business_phone, show_business_phone_ext, show_personal_email, show_business_email, show_junk_email, show_business_url,
 show_linkedin_url, show_instagram_url, show_facebook_url, show_twitter_url, show_bio, show_slogan) 
-VALUES ("GpezkY","My personal Card 1", 1, 1, 1, 1, true, true, true, true, false, false, false, true, false, false, true, false, false, false, true, false, false, false, true, false);
+VALUES ("GpezkY","My very personal card", 1, 1, 1, 1, true, true, true, true, false, false, false, true, false, false, true, false, false, false, true, false, false, false, true, false);
 
 INSERT INTO card_social_db.card
 (card_code, card_title, user_id, font_id, background_id, icon_id, show_first_name, show_last_name, show_nickname, show_home_address, show_business_name, show_business_address,
