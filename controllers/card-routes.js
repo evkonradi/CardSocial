@@ -28,7 +28,7 @@ router.get('/:card_code', (req, res) => {
       })
         .then(dbUserData => {
             const card = dbUserData.get({ plain: true });
-            res.render('usercard', card);
+            res.render('usercard', {card: card});
         })
         .catch(err => {
           console.log(err);
