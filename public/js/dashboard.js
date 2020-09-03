@@ -8,6 +8,36 @@ $('#personalPhone').keyup(function(){
     $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
 });
 
+const form = document.getElementById('form');
+const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const nickname = document.getElementById('nickname');
+
+function checkInputs() {
+	// trim to remove the whitespaces
+	const firstNameValue = firstName.value.trim();
+	const lastNameValue = lastName.value.trim();
+	const nicknameValue = nickname.value.trim();
+	
+	if(!firstNameValue == '^[a-zA-Z]+$') {
+		setErrorFor(firstName, 'First Name must contain letters');
+	} else {
+		setSuccessFor(firstName);
+	}
+	
+	if(emailValue === '') {
+		setErrorFor(email, 'Email cannot be blank');
+	} else if (!isEmail(emailValue)) {
+		setErrorFor(email, 'Not a valid email');
+	} else {
+		setSuccessFor(email);
+	}
+};
+
+
+
+
+
 var formatPhoneForSave = function(phone) {
     if (!phone)
     return '';
