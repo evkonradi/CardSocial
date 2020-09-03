@@ -23,6 +23,7 @@ async function saveProfileHandler(event) {
     event.preventDefault();
   
     let personalPhone = formatPhoneForSave(document.querySelector('#personalPhone').value.trim());
+    
     let businessPhone = formatPhoneForSave(document.querySelector('#businessPhone').value.trim());
     let personalEmail = document.querySelector('#personalEmail').value.trim();
     let businessEmail = document.querySelector('#businessEmail').value.trim();
@@ -61,13 +62,27 @@ async function saveProfileHandler(event) {
     });
   
     if (response.ok) {
-        console.log('success');
         document.location.replace('/dashboard', {loggedIn: true});
     } else {
         alert(response.statusText);
     }
 };
+
+var viewMyCardHandler = function(event){
+    var targetEl = event.target;
+
+    var closestEl = targetEl.closest("#cardCodeDiv");
+
+    if (closestEl){
+        if (closestEl.hasAttribute("data-card-code")) {
+            var cardCode = closestEl.getAttribute("data-card-code");
+            document.location.replace('/card/'+ cardCode);
+        } 
+    }
+};
   
 document.querySelector('#profileSave').addEventListener('click', saveProfileHandler);
+document.querySelector('#profileSave').addEventListener('click', saveProfileHandler);
+document.querySelector('#mycards-list').addEventListener("click", viewMyCardHandler);
 
 

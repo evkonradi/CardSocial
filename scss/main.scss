@@ -1,4 +1,4 @@
-$font-stack: Helvetica, sans-serif;
+$font-stack: Helvetica, sans-serif, "Perpetua Titling MT", serif, Verdana, sans-serif;
 $purple: #400135;
 $dark-orange: #F24405;
 $light-orange: #F2620F;
@@ -16,7 +16,7 @@ $white: #f2f2f2;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: $purple;
     flex-wrap: wrap;
   }
 
@@ -78,11 +78,18 @@ $white: #f2f2f2;
   .build-card {
     display: flex;
     flex-direction: column;
-    border-color: $purple;
     border-radius: 0 0 5px 5px;
     background-color: $white;
     position: center;
     padding: 15px 15px;
+    // flex-basis: auto;
+    // overflow: hidden;
+  }
+
+  .newcard {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
   }
 
   h3 {
@@ -90,8 +97,9 @@ $white: #f2f2f2;
     size: 2.5em;
   }
   h2 {
-    color: $dark-orange;
+    color: $purple;
     text-align: center;
+    text-shadow: 1px 2px 3px $white;
   }
 
   h1 {
@@ -105,37 +113,148 @@ $white: #f2f2f2;
     color: $peach;
     font-weight: bold;
     transition: color .1s;
-  }
   
-  a:hover {
-    color: $dark-orange;
+  &:hover { color: $dark-orange; }
   }
 
+  // CARD ELEMENTS
   .card {
     .card-title {
       color: $purple;
       size: 24px;
       text-transform: uppercase;
     }
+    h5{
+      text-align: center;
+    }
+    body {
+      display: flex;
+      align-content: space-around;
+    }
     border: 1px solid $purple;
     border-radius: 5px;
     padding: 3%;
     margin: 5%;
-    width: 300px;
-    height: 150px;
+    width: 320px;
+    height: 160px;
     box-shadow: 0 3px 6px 0 $purple;
-    text-align: center;
+    background: $white;
+  }
+
+  .backgrounds {
+    display: inline-flex;
+  }
+
+  .circle {
+    img {
+    width: 70px;
+    height: 70px;
+    }
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid $dark-orange;
+  }
+
+  .light-background {
+    background-image: url("./images/light_card_background.png");
+  }
+
+  .white-background {
+    background-image: url("./images/white_background.png");
+  }
+
+  .orange-background {
+    background-color: $light-orange;
+  }
+
+  .peach-background {
+    background-color: $peach;
+  }
+
+  .orangebackground {
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $light-orange;
+  }
+
+  .peachbackground {
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $peach;
+  }
+
+  .font-one {
+    p {
+      font-family: "Perpetua Titling MT", serif;
+    }
+  }
+
+  .font-two {
+    p {
+      font-family: Verdana, sans-serif;
+    }
+  }
+
+  .icon {
+    display: block;
+    width: fit-content;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .icon-one {
+    background: url("./icons/tie.png");
+  }
+
+  .icon-two {
+    background: url("./icons/share.png");
+  }
+
+  .icon-three {
+    background: url("./icons/email.png");
+  }
+
+  .icon-four {
+    background: url("./icons/layers.png");
+  }
+
+  .font-card input {
+    float: right;
   }
   
   textarea, input {
-    padding: .75%;
+    padding: 1.5%;
     border-radius: 5px;
     border: 1px solid $purple;
     margin: 1.5%;
+    min-height: 5%;
+    position: relative;
+    color: $purple;
+    font: Helvetica;
+  }
+
+  label, input {
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: space-around;
+  }
+
+  .info {
+  display: inline-block;
+  width: 300px;
+  padding: .75%;
+  border-radius: 5px;
+  border: 1px solid $purple;
+  margin: 1.5%;
+  min-height: 1.5rem;
+  position: relative;
+  box-shadow: 0 2px 4px 0 $purple;
   }
   
   textarea {
-    min-width: 40%;
+    min-width: 50%;
     min-height: 100px;
   }
   
@@ -153,6 +272,10 @@ $white: #f2f2f2;
   }
   
   .wrapper {
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
     width: 100%;
     min-height: 100%;
     // max-width: 1200px;
@@ -164,8 +287,17 @@ $white: #f2f2f2;
     // background-position: center;
     background-attachment: fixed;
   }
-  
-  header {
+
+  header { 
+      .logo {
+        display: inline-flex;
+      }
+      .logout {
+        display: inline-flex;
+        padding: .5rem;
+        float: right;
+        align-items: flex-end;
+      }
     background-color: $purple;
     display: flex;
     justify-content: space-between;
@@ -173,10 +305,11 @@ $white: #f2f2f2;
     padding: 2% 2%;
     position: -webkit-sticky;
     position: sticky;
+
   }
   
   header h1 {
-    font-size: 1em;
+    font-size: 1.5rem;
   }
   
   main {
@@ -187,7 +320,7 @@ $white: #f2f2f2;
   // BUTTON STYLES
 
   button {
-    background-color: $purple;
+    background-color: $dark-orange;
     border: 0;
     padding: 1.5%;
     color: $white;
@@ -200,25 +333,34 @@ $white: #f2f2f2;
   }
   
   button:hover {
-    background-color: $dark-orange;
+    background-color: $purple;
   }
-  
+
+  .logout {
+      background-color: $purple;
+      text-decoration: none;
+      color: $peach;
+      font-weight: bold;
+      text-transform: lowercase;
+      border: 1px solid $dark-orange 5px;
+  }
+
   .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: $purple;
-    font-size: 100%;
+    background: $purple;
+    border: 1px solid $purple;
+    padding: 1.5%;
+    // cursor: pointer;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 1rem;
     font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
+    // transition: color .1s;
+    // margin-left: 16px;
   }
   
   .btn-no-style:hover {
-    background: none;
-    color: $purple;
+    background-color: $dark-orange;
+    // color: $purple;
   }
 
   // FOOTER STYLES
