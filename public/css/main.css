@@ -125,10 +125,10 @@ a {
     height: 70px; }
 
 .light-background {
-  background-image: image-url("./images/light_card_background.png"); }
+  background-image: url("./images/light_card_background.png"); }
 
 .white-background {
-  background-image: image-url("./images/white_background.png"); }
+  background-image: url("./images/white_background.png"); }
 
 .orange-background {
   background-color: #F2620F; }
@@ -236,13 +236,13 @@ header {
   padding: 2% 2%;
   position: -webkit-sticky;
   position: sticky; }
-  header nav {
-    display: inline-flex;
-    padding: .5%;
-    float: right;
-    align-items: flex-end; }
   header .logo {
     display: inline-flex; }
+  header .logout {
+    display: inline-flex;
+    padding: .5rem;
+    float: right;
+    align-items: flex-end; }
 
 header h1 {
   font-size: 1.5rem; }
@@ -271,7 +271,6 @@ button:hover {
   text-decoration: none;
   color: #F2BB9B;
   font-weight: bold;
-  transition: color .1s;
   text-transform: lowercase;
   border: 1px solid #F24405 5px; }
 
