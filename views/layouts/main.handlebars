@@ -12,7 +12,7 @@
 <body>
   <div class="wrapper">
     <header>
-      <div class="row middle-xs">
+      <div class="row middle-xs between-xs">
       <div class="logo">
         <a href="/"><img id="logo" src="/images/CS_logo.png"></a>
         <h1>
@@ -21,8 +21,7 @@
       </div>
       <nav>
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        {{!-- <a href="/logout">logout</a> --}}
+        {{!-- <a href="/dashboard">dashboard</a> --}}
         <button class="logout" id="logout">logout</button>
         {{/if}}
         {{#unless loggedIn}}

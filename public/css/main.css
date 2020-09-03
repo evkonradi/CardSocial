@@ -126,11 +126,11 @@ a {
 
 .light-background {
   background-image: url("./images/light_card_background.png");
-  background-size: contain; }
+  background-size: cover; }
 
 .white-background {
   background-image: url("./images/white_background.png");
-  background-size: contain; }
+  background-size: cover; }
 
 .orange-background {
   background-color: #F2620F; }
@@ -235,7 +235,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 2%;
+  padding: 2% 2% 0;
   position: -webkit-sticky;
   position: sticky; }
   header nav {
