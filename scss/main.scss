@@ -97,6 +97,7 @@ $white: #f2f2f2;
     text-align: center;
     text-shadow: 1px 2px 3px $white;
   }
+
   h3 {
     color: $purple;
     size: 2.5em;
@@ -118,8 +119,8 @@ $white: #f2f2f2;
     color: $peach;
     font-weight: bold;
     transition: color .1s;
-  
-  &:hover { color: $dark-orange; }
+  &:hover { 
+    color: $dark-orange; }
   }
 
   // CARD ELEMENTS
@@ -161,12 +162,12 @@ $white: #f2f2f2;
   }
 
   .light-background {
-    background-image: url("./images/light_card_background.png");
+    background-image: url("/images/light_card_background.png");
     background-size: cover;
   }
 
   .white-background {
-    background-image: url("./images/white_background.png");
+    background-image: url("/images/white_background.png");
     background-size: cover;
   }
 
@@ -297,10 +298,11 @@ $white: #f2f2f2;
 
   header { 
       nav {
-        display: inline-flex;
+        display: inline-block;
         padding: .5%;
+        margin-right: 3%;
         float: right;
-        align-items: flex-end;
+        // align-items: flex-end;
       }
       .logo {
         display: inline-flex;
@@ -343,6 +345,9 @@ $white: #f2f2f2;
   }
 
   .logout {
+    &:hover {
+      color: $dark-orange;
+    }
       background-color: $purple;
       text-decoration: none;
       color: $peach;
@@ -350,9 +355,13 @@ $white: #f2f2f2;
       transition: color .1s;
       text-transform: lowercase;
       border: 1px solid $dark-orange 5px;
+      font-size: 16px;
   }
 
   .btn-no-style {
+      &:hover{
+        background-color: $dark-orange;
+      }
     background: $purple;
     border: 1px solid $purple;
     padding: 1.5%;
@@ -363,11 +372,6 @@ $white: #f2f2f2;
     font-weight: bold;
     // transition: color .1s;
     // margin-left: 16px;
-  }
-  
-  .btn-no-style:hover {
-    background-color: $dark-orange;
-    // color: $purple;
   }
 
   // FOOTER STYLES
