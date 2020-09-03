@@ -92,6 +92,12 @@ $white: #f2f2f2;
     flex-basis: auto;
   }
 
+  h4 {
+    color: $dark-orange;
+    text-align: center;
+    text-shadow: 1px 2px 3px $white;
+  }
+
   h3 {
     color: $purple;
     size: 2.5em;
@@ -113,8 +119,8 @@ $white: #f2f2f2;
     color: $peach;
     font-weight: bold;
     transition: color .1s;
-  
-  &:hover { color: $dark-orange; }
+  &:hover { 
+    color: $dark-orange; }
   }
 
   // CARD ELEMENTS
@@ -156,11 +162,21 @@ $white: #f2f2f2;
   }
 
   .light-background {
+<<<<<<< HEAD
     background-image: url("./images/light_card_background.png");
   }
 
   .white-background {
     background-image: url("./images/white_background.png");
+=======
+    background-image: url("/images/light_card_background.png");
+    background-size: cover;
+  }
+
+  .white-background {
+    background-image: url("/images/white_background.png");
+    background-size: cover;
+>>>>>>> feature/stylefix
   }
 
   .orange-background {
@@ -289,8 +305,17 @@ $white: #f2f2f2;
   }
 
   header { 
+<<<<<<< HEAD
       .logo {
         display: inline-flex;
+=======
+      nav {
+        display: inline-block;
+        padding: .5%;
+        margin-right: 3%;
+        float: right;
+        // align-items: flex-end;
+>>>>>>> feature/stylefix
       }
       .logout {
         display: inline-flex;
@@ -302,7 +327,7 @@ $white: #f2f2f2;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2% 2%;
+    padding: 2% 2% 0;
     position: -webkit-sticky;
     position: sticky;
 
@@ -337,15 +362,22 @@ $white: #f2f2f2;
   }
 
   .logout {
+    &:hover {
+      color: $dark-orange;
+    }
       background-color: $purple;
       text-decoration: none;
       color: $peach;
       font-weight: bold;
       text-transform: lowercase;
       border: 1px solid $dark-orange 5px;
+      font-size: 16px;
   }
 
   .btn-no-style {
+      &:hover{
+        background-color: $dark-orange;
+      }
     background: $purple;
     border: 1px solid $purple;
     padding: 1.5%;
@@ -356,11 +388,6 @@ $white: #f2f2f2;
     font-weight: bold;
     // transition: color .1s;
     // margin-left: 16px;
-  }
-  
-  .btn-no-style:hover {
-    background-color: $dark-orange;
-    // color: $purple;
   }
 
   // FOOTER STYLES

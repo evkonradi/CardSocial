@@ -72,6 +72,11 @@ body, html {
   flex-direction: column;
   flex-basis: auto; }
 
+h4 {
+  color: #F24405;
+  text-align: center;
+  text-shadow: 1px 2px 3px #f2f2f2; }
+
 h3 {
   color: #400135;
   size: 2.5em; }
@@ -125,6 +130,7 @@ a {
     height: 70px; }
 
 .light-background {
+<<<<<<< HEAD
   background-image: url("/images/light_card_background.png"); 
   background-size: cover;
 }
@@ -133,6 +139,14 @@ a {
   background-image: url("/images/white_background.png"); 
   background-size: cover;
 }
+=======
+  background-image: url("/images/light_card_background.png");
+  background-size: cover; }
+
+.white-background {
+  background-image: url("/images/white_background.png");
+  background-size: cover; }
+>>>>>>> feature/stylefix
 
 .orange-background {
   background-color: #F2620F; }
@@ -237,9 +251,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 2%;
+  padding: 2% 2% 0;
   position: -webkit-sticky;
   position: sticky; }
+<<<<<<< HEAD
   header .logo {
     display: inline-flex; }
   header .logout {
@@ -247,6 +262,15 @@ header {
     padding: .5rem;
     float: right;
     align-items: flex-end; }
+=======
+  header nav {
+    display: inline-block;
+    padding: .5%;
+    margin-right: 3%;
+    float: right; }
+  header .logo {
+    display: inline-flex; }
+>>>>>>> feature/stylefix
 
 header h1 {
   font-size: 1.5rem; }
@@ -276,7 +300,10 @@ button:hover {
   color: #F2BB9B;
   font-weight: bold;
   text-transform: lowercase;
-  border: 1px solid #F24405 5px; }
+  border: 1px solid #F24405 5px;
+  font-size: 16px; }
+  .logout:hover {
+    color: #F24405; }
 
 .btn-no-style {
   background: #400135;
@@ -286,9 +313,8 @@ button:hover {
   color: #f2f2f2;
   font-size: 1rem;
   font-weight: bold; }
-
-.btn-no-style:hover {
-  background-color: #F24405; }
+  .btn-no-style:hover {
+    background-color: #F24405; }
 
 footer {
   background-color: #400135;
