@@ -15,19 +15,40 @@ INSERT INTO card_social_db.user (first_name, last_name, nickname, home_address, 
 values('Stephen','Sovkov',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'stephen@yahoo.com',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'$2b$10$tKSYR1RTcAOHhguOdTYP9OfCu2bCuIegvugGqOA3DLhSlQEQYECgK');
 
 INSERT INTO card_social_db.font (font_name, font_size, font_decoration)
-VALUES('Helvetica', 12, 'I');
+VALUES('font-one', 12, 'I');
 
 INSERT INTO card_social_db.font (font_name, font_size, font_decoration)
-VALUES('Times New Roman', 12, 'B');
+VALUES('font-two', 12, 'B');
 
 INSERT INTO card_social_db.background (background_name, background_color)
-VALUES('Personal', 'light_blue');
+VALUES('light-background', 'light_blue');
 
 INSERT INTO card_social_db.background (background_name, background_color)
-VALUES('Business', 'green');
+VALUES('white-background', 'green');
+
+INSERT INTO card_social_db.background (background_name, background_color)
+VALUES('orange-background', 'green');
 
 INSERT INTO card_social_db.icon (icon_name, icon_path)
-VALUES('IconA', './public/assets/IconA');
+VALUES('icon-one', '../icons/attach.png');
 
 INSERT INTO card_social_db.icon (icon_name, icon_path)
-VALUES('IconB', './public/assets/IconB');
+VALUES('icon-two', '../icons/email.png');
+
+INSERT INTO card_social_db.icon (icon_name, icon_path)
+VALUES('icon-three', '../icons/share.png');
+
+INSERT INTO card_social_db.icon (icon_name, icon_path)
+VALUES('icon-four', '../icons/tie.png');
+
+INSERT INTO card_social_db.card
+(card_code, card_title, user_id, font_id, background_id, icon_id, show_first_name, show_last_name, show_nickname, show_home_address, show_business_name, show_business_address,
+show_position, show_personal_phone, show_business_phone, show_business_phone_ext, show_personal_email, show_business_email, show_junk_email, show_business_url,
+show_linkedin_url, show_instagram_url, show_facebook_url, show_twitter_url, show_bio, show_slogan) 
+VALUES ("GpezkY","My personal Card 1", 1, 1, 1, 1, true, true, true, true, false, false, false, true, false, false, true, false, false, false, true, false, false, false, true, false);
+
+INSERT INTO card_social_db.card
+(card_code, card_title, user_id, font_id, background_id, icon_id, show_first_name, show_last_name, show_nickname, show_home_address, show_business_name, show_business_address,
+show_position, show_personal_phone, show_business_phone, show_business_phone_ext, show_personal_email, show_business_email, show_junk_email, show_business_url,
+show_linkedin_url, show_instagram_url, show_facebook_url, show_twitter_url, show_bio, show_slogan) 
+VALUES ("7SgKLZ","My Business Card", 1,2,2,2,true,true,false,false,true,true,true,false,true,true,false,true,false,true,false,false,false,false,false,true );

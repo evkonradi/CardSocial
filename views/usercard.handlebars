@@ -1,10 +1,10 @@
-<div class="user-card">
-    <div class="user-card">
+    <div class="user-card {{background.background_name}}">
         <div class="row .center-xs .middle-xs">
             <div class="col-xs-12">
+                <img src="{{icon.icon_path}}" />
                 <h2>{{card_title}}</h2>
 
-                <div class="contact-info">
+                <div class="contact-info {{font.font_name}}">
                      <p>
                         {{#if show_first_name}}{{user.first_name}}{{/if}}
                         {{#if show_last_name}}{{user.last_name}}{{/if}}
@@ -15,7 +15,7 @@
                      {{#if show_personal_email}}<p>{{user.personal_email}}</p>{{/if}}
                 </div>
 
-                <div class="extra-info">
+                <div class="extra-info  {{font.font_name}}">
                      {{#if show_business_name}}<p>{{user.business_name}}</p>{{/if}}
                      {{#if show_business_address}}<p>{{user.business_address}}</p>{{/if}}
                      {{#if show_position}}<p>{{user.position}}</p>{{/if}}
@@ -38,4 +38,3 @@
             </div>
         </div>
     </div>
-</div>
