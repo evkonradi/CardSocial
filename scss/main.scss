@@ -92,6 +92,11 @@ $white: #f2f2f2;
     flex-basis: auto;
   }
 
+  h4 {
+    color: $dark-orange;
+    text-align: center;
+    text-shadow: 1px 2px 3px $white;
+  }
   h3 {
     color: $purple;
     size: 2.5em;
