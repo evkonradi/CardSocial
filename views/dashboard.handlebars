@@ -6,7 +6,7 @@
     social accounts could be saved here and represented as icons in template --}}
 <div class="row around-xs">
   <div class="row center-xs">
-    <div class="col-xs">
+    <div class="col-xs"> 
       <input type="text" class="form-control" placeholder="First Name" value="{{profile.first_name}}" id ="firstName">
       <input type="text" class="form-control" placeholder="Last Name" value="{{profile.last_name}}" id ="lastName">
       <input type="text" class="form-control" placeholder="Nickname" value="{{profile.nickname}}" id="nickname">
@@ -15,17 +15,17 @@
       <input type="text" class="form-control" placeholder="Facebook url" type="url" value="{{profile.facebook_url}}" id="facebookUrl">
       <input type="text" class="form-control" placeholder="Home Address" value="{{profile.home_address}}" id="homeAddress">
       <input type="text" class="form-control" placeholder="Twitter url" type="url" value="{{profile.twitter_url}}" id="twitterUrl">
-      <input type="text" class="form-control" placeholder="Personal Phone" type="tel" id="personalPhone" value="{{format_phone profile.personal_phone}}">
-      <input type="text" class="form-control" placeholder="Personal Email" type="email" value="{{profile.personal_email}}" id="personalEmail">
-      <input type="text" class="form-control" placeholder="Junk Email" type = "email" value="{{profile.junk_email}}" id="junkEmail">
+      <input type="number" id="quantity" name="quantity" max="10" class="form-control" placeholder="Personal Phone" type="tel" id="personalPhone" value="{{format_phone profile.personal_phone}}">
+      <input type="email" class="form-control" placeholder="Personal Email" type="email" value="{{profile.personal_email}}" id="personalEmail">
+      <input type="email" class="form-control" placeholder="Junk Email" type = "email"  value="{{profile.junk_email}}" id="junkEmail">
     </div>
     <div class="col-xs">
       <input type="text" class="form-control" placeholder="Business Name" value="{{profile.business_name}}" id="businessName">
       <input type="text" class="form-control" placeholder="Position" value="{{profile.position}}" id="position">
       <input type="text" class="form-control" placeholder="Business Address" value="{{profile.business_address}}" id="businessAddress">
-      <input type="text" class="form-control" placeholder="Business Phone" type="tel" id="businessPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{format_phone profile.business_phone}}">
-      <input type="text" class="form-control" placeholder="Business Phone Ext." id="businessPhoneExt" value="{{profile.business_phone_ext}}">
-      <input type="text" class="form-control" placeholder="Business Email" type="email" value="{{profile.business_email}}" id="businessEmail">
+      <input type="number" id="quantity" name="quantity" max="10" class="form-control" placeholder="Business Phone" type="tel" id="businessPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value="{{format_phone profile.business_phone}}">
+      <input type="number" id="quantity" name="quantity" min="1" max="4" class="form-control" placeholder="Business Phone Ext." id="businessPhoneExt" value="{{profile.business_phone_ext}}">
+      <input type="email" class="form-control" placeholder="Business Email" type="email" id="validationDefault03" value="{{profile.business_email}}" id="businessEmail">
       <input type="text" class="form-control" placeholder="Business Website" type="url" value="{{profile.business_url}}" id="businessWebsite">
       <input type="text" class="form-control" placeholder="Business Slogan" value="{{profile.slogan}}" id="slogan">
       <input type="text" class="form-control" placeholder="Short Bio" value="{{profile.bio}}" id="bio">
@@ -167,5 +167,7 @@
 </form>
 
 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/js/dashboard.js"></script>
+

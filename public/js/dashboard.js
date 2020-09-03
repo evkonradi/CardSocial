@@ -25,14 +25,15 @@ async function saveProfileHandler(event) {
     let personalPhone = formatPhoneForSave(document.querySelector('#personalPhone').value.trim());
     
     let businessPhone = formatPhoneForSave(document.querySelector('#businessPhone').value.trim());
-    let personalEmail = document.querySelector('#personalEmail').value.trim();
-    let businessEmail = document.querySelector('#businessEmail').value.trim();
-    let junkEmail = document.querySelector('#junkEmail').value.trim();
+    let personalEmail = document.querySelector('#personalEmail').pattern = "[/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/]".value.trim();
+    let businessEmail = document.querySelector('#businessEmail').pattern = "[/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/]".value.trim();
+    let junkEmail = document.querySelector('#junkEmail').pattern = "[/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/]".value.trim();
     let businessWebsite = document.querySelector('#businessWebsite').value.trim();
     let linkedinUrl = document.querySelector('#linkedinUrl').value.trim();
     let instagramUrl = document.querySelector('#instagramUrl').value.trim();
     let facebookUrl = document.querySelector('#facebookUrl').value.trim();
     let twitterUrl = document.querySelector('#twitterUrl').value.trim();
+    
 
     const response = await fetch('/api/users/user', {
         method: 'put',
