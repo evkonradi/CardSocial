@@ -190,12 +190,14 @@ label, input {
   vertical-align: middle;
   justify-content: space-around; }
 
-label {
+.info {
+  display: inline-block;
+  width: 300px;
   padding: .75%;
   border-radius: 5px;
   border: 1px solid #400135;
   margin: 1.5%;
-  min-height: 5%;
+  min-height: 1.5rem;
   position: relative;
   box-shadow: 0 2px 4px 0 #400135; }
 
