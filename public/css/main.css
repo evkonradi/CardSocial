@@ -8,7 +8,7 @@ body, html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
+  color: #400135;
   flex-wrap: wrap; }
 
 .connection-login {
@@ -62,12 +62,10 @@ body, html {
 .build-card {
   display: flex;
   flex-direction: column;
-  border-color: #400135;
   border-radius: 0 0 5px 5px;
   background-color: #f2f2f2;
   position: center;
-  padding: 15px 15px;
-  flex-basis: auto; }
+  padding: 15px 15px; }
 
 .newcard {
   display: flex;
@@ -81,7 +79,7 @@ h3 {
 h2 {
   color: #400135;
   text-align: center;
-  text-shadow: 2px 2px #f2f2f2; }
+  text-shadow: 1px 2px 3px #f2f2f2; }
 
 h1 {
   color: #F24405;
@@ -127,19 +125,28 @@ a {
     height: 70px; }
 
 .light-background {
-  background-image: image-url("../images/light_card_background.png"); }
+  background-image: image-url("./images/light_card_background.png"); }
 
 .white-background {
-  background-image: image-url("../images/white_background.png"); }
+  background-image: image-url("./images/white_background.png"); }
 
 .orange-background {
   background-color: #F2620F; }
+
+.peach-background {
+  background-color: #F2BB9B; }
 
 .orangebackground {
   width: 70px;
   height: 50px;
   border-radius: 50%;
   background-color: #F2620F; }
+
+.peachbackground {
+  width: 70px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #F2BB9B; }
 
 .font-one p {
   font-family: "Perpetua Titling MT", serif; }
@@ -154,31 +161,34 @@ a {
   background-repeat: no-repeat; }
 
 .icon-one {
-  background-image: url("../icons/tie.png"); }
+  background: url("./icons/tie.png"); }
 
 .icon-two {
-  background-image: image-url("../icons/share.png"); }
+  background: url("./icons/share.png"); }
 
 .icon-three {
-  background-image: image-url("../icons/email.png"); }
+  background: url("./icons/email.png"); }
 
 .icon-four {
-  background-image: image-url("../icons/layers.png"); }
+  background: url("./icons/layers.png"); }
 
 .font-card input {
   float: right; }
 
 textarea, input {
-  padding: .75%;
+  padding: 1.5%;
   border-radius: 5px;
   border: 1px solid #400135;
   margin: 1.5%;
   min-height: 5%;
-  position: relative; }
+  position: relative;
+  color: #400135;
+  font: Helvetica; }
 
 label, input {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  justify-content: space-around; }
 
 label {
   padding: .75%;
@@ -240,7 +250,7 @@ main {
   padding: 5%; }
 
 button {
-  background-color: #400135;
+  background-color: #F24405;
   border: 0;
   padding: 1.5%;
   color: #f2f2f2;
@@ -250,30 +260,30 @@ button {
   border-radius: 5px;
   text-transform: uppercase;
   margin-top: 2%; }
-  button .logout {
-    text-decoration: none;
-    color: #F2BB9B;
-    font-weight: bold;
-    transition: color .1s; }
 
 button:hover {
-  background-color: #F24405; }
+  background-color: #400135; }
 
-.btn-no-style {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+.logout {
+  background-color: #400135;
   text-decoration: none;
-  color: #400135;
-  font-size: 100%;
+  color: #F2BB9B;
   font-weight: bold;
   transition: color .1s;
-  margin-left: 16px; }
+  text-transform: lowercase;
+  border: 1px solid #F24405 5px; }
+
+.btn-no-style {
+  background: #400135;
+  border: 1px solid #400135;
+  padding: 1.5%;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  font-size: 1rem;
+  font-weight: bold; }
 
 .btn-no-style:hover {
-  background: none;
-  color: #400135; }
+  background-color: #F24405; }
 
 footer {
   background-color: #400135;

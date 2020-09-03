@@ -16,7 +16,7 @@ $white: #f2f2f2;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: $purple;
     flex-wrap: wrap;
   }
 
@@ -78,14 +78,12 @@ $white: #f2f2f2;
   .build-card {
     display: flex;
     flex-direction: column;
-    border-color: $purple;
     border-radius: 0 0 5px 5px;
     background-color: $white;
     position: center;
     padding: 15px 15px;
-    // height: fit-content;
-    flex-basis: auto;
-    // overflow-y: auto;
+    // flex-basis: auto;
+    // overflow: hidden;
   }
 
   .newcard {
@@ -101,7 +99,7 @@ $white: #f2f2f2;
   h2 {
     color: $purple;
     text-align: center;
-    text-shadow: 2px 2px $white;
+    text-shadow: 1px 2px 3px $white;
   }
 
   h1 {
@@ -158,15 +156,19 @@ $white: #f2f2f2;
   }
 
   .light-background {
-    background-image: image-url("../images/light_card_background.png");
+    background-image: image-url("./images/light_card_background.png");
   }
 
   .white-background {
-    background-image: image-url("../images/white_background.png");
+    background-image: image-url("./images/white_background.png");
   }
 
   .orange-background {
     background-color: $light-orange;
+  }
+
+  .peach-background {
+    background-color: $peach;
   }
 
   .orangebackground {
@@ -174,6 +176,13 @@ $white: #f2f2f2;
     height: 50px;
     border-radius: 50%;
     background-color: $light-orange;
+  }
+
+  .peachbackground {
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $peach;
   }
 
   .font-one {
@@ -196,19 +205,19 @@ $white: #f2f2f2;
   }
 
   .icon-one {
-    background-image: url("../icons/tie.png");
+    background: url("./icons/tie.png");
   }
 
   .icon-two {
-    background-image: image-url("../icons/share.png");
+    background: url("./icons/share.png");
   }
 
   .icon-three {
-    background-image: image-url("../icons/email.png");
+    background: url("./icons/email.png");
   }
 
   .icon-four {
-    background-image: image-url("../icons/layers.png");
+    background: url("./icons/layers.png");
   }
 
   .font-card input {
@@ -216,17 +225,20 @@ $white: #f2f2f2;
   }
   
   textarea, input {
-    padding: .75%;
+    padding: 1.5%;
     border-radius: 5px;
     border: 1px solid $purple;
     margin: 1.5%;
     min-height: 5%;
     position: relative;
+    color: $purple;
+    font: Helvetica;
   }
 
   label, input {
     display: inline-block;
     vertical-align: middle;
+    justify-content: space-around;
   }
 
   label {
@@ -305,13 +317,7 @@ $white: #f2f2f2;
   // BUTTON STYLES
 
   button {
-      .logout {
-      text-decoration: none;
-      color: $peach;
-      font-weight: bold;
-      transition: color .1s;
-    }
-    background-color: $purple;
+    background-color: $dark-orange;
     border: 0;
     padding: 1.5%;
     color: $white;
@@ -324,25 +330,35 @@ $white: #f2f2f2;
   }
   
   button:hover {
-    background-color: $dark-orange;
+    background-color: $purple;
   }
-  
+
+  .logout {
+      background-color: $purple;
+      text-decoration: none;
+      color: $peach;
+      font-weight: bold;
+      transition: color .1s;
+      text-transform: lowercase;
+      border: 1px solid $dark-orange 5px;
+  }
+
   .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: $purple;
-    font-size: 100%;
+    background: $purple;
+    border: 1px solid $purple;
+    padding: 1.5%;
+    // cursor: pointer;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 1rem;
     font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
+    // transition: color .1s;
+    // margin-left: 16px;
   }
   
   .btn-no-style:hover {
-    background: none;
-    color: $purple;
+    background-color: $dark-orange;
+    // color: $purple;
   }
 
   // FOOTER STYLES
