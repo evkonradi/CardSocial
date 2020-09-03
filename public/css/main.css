@@ -125,10 +125,12 @@ a {
     height: 70px; }
 
 .light-background {
-  background-image: image-url("./images/light_card_background.png"); }
+  background-image: url("./images/light_card_background.png");
+  background-size: contain; }
 
 .white-background {
-  background-image: image-url("./images/white_background.png"); }
+  background-image: url("./images/white_background.png");
+  background-size: contain; }
 
 .orange-background {
   background-color: #F2620F; }

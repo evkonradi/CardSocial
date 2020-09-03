@@ -156,11 +156,13 @@ $white: #f2f2f2;
   }
 
   .light-background {
-    background-image: image-url("./images/light_card_background.png");
+    background-image: url("./images/light_card_background.png");
+    background-size: contain;
   }
 
   .white-background {
-    background-image: image-url("./images/white_background.png");
+    background-image: url("./images/white_background.png");
+    background-size: contain;
   }
 
   .orange-background {
