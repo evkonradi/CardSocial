@@ -30,7 +30,7 @@ INSERT INTO card_social_db.background (background_name, background_color)
 VALUES('orange-background', 'green');
 
 INSERT INTO card_social_db.icon (icon_name, icon_path)
-VALUES('icon-one', '../icons/attach.png');
+VALUES('icon-one', '../icons/layers.png');
 
 INSERT INTO card_social_db.icon (icon_name, icon_path)
 VALUES('icon-two', '../icons/email.png');

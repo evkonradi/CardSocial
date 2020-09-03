@@ -50,12 +50,27 @@
 </section> --}}
 
 <section id="mycards">
+  <div class="saved-cards">
+    <h2>My Cards</h2>
+    
+    <div class="row around-xs">
+      <ul>
+        {{#each cards}}
+          {{> mycards-dashboard}}
+        {{/each}}
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+{{!-- <section id="mycards">
 <div class="saved-cards">
     <h2>My Cards</h2>
-  <div class="row around-xs">
+  <div class="row around-xs"> --}}
 {{!-- card option that includes link - this could go to a page with just that number or generate QR code --}}
 {{!-- may need to created another handlebars template so this can be a repeating option like above ^^^ --}}
-  <div class="col-sm-6">
+  {{!-- <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Business Card</h5>
@@ -90,7 +105,7 @@
   </div>
 </div>
 </div>
-</section>
+</section> --}}
 
     {{!-- image container needs to be stylized and have option to upload url
     social accounts could be saved here and represented as icons in template --}}

@@ -5,7 +5,6 @@ const { User, Card, Font, Icon, Background } = require('../models');
 router.get('/:card_code', (req, res) => {
 
     Card.findOne({
-        attributes: { exclude: ['pwd'] },
         where: {
           card_code: req.params.card_code
         },
