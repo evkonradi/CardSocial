@@ -156,11 +156,11 @@ $white: #f2f2f2;
   }
 
   .light-background {
-    background-image: image-url("./images/light_card_background.png");
+    background-image: url("./images/light_card_background.png");
   }
 
   .white-background {
-    background-image: image-url("./images/white_background.png");
+    background-image: url("./images/white_background.png");
   }
 
   .orange-background {
@@ -289,14 +289,14 @@ $white: #f2f2f2;
   }
 
   header { 
-      nav {
-        display: inline-flex;
-        padding: .5%;
-        float: right;
-        align-items: flex-end;
-      }
       .logo {
         display: inline-flex;
+      }
+      .logout {
+        display: inline-flex;
+        padding: .5rem;
+        float: right;
+        align-items: flex-end;
       }
     background-color: $purple;
     display: flex;
@@ -305,6 +305,7 @@ $white: #f2f2f2;
     padding: 2% 2%;
     position: -webkit-sticky;
     position: sticky;
+
   }
   
   header h1 {
@@ -340,7 +341,6 @@ $white: #f2f2f2;
       text-decoration: none;
       color: $peach;
       font-weight: bold;
-      transition: color .1s;
       text-transform: lowercase;
       border: 1px solid $dark-orange 5px;
   }
