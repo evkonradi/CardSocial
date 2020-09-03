@@ -31,3 +31,6 @@ VALUES('IconA', './public/assets/IconA');
 
 INSERT INTO card_social_db.icon (icon_name, icon_path)
 VALUES('IconB', './public/assets/IconB');
+
+INSERT INTO card_social_db.card (card_code, user_id, card_title, font_id, background_id, icon_id, show_first_name, show_last_name, show_nickname, show_home_address, show_business_name, show_business_address, show_position, show_personal_phone, show_business_phone, show_business_phone_ext, show_personal_email, show_business_email, show_junk_email, show_business_url, show_linkedin_url, show_instagram_url, show_facebook_url, show_twitter_url, show_bio, show_slogan)
+VALUES('VGQgNC', 1, 'My Card', 1, 1, 1, true, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false);
