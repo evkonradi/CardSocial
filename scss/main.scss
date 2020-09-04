@@ -20,6 +20,62 @@ $white: #f2f2f2;
     flex-wrap: wrap;
   }
 
+  .wrapper {
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  width: 100%;
+  min-height: 100%;
+  // max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  // background-image: url("../images/dark_background.png");
+  background-size: cover;
+  // background-position: center;
+  background-attachment: fixed;
+}
+
+header { 
+    .logo {
+      display: inline-flex;
+    nav {
+      display: inline-block;
+      padding: .5%;
+      margin-right: 3%;
+      // float: right;
+      // align-items: flex-end;
+    }
+    .logout {
+      display: inline-flex;
+      padding: .5rem;
+      float: right;
+      align-items: flex-end;
+    }
+  background-color: $purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 2% 0;
+  position: -webkit-sticky;
+  position: sticky;
+  box-shadow: 2px 3px 4px $dark-orange;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+main {
+  flex: 1;
+  padding: 5%;
+}
+
+
+// DASHBOARD SECTIONS
+
   .connection-login {
     display: flex;
     flex-direction: column;
@@ -162,13 +218,6 @@ $white: #f2f2f2;
   }
 
   .light-background {
-<<<<<<< HEAD
-    background-image: url("./images/light_card_background.png");
-  }
-
-  .white-background {
-    background-image: url("./images/white_background.png");
-=======
     background-image: url("/images/light_card_background.png");
     background-size: cover;
   }
@@ -176,7 +225,6 @@ $white: #f2f2f2;
   .white-background {
     background-image: url("/images/white_background.png");
     background-size: cover;
->>>>>>> feature/stylefix
   }
 
   .orange-background {
@@ -287,61 +335,7 @@ $white: #f2f2f2;
     justify-content: center;
   }
   
-  .wrapper {
-      img {
-        width: 3rem;
-        height: 3rem;
-      }
-    width: 100%;
-    min-height: 100%;
-    // max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../images/dark_background.png");
-    background-size: cover;
-    // background-position: center;
-    background-attachment: fixed;
-  }
-
-  header { 
-<<<<<<< HEAD
-      .logo {
-        display: inline-flex;
-=======
-      nav {
-        display: inline-block;
-        padding: .5%;
-        margin-right: 3%;
-        float: right;
-        // align-items: flex-end;
->>>>>>> feature/stylefix
-      }
-      .logout {
-        display: inline-flex;
-        padding: .5rem;
-        float: right;
-        align-items: flex-end;
-      }
-    background-color: $purple;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2% 2% 0;
-    position: -webkit-sticky;
-    position: sticky;
-
-  }
   
-  header h1 {
-    font-size: 1.5rem;
-  }
-  
-  main {
-    flex: 1;
-    padding: 5%;
-  }
-
   // BUTTON STYLES
 
   button {
@@ -689,3 +683,4 @@ $white: #f2f2f2;
     -ms-flex-order: 1;
         order: 1;
   }
+}

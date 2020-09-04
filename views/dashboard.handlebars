@@ -152,9 +152,9 @@
       </div> 
     </div>     
     <h2>Choose Your Information</h2>
-<div class="row around-xs">
+<div class=".row .around-xs">
   {{!-- <div class="row center-xs"> --}}
-    <div class="col-xs">
+    <div class=".col-xs">
       <p class="info">{{profile.first_name}}</p><input type="checkbox" id="profile.first_name">
       <p class="info">{{profile.last_name}}</p><input type="checkbox" id="profile.last_name">
       <p class="info">{{profile.nickname}}</p><input type="checkbox" id="profile.nickname">
@@ -167,7 +167,7 @@
       <p class="info">{{profile.personal_email}}</p><input type="checkbox" id="profile.personal_email">
       <p class="info">{{profile.junk_email}}</p><input type="checkbox" id="profile.junk_email">
     </div>
-    <div class="col-xs">
+    <div class=".col-xs">
       <p class="info">{{profile.business_name}}</p><input type="checkbox" id="profile.business_name">
       <p class="info">{{profile.position}}</p><input type="checkbox" id="profile.position">
       <p class="info">{{profile.business_address}}</p><input type="checkbox" id="profile.business_address">
@@ -178,8 +178,13 @@
       <p class="info">{{profile.slogan}}</p><input type="checkbox" id="profile.slogan">
       <p class="info">{{profile.bio}}</p><input type="checkbox" id="profile.bio">
     </div>
-      <div class="row around-xs">
+      <div class="row .center">
+        <div class=".col">
+          <div class="row .center">
+        <input type="text" class="form-control" placeholder="Card Title" value="{{card_title}}" id ="cardTitle">
+        </div>
         <button type="submit">create card</button>
+        </div>
       </div>
   </div>
 </div>
