@@ -36,6 +36,7 @@ $white: #f2f2f2;
   background-size: cover;
   // background-position: center;
   background-attachment: fixed;
+  margin-bottom: -50px;
 }
 
 header { 
@@ -385,15 +386,22 @@ main {
   }
 
   // FOOTER STYLES
-  footer {
+  .footer , 
+    .push {
+      height: 50px;
+    }
     background-color: $purple;
     display: flex;
     justify-content: center;
     padding: 2%;
     font-size: 110%;
+    position: -webkit-sticky;
+    position: sticky;
+    align-items: center;
+    padding: 2% 2% 0;
   }
 
-  footer p {
+  .footer p {
     color: $peach;
   }
 
@@ -683,4 +691,3 @@ main {
     -ms-flex-order: 1;
         order: 1;
   }
-}
