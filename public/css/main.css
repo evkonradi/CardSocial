@@ -12,14 +12,15 @@ body, html {
   flex-wrap: wrap; }
 
 .connection-login {
-  display: flex;
+  display: inline-flexbox;
   flex-direction: column;
   border-radius: 5px;
   background-color: #F2BB9B;
   position: center;
   padding: 15px 15px;
   text-align: center;
-  justify-content: center; }
+  justify-content: center;
+  max-width: 60%; }
 
 .user-field {
   display: flex;
@@ -235,6 +236,11 @@ form label {
     width: 3rem;
     height: 3rem; }
 
+header nav {
+  display: inline-block;
+  padding: .5%;
+  margin-right: 3%; }
+
 header .logo {
   display: inline-flex;
   background-color: #400135;
@@ -244,10 +250,6 @@ header .logo {
   padding: 2% 2% 0;
   position: -webkit-sticky;
   position: sticky; }
-  header .logo nav {
-    display: inline-block;
-    padding: .5%;
-    margin-right: 3%; }
   header .logo .logout {
     display: inline-flex;
     padding: .5rem;
@@ -439,6 +441,7 @@ header .col-xs-6 {
   box-sizing: border-box;
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
+  max-width: 50%;
   padding: 1rem; }
 
 header .col-xs-offset-6 {

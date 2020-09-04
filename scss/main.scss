@@ -21,7 +21,7 @@ $white: #f2f2f2;
   }
 
   .connection-login {
-    display: flex;
+    display: inline-flexbox;
     flex-direction: column;
     border-radius: 5px;
     background-color: $peach;
@@ -29,6 +29,7 @@ $white: #f2f2f2;
     padding: 15px 15px;
     text-align: center;
     justify-content: center;
+    max-width: 60%;
   }
 
   .user-field {
@@ -297,8 +298,6 @@ $white: #f2f2f2;
   }
 
   header { 
-      .logo {
-        display: inline-flex;
       nav {
         display: inline-block;
         padding: .5%;
@@ -306,6 +305,8 @@ $white: #f2f2f2;
         // float: right;
         // align-items: flex-end;
       }
+      .logo {
+        display: inline-flex;
       .logout {
         display: inline-flex;
         padding: .5rem;
@@ -549,7 +550,7 @@ $white: #f2f2f2;
     box-sizing: border-box;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    // max-width: 50%;
+    max-width: 50%;
     padding: 1rem;
   }
   
