@@ -37,7 +37,7 @@ router.post('/', (req, res) => {
     Card.create({
         card_code: createCode(),
         card_title: req.body.card_title,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         font_id: req.body.font_id,
         background_id: req.body.background_id,
         icon_id: req.body.icon_id,
@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
         show_business_name: req.body.show_business_name,
         show_business_address: req.body.show_business_address,
         show_position: req.body.show_position,
-        show_personal_phone: req.body.show_position,
+        show_personal_phone: req.body.show_personal_phone,
         show_business_phone: req.body.show_business_phone,
         show_business_phone_ext: req.body.show_business_phone_ext,
         show_personal_email: req.body.show_personal_email,
