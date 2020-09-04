@@ -1,17 +1,20 @@
 
+
 async function saveCardHandler(event) {
     event.preventDefault();
     first_name = document.querySelector('#profile_first_name').checked;
     console.log(first_name);
     console.log(document.querySelector('#profile_last_name').checked);
+
+
     const response = await fetch('/api/cards', {
         method: 'post',
         body: JSON.stringify({
-            user_id: 0,
+            user_id: req.session.user_id,
             card_title: 'Test Card',
-            font_id: document.querySelector('#perpetua_font'),
-            background_id: document.querySelector('#peach_background'),
-            icon_id: document.querySelector('#icon-one'),
+            font_id: 1,
+            background_id: 1,
+            icon_id: 1,
             show_first_name: document.querySelector('#profile_first_name').checked,
             show_last_name: document.querySelector('#profile_last_name').checked,
             show_nickname: document.querySelector('#profile_nickname').checked,

@@ -130,7 +130,6 @@ a {
     height: 70px; }
 
 .light-background {
-<<<<<<< HEAD
   background-image: url("/images/light_card_background.png"); 
   background-size: cover;
 }
@@ -139,14 +138,6 @@ a {
   background-image: url("/images/white_background.png"); 
   background-size: cover;
 }
-=======
-  background-image: url("/images/light_card_background.png");
-  background-size: cover; }
-
-.white-background {
-  background-image: url("/images/white_background.png");
-  background-size: cover; }
->>>>>>> feature/stylefix
 
 .orange-background {
   background-color: #F2620F; }
@@ -254,15 +245,6 @@ header {
   padding: 2% 2% 0;
   position: -webkit-sticky;
   position: sticky; }
-<<<<<<< HEAD
-  header .logo {
-    display: inline-flex; }
-  header .logout {
-    display: inline-flex;
-    padding: .5rem;
-    float: right;
-    align-items: flex-end; }
-=======
   header nav {
     display: inline-block;
     padding: .5%;
@@ -270,7 +252,6 @@ header {
     float: right; }
   header .logo {
     display: inline-flex; }
->>>>>>> feature/stylefix
 
 header h1 {
   font-size: 1.5rem; }
