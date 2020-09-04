@@ -162,13 +162,6 @@ $white: #f2f2f2;
   }
 
   .light-background {
-<<<<<<< HEAD
-    background-image: url("./images/light_card_background.png");
-  }
-
-  .white-background {
-    background-image: url("./images/white_background.png");
-=======
     background-image: url("/images/light_card_background.png");
     background-size: cover;
   }
@@ -176,7 +169,6 @@ $white: #f2f2f2;
   .white-background {
     background-image: url("/images/white_background.png");
     background-size: cover;
->>>>>>> feature/stylefix
   }
 
   .orange-background {
@@ -305,17 +297,12 @@ $white: #f2f2f2;
   }
 
   header { 
-<<<<<<< HEAD
-      .logo {
-        display: inline-flex;
-=======
       nav {
         display: inline-block;
         padding: .5%;
         margin-right: 3%;
-        float: right;
+        // float: right;
         // align-items: flex-end;
->>>>>>> feature/stylefix
       }
       .logout {
         display: inline-flex;
