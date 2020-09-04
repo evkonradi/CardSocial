@@ -1,3 +1,20 @@
+@import "bootstrap-overrides";
+@import "my-theme/my-theme";
+
+/*!
+* Bootstrap v4.2.1 (https://getbootstrap.com/)
+* Copyright 2011-2018 The Bootstrap Authors
+* Copyright 2011-2018 Twitter, Inc.
+* Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+*/
+
+// @import "bootstrap/functions";
+// @import "bootstrap/variables";
+// @import "bootstrap/mixins";
+// @import "bootstrap/root";
+// @import "bootstrap/reboot";
+
+
 $font-stack: Helvetica, sans-serif, "Perpetua Titling MT", serif, Verdana, sans-serif;
 $purple: #400135;
 $dark-orange: #F24405;
@@ -7,6 +24,7 @@ $white: #f2f2f2;
 
 * {
     box-sizing: border-box;
+    display: flexbox;
   }
   
   body, html {
@@ -36,7 +54,7 @@ $white: #f2f2f2;
   background-size: cover;
   // background-position: center;
   background-attachment: fixed;
-  margin-bottom: -50px;
+  
 }
 
 header { 
@@ -77,15 +95,15 @@ main {
 
 // DASHBOARD SECTIONS
 
-  .connection-login {
-    display: flex;
-    flex-direction: column;
+  .login {
+    // display: flex;
+    // flex-direction: column;
     border-radius: 5px;
     background-color: $peach;
-    position: center;
-    padding: 15px 15px;
-    text-align: center;
-    justify-content: center;
+    // position: center;
+    // padding: 15px 15px;
+    // text-align: center;
+    // justify-content: center;
   }
 
   .user-field {
@@ -386,10 +404,7 @@ main {
   }
 
   // FOOTER STYLES
-  .footer , 
-    .push {
-      height: 50px;
-    }
+  footer {
     background-color: $purple;
     display: flex;
     justify-content: center;
@@ -401,7 +416,7 @@ main {
     padding: 2% 2% 0;
   }
 
-  .footer p {
+  footer p {
     color: $peach;
   }
 
@@ -691,3 +706,4 @@ main {
     -ms-flex-order: 1;
         order: 1;
   }
+}
