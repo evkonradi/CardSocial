@@ -2,16 +2,17 @@
 
 async function saveCardHandler(event) {
     event.preventDefault();
-    first_name = document.querySelector('#profile_first_name').checked;
+    first_name = document.querySelector('#peach_background').checked;
     console.log(first_name);
-    console.log(document.querySelector('#profile_last_name').checked);
+    console.log(document.querySelector('#white_background').checked);
+    console.log(document.querySelector('#card_title').value);
 
 
     const response = await fetch('/api/cards', {
         method: 'post',
         body: JSON.stringify({
-            user_id: req.session.user_id,
-            card_title: 'Test Card',
+            user_id: req.body.user_id,
+            card_title: document.querySelector('#card_title').value.trim(),
             font_id: 1,
             background_id: 1,
             icon_id: 1,
@@ -22,10 +23,10 @@ async function saveCardHandler(event) {
             show_business_name: document.querySelector('#profile_business_name').checked,
             show_business_address: document.querySelector('#profile_business_address').checked,
             show_position: document.querySelector('#profile_position').checked,
-            show_personal_phone: false,
-            show_business_phone: false,
-            show_business_phone_ext: false,
-            show_personal_email: false,
+            show_personal_phone: document.querySelector('#profile_personal_phone').checked,
+            show_business_phone: document.querySelector('#profile_business_phone').checked,
+            show_business_phone_ext: document.querySelector('#profile_business_phone_ext').checked,
+            show_personal_email: document.querySelector('#profile_personal_email').checked,
             show_business_email: false,
             show_junk_email: false,
             show_business_url: false,
