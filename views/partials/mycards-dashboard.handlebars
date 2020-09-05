@@ -1,19 +1,23 @@
 {{!-- <li class="li-display"> --}}
 <div class="row around-xs">
-    <div class="col-xs-4">
+    {{!-- <div class="col-xs"> --}}
+        {{!-- <div class="row"> --}}
+            <div class="col-sm-4">
         <div id ="cardCodeDiv" class="card {{background.background_name}} cursor-pointer" data-card-code="{{card_code}}">
             {{!-- <div class="card-body text-align-center"> --}}
                 <img src="{{icon.icon_path}}" />
                 <h5 class="card-title {{font.font_name}}">{{card_title}}</h5>
                 <h5 class="card-code">&nbsp;{{card_code}}</h5>
             {{!-- </div> --}}
-        </div>    
-            <div class="row">
+        {{!-- </div>     --}}
+            {{!-- <div class="row"> --}}
                 <button type="submit" data-qr-card-code="{{card_code}}" data-bg="{{background.background_name}}">QR code</button>
                 <button type="submit" data-edit-card-code="{{card_code}}">edit card</button>
                 <button type="submit" data-delete-card-code="{{card_code}}">delete card</button>
             </div>
-    </div>
+            {{!-- </div>
+            </div> --}}
+    {{!-- </div> --}}
 </div>
     
 {{!-- </li> --}}

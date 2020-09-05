@@ -74,6 +74,9 @@ body, html {
   position: center;
   padding: 15px 15px; }
 
+.cardCodeDiv {
+  max-width: 30%; }
+
 .container-info {
   display: flex;
   flex-direction: column;
@@ -105,12 +108,55 @@ h3 {
 h2 {
   color: #400135;
   text-align: center;
-  text-shadow: 1px 2px 3px #f2f2f2; }
+  text-transform: uppercase; }
 
 h1 {
+  font-size: 3em;
   color: #F24405;
+  transform: translateX(-600px);
+  animation: 1.2s slideIn ease-in-out forwards 1s;
+  z-index: 10;
+  opacity: 0;
   text-align: right;
-  padding-right: 50px; }
+  padding-right: 50px;
+  position: relative; }
+
+h1::before {
+  content: '';
+  width: 0%;
+  height: 3em;
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: -10px;
+  animation: 1s underline ease-in-out forwards 2s;
+  mix-blend-mode: screen; }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--secondary-color);
+  transform: scale(0.5);
+  animation: .5s slideIn ease-in-out forwards, 1s skewBg ease-in-out; }
+
+@keyframes skewBg {
+  0% {
+    transform: scale(0.5); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes underline {
+  100% {
+    width: 100%; } }
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
 
 a {
   text-decoration: none;
@@ -266,6 +312,9 @@ header {
   padding: 2% 2% 0;
   position: -webkit-sticky;
   position: sticky; }
+  header .h1 {
+    color: #F2BB9B;
+    display: inline-flex; }
   header nav {
     display: inline-block;
     padding: .5%;
