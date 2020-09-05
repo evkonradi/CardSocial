@@ -30,7 +30,6 @@ async function saveCardHandler(event) {
     const response = await fetch('/api/cards', {
         method: 'post',
         body: JSON.stringify({
-            user_id: 1,
             card_title: document.querySelector('#card_title').value.trim(),
             font_id: font,
             background_id: background,
@@ -66,14 +65,6 @@ async function saveCardHandler(event) {
     }
 };
 
-async function deleteCardHandler(event) {
-    event.preventDefault();
-    console.log("A delete button was pressed.")
-    // const response = await fetch('/api/cards', {
-    //     method: 'delete',
-    // })
-}
 
-  
+
 document.querySelector('#cardSave').addEventListener('click', saveCardHandler);
-document.querySelector('#cardDelete').addEventListener('click', deleteCardHandler);
