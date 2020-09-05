@@ -30,7 +30,6 @@ async function saveCardHandler(event) {
     const response = await fetch('/api/cards', {
         method: 'post',
         body: JSON.stringify({
-            user_id: 1,
             card_title: document.querySelector('#card_title').value.trim(),
             font_id: font,
             background_id: background,
@@ -66,5 +65,6 @@ async function saveCardHandler(event) {
     }
 };
 
-  
+
+
 document.querySelector('#cardSave').addEventListener('click', saveCardHandler);
