@@ -1,20 +1,29 @@
 
-
 async function saveCardHandler(event) {
     event.preventDefault();
-    first_name = document.querySelector('#peach_background').checked;
-    console.log(first_name);
-    console.log(document.querySelector('#white_background').checked);
-    console.log(document.querySelector('#card_title').value);
-
+    if (document.querySelector('#light_background').checked) {
+        background = 1;
+    } else if (document.querySelector('#white_background').checked) {
+        background = 2;
+    } else if (document.querySelector('#orange_background').checked) {
+        background = 3;
+    } else {
+        background = 4;
+    };
+    
+    if (document.querySelector('#perpetua_font').checked) {
+        font = 1;
+    } else {
+        font = 2;
+    };
 
     const response = await fetch('/api/cards', {
         method: 'post',
         body: JSON.stringify({
-            user_id: req.body.user_id,
+            user_id: 1,
             card_title: document.querySelector('#card_title').value.trim(),
             font_id: 1,
-            background_id: 1,
+            background_id: background,
             icon_id: 1,
             show_first_name: document.querySelector('#profile_first_name').checked,
             show_last_name: document.querySelector('#profile_last_name').checked,
@@ -27,15 +36,15 @@ async function saveCardHandler(event) {
             show_business_phone: document.querySelector('#profile_business_phone').checked,
             show_business_phone_ext: document.querySelector('#profile_business_phone_ext').checked,
             show_personal_email: document.querySelector('#profile_personal_email').checked,
-            show_business_email: false,
-            show_junk_email: false,
-            show_business_url: false,
-            show_linkedin_url: false,
-            show_instagram_url: false,
-            show_facebook_url: false,
-            show_twitter_url: false,
-            show_bio: false,
-            show_slogan: true
+            show_business_email: document.querySelector('#profile_business_email').checked,
+            show_junk_email: document.querySelector('#profile_junk_email').checked,
+            show_business_url: document.querySelector('#profile_business_url').checked,
+            show_linkedin_url: document.querySelector('#profile_linkedin_url').checked,
+            show_instagram_url: document.querySelector('#profile_instagram_url').checked,
+            show_facebook_url: document.querySelector('#profile_facebook_url').checked,
+            show_twitter_url: document.querySelector('#profile_twitter_url').checked,
+            show_bio: document.querySelector('#profile_bio').checked,
+            show_slogan: document.querySelector('#profile_slogan').checked
         }),
         headers: { 'Content-Type': 'application/json' }
     });
