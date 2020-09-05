@@ -548,3 +548,13 @@ footer p {
 .cursor-pointer{
     cursor: pointer;
 }
+
+/* validations css */
+.small-hidden{
+  visibility: hidden;
+}
+.small-visible{
+  color: #e74c3c;
+  visibility: visible;
+  display: block;
+}
