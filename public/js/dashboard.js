@@ -1,5 +1,3 @@
-//const { NULL } = require("node-sass");
-
 $('#businessPhone').keyup(function(){
     $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
 });
@@ -71,18 +69,28 @@ async function saveProfileHandler(event) {
 var viewMyCardHandler = function(event){
     var targetEl = event.target;
 
-    var closestEl = targetEl.closest("#cardCodeDiv");
-
-    if (closestEl){
-        if (closestEl.hasAttribute("data-card-code")) {
-            var cardCode = closestEl.getAttribute("data-card-code");
-            document.location.replace('/card/'+ cardCode);
-        } 
+    if (targetEl.hasAttribute("data-qr-card-code")){
+        //clicked on the QR button
+        var cardCode = event.target.getAttribute("data-qr-card-code");
+        document.location.replace('/qr-code/'+ cardCode);
     }
+    else{
+        //clicked on the card itself
+        var closestEl = targetEl.closest("#cardCodeDiv");
+
+        if (closestEl){
+            if (closestEl.hasAttribute("data-card-code")) {
+                var cardCode = closestEl.getAttribute("data-card-code");
+                document.location.replace('/card/'+ cardCode);
+            } 
+        }
+    }
+
 };
-  
+
 document.querySelector('#profileSave').addEventListener('click', saveProfileHandler);
 document.querySelector('#profileSave').addEventListener('click', saveProfileHandler);
 document.querySelector('#mycards-list').addEventListener("click", viewMyCardHandler);
+
 
 
