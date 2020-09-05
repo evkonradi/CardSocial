@@ -120,10 +120,10 @@
               <h5 class="card-title">Select Background</h5>
           <div class="card-body">
             <div class="backgrounds">
-              <img class="circle" src="./images/light_card_background.png" alt="peach background"><input type="radio" id="peach background" name="background" value="peach">
-              <img class="circle" src="./images/white_background.png" alt="white background"><input type="radio" id="white background" name="background" value="white">
-              <div class="orangebackground" alt="orange background"></div><input type="radio" id="orange background" name="background" value="orange">
-              <div class="peachbackground" alt="peach background"></div><input type="radio" id="peach background" name="background" value="peach">
+              <img class="circle" src="./images/light_card_background.png" alt="peach background"><input type="radio" id="light_background" name="background" value="peach">
+              <img class="circle" src="./images/white_background.png" alt="white background"><input type="radio" id="white_background" name="background" value="white">
+              <div class="orangebackground" alt="orange background"></div><input type="radio" id="orange_background" name="background" value="orange">
+              <div class="peachbackground" alt="peach background"></div><input type="radio" id="peach_background" name="background" value="peach">
             </div>
           </div>
         </div>
@@ -132,9 +132,9 @@
         <div class="card">
             <div class="font-card">
               <h5 class="card-title">Select Font</h5>
-            <div class="card-body">
-              <p class="font-one">Perpetua Example<input type="radio" id="perpetua font" name="font" value="perpetua"></p>
-              <p class="font-two">Verdana Example<input type="radio" id="verdana font" name="font" value="verdana"></p>
+            <div class="card-body" id="card-font">
+              <p class="font-one">Perpetua Example<input type="radio" id="perpetua_font" name="font" value="perpetua"></p>
+              <p class="font-two">Verdana Example<input type="radio" id="verdana_font" name="font" value="verdana"></p>
             </div>
             </div>
         </div>
@@ -143,10 +143,10 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Select Icon</h5>
-            <img title="icon-one" alt="tie-icon" src="./icons/tie.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-one">
-            <img title="icon-two" alt="share-icon" src="./icons/share.png" width="30px"><input type="radio" id="icon-two" name="icon" value="icon-two">
-            <img title="icon-three" alt="email-icon" src="./icons/email.png" width="30px"><input type="radio" id="icon-three" name="icon" value="icon-three">
-            <img title="icon-four" alt="layers-icon" src="./icons/layers.png" width="30px"><input type="radio" id="icon-four" name="icon" value="icon-four">
+            <img title="icon-one" alt="tie-icon" src="./icons/tie.png" width="30px"><input type="radio" id="icon-four" name="icon" value="icon-one">
+            <img title="icon-two" alt="share-icon" src="./icons/share.png" width="30px"><input type="radio" id="icon-three" name="icon" value="icon-two">
+            <img title="icon-three" alt="email-icon" src="./icons/email.png" width="30px"><input type="radio" id="icon-two" name="icon" value="icon-three">
+            <img title="icon-four" alt="layers-icon" src="./icons/layers.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-four">
           </div>
         </div>
       </div> 
@@ -155,31 +155,34 @@
 <div class="row around-xs">
   {{!-- <div class="row center-xs"> --}}
     <div class="col-xs">
-      <p class="info">{{profile.first_name}}</p><input type="checkbox" id="profile.first_name">
-      <p class="info">{{profile.last_name}}</p><input type="checkbox" id="profile.last_name">
-      <p class="info">{{profile.nickname}}</p><input type="checkbox" id="profile.nickname">
-      <p class="info">{{profile.home_address}}</p><input type="checkbox" id="profile.home_address">
-      <p class="info">{{profile.linkedin_url}}</p><input type="checkbox" id="profile.linkedin_url">
-      <p class="info">{{profile.instagram_url}}</p><input type="checkbox" id="profile.instagram_url">
-      <p class="info">{{profile.facebook_url}}</p><input type="checkbox" id="profile.facebook_url">
-      <p class="info">{{profile.twitter_url}}</p><input type="checkbox" id="profile.twitter_url">
-      <p class="info">{{format_phone profile.personal_phone}}</p><input type="checkbox" id="profile.personal_phone">
-      <p class="info">{{profile.personal_email}}</p><input type="checkbox" id="profile.personal_email">
-      <p class="info">{{profile.junk_email}}</p><input type="checkbox" id="profile.junk_email">
+      <p class="info">{{profile.first_name}}</p><input type="checkbox" id="profile_first_name" onchange="true">
+      <p class="info">{{profile.last_name}}</p><input type="checkbox" id="profile_last_name" onchange="true">
+      <p class="info">{{profile.nickname}}</p><input type="checkbox" id="profile_nickname">
+      <p class="info">{{profile.home_address}}</p><input type="checkbox" id="profile_home_address">
+      <p class="info">{{profile.linkedin_url}}</p><input type="checkbox" id="profile_linkedin_url">
+      <p class="info">{{profile.instagram_url}}</p><input type="checkbox" id="profile_instagram_url">
+      <p class="info">{{profile.facebook_url}}</p><input type="checkbox" id="profile_facebook_url">
+      <p class="info">{{profile.twitter_url}}</p><input type="checkbox" id="profile_twitter_url">
+      <p class="info">{{format_phone profile.personal_phone}}</p><input type="checkbox" id="profile_personal_phone">
+      <p class="info">{{profile.personal_email}}</p><input type="checkbox" id="profile_personal_email">
+      <p class="info">{{profile.junk_email}}</p><input type="checkbox" id="profile_junk_email">
     </div>
     <div class="col-xs">
-      <p class="info">{{profile.business_name}}</p><input type="checkbox" id="profile.business_name">
-      <p class="info">{{profile.position}}</p><input type="checkbox" id="profile.position">
-      <p class="info">{{profile.business_address}}</p><input type="checkbox" id="profile.business_address">
-      <p class="info">{{format_phone profile.business_phone}}</p><input type="checkbox" id="profile.business_phone">
-      <p class="info">{{profile.business_phone_ext}}</p><input type="checkbox" id="profile.business_phone_ext">
-      <p class="info">{{profile.business_email}}</p><input type="checkbox" id="profile.business_email">
-      <p class="info">{{profile.business_url}}</p><input type="checkbox" id="profile.business_url">
-      <p class="info">{{profile.slogan}}</p><input type="checkbox" id="profile.slogan">
-      <p class="info">{{profile.bio}}</p><input type="checkbox" id="profile.bio">
+      <p class="info">{{profile.business_name}}</p><input type="checkbox" id="profile_business_name">
+      <p class="info">{{profile.position}}</p><input type="checkbox" id="profile_position">
+      <p class="info">{{profile.business_address}}</p><input type="checkbox" id="profile_business_address">
+      <p class="info">{{format_phone profile.business_phone}}</p><input type="checkbox" id="profile_business_phone">
+      <p class="info">{{profile.business_phone_ext}}</p><input type="checkbox" id="profile_business_phone_ext">
+      <p class="info">{{profile.business_email}}</p><input type="checkbox" id="profile_business_email">
+      <p class="info">{{profile.business_url}}</p><input type="checkbox" id="profile_business_url">
+      <p class="info">{{profile.slogan}}</p><input type="checkbox" id="profile_slogan">
+      <p class="info">{{profile.bio}}</p><input type="checkbox" id="profile_bio">
     </div>
       <div class="row around-xs">
-        <button type="submit">create card</button>
+        <input type="text" class="info" placeholder="NAME YOUR CARD" id="card_title">
+      </div>
+      <div class="row around-xs">
+        <button type="submit" id='cardSave'>create card</button>
       </div>
   </div>
 </div>
@@ -189,3 +192,4 @@
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/js/dashboard.js"></script>
+<script src="/js/mycards.js"></script>
