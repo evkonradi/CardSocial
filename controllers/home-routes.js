@@ -25,7 +25,7 @@ async function generateQR(req, res, code, background_name) {
     }
 
     const qrImage = await QRCode.toDataURL('https://cryptic-shelf-96558.herokuapp.com/card/' + code, opts);
-    res.render('qr-code', {qrImage, background_name, loggedIn: req.session.loggedIn});
+    res.render('qr-code', {qrImage, background_name, loggedIn: req.session.loggedIn, code});
   } catch (err) {
     console.error(err)
   }
