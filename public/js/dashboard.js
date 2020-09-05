@@ -66,7 +66,9 @@ async function saveProfileHandler(event) {
     }
 };
 
-var viewMyCardHandler = function(event){
+// var viewMyCardHandler = function(event){
+// Await only valid in async function
+async function viewMyCardHandler(event){
     var targetEl = event.target;
 
     if (targetEl.hasAttribute("data-qr-card-code")){
@@ -74,6 +76,20 @@ var viewMyCardHandler = function(event){
         var cardCode = event.target.getAttribute("data-qr-card-code");
         var background_name = event.target.getAttribute("data-bg");
         document.location.replace('/qr-code/'+ cardCode + '/' + background_name);
+    }
+    else if (targetEl.hasAttribute("data-delete-card-code")) {
+        console.log("A delete button was pressed.");
+        const id = event.target.getAttribute("data-delete-card-code");
+        console.log(id);
+        const response = await fetch(`/api/cards/${id}`, {
+            method: 'delete',
+            headers: { 'Content-Type': 'application/json' }
+        });
+        if (response.ok) {
+            document.location.replace('/dashboard', {loggedIn: true});
+        } else {
+            alert(response.statusText);
+        }
     }
     else{
         //clicked on the card itself
@@ -86,6 +102,7 @@ var viewMyCardHandler = function(event){
             } 
         }
     }
+
 
 };
 

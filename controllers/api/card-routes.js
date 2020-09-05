@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Font, Background, Icon, Card } = require('../../models');
 const { createCode } = require('../../utils/code');
+const withAuth = require('../../utils/auth');
 
 // GET /api/cards
 router.get('/', withAuth, (req, res) => {

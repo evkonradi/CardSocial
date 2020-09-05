@@ -1,4 +1,3 @@
-const withAuth = require('../../utils/auth');
 
 async function saveCardHandler(event) {
     event.preventDefault();
