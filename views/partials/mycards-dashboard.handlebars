@@ -4,13 +4,15 @@
             <div class="card-body text-align-center">
                 <img src="{{icon.icon_path}}" />
                 <h5 class="card-title {{font.font_name}}">{{card_title}}</h5>
-                <h5 class="card-title">Card code:&nbsp;{{card_code}}</h5>
+                <h5 class="card-code">CARD CODE:&nbsp;{{card_code}}</h5>
             </div>
         </div>
         <div class="row around-xs">
-            <button type="submit">QR code</button>
-            <button type="submit">edit card</button>
-            <button type="submit">delete card</button>
+            <button type="submit" data-qr-card-code="{{card_code}}" data-bg="{{background.background_name}}">QR code</button>
+            <button type="submit" data-edit-card-code="{{card_code}}">edit card</button>
+            <button type="submit" data-delete-card-code="{{card_code}}">delete card</button>
         </div>
     </div>
 </li>
+
+<script src="/js/edit.js"></script>
