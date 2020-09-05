@@ -112,6 +112,10 @@ a {
     color: #400135;
     size: 24px;
     text-transform: uppercase; }
+  .card .card-code {
+    color: #400135;
+    size: 24px;
+  }
   .card h5 {
     text-align: center; }
   .card body {
