@@ -77,10 +77,9 @@ async function viewMyCardHandler(event){
         var background_name = event.target.getAttribute("data-bg");
         document.location.replace('/qr-code/'+ cardCode + '/' + background_name);
     }
+    // Click on delete button
     else if (targetEl.hasAttribute("data-delete-card-code")) {
-        console.log("A delete button was pressed.");
         const id = event.target.getAttribute("data-delete-card-code");
-        console.log(id);
         const response = await fetch(`/api/cards/${id}`, {
             method: 'delete',
             headers: { 'Content-Type': 'application/json' }
