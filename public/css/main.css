@@ -56,8 +56,15 @@ body, html {
   position: center;
   text-align: center;
   justify-content: space-around;
-  width: 70%;
+  width: 60%;
   margin: auto; }
+  .user-card h2 {
+    color: #400135;
+    text-transform: uppercase; }
+  .user-card h3 {
+    color: #F24405; }
+  .user-card p {
+    color: #f2f2f2; }
 
 .build-card {
   display: flex;
@@ -66,6 +73,20 @@ body, html {
   background-color: #f2f2f2;
   position: center;
   padding: 15px 15px; }
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  opacity: 50%;
+  margin: 1em;
+  position: center;
+  justify-content: space-around;
+  z-index: -4; }
+  .container-info .icon {
+    margin: .5em;
+    position: center;
+    justify-content: space-around; }
 
 .newcard {
   display: flex;
@@ -112,12 +133,9 @@ a {
     color: #400135;
     size: 24px;
     text-transform: uppercase; }
-  .card .card-code {
-    color: #400135;
-    size: 24px;
-  }
   .card h5 {
-    text-align: center; }
+    text-align: center;
+    color: #400135; }
   .card body {
     display: flex;
     align-content: space-around; }
@@ -135,7 +153,8 @@ a {
 
 .light-background {
   background-image: url("/images/light_card_background.png");
-  background-size: cover; }
+  background-size: cover;
+  z-index: -1; }
 
 .white-background {
   background-image: url("/images/white_background.png");
@@ -248,12 +267,14 @@ header {
   position: -webkit-sticky;
   position: sticky; }
   header nav {
-    /*display: inline-block;*/
+    display: inline-block;
     padding: .5%;
-    margin-right: 3%;
-    float: right; }
-  header .logo {
-    display: inline-flex; }
+    margin-right: 3%; }
+  header .logout {
+    display: inline-flex;
+    padding: .5rem;
+    float: right;
+    align-items: flex-end; }
 
 header h1 {
   font-size: 1.5rem; }
@@ -263,7 +284,7 @@ main {
   padding: 5%; }
 
 button {
-  background-color: #F24405;
+  background-color: #400135;
   border: 0;
   padding: 1.5%;
   color: #f2f2f2;
@@ -275,7 +296,7 @@ button {
   margin-top: 2%; }
 
 button:hover {
-  background-color: #400135; }
+  background-color: #F24405; }
 
 .logout {
   background-color: #400135;

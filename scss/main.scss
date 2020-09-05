@@ -64,6 +64,16 @@ $white: #f2f2f2;
   }
 
   .user-card {
+    h2 {
+      color: $purple;
+      text-transform: uppercase;
+    }
+    h3 {
+      color: $dark-orange;
+    }
+    p {
+      color: $white;
+    }
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -71,7 +81,7 @@ $white: #f2f2f2;
     position: center;
     text-align: center;
     justify-content: space-around;
-    width: 70%;
+    width: 60%;
     margin: auto;
   }
 
@@ -84,6 +94,22 @@ $white: #f2f2f2;
     padding: 15px 15px;
     // flex-basis: auto;
     // overflow: hidden;
+  }
+
+  .container-info {
+    .icon{
+      margin: .5em;
+      position: center;
+      justify-content: space-around;
+    }
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    opacity: 50%;
+    margin: 1em;
+    position: center;
+    justify-content: space-around;
+    z-index: -4;
   }
 
   .newcard {
@@ -132,6 +158,7 @@ $white: #f2f2f2;
     }
     h5{
       text-align: center;
+      color: $purple;
     }
     body {
       display: flex;
@@ -164,6 +191,7 @@ $white: #f2f2f2;
   .light-background {
     background-image: url("/images/light_card_background.png");
     background-size: cover;
+    z-index: -1;
   }
 
   .white-background {
@@ -332,7 +360,7 @@ $white: #f2f2f2;
   // BUTTON STYLES
 
   button {
-    background-color: $dark-orange;
+    background-color: $purple;
     border: 0;
     padding: 1.5%;
     color: $white;
@@ -345,7 +373,7 @@ $white: #f2f2f2;
   }
   
   button:hover {
-    background-color: $purple;
+    background-color: $dark-orange;
   }
 
   .logout {
