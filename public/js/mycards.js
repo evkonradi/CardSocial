@@ -17,14 +17,24 @@ async function saveCardHandler(event) {
         font = 2;
     };
 
+    if (document.querySelector('#icon-one').checked) {
+        icon = 1;
+    } else if (document.querySelector('#icon-two').checked) {
+        icon = 2;
+    } else if (document.querySelector('#icon-three').checked) {
+        icon = 3;
+    } else {
+        icon = 4;
+    };
+
     const response = await fetch('/api/cards', {
         method: 'post',
         body: JSON.stringify({
             user_id: 1,
             card_title: document.querySelector('#card_title').value.trim(),
-            font_id: 1,
+            font_id: font,
             background_id: background,
-            icon_id: 1,
+            icon_id: icon,
             show_first_name: document.querySelector('#profile_first_name').checked,
             show_last_name: document.querySelector('#profile_last_name').checked,
             show_nickname: document.querySelector('#profile_nickname').checked,
