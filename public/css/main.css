@@ -246,7 +246,7 @@ header {
   position: -webkit-sticky;
   position: sticky; }
   header nav {
-    display: inline-block;
+    /*display: inline-block;*/
     padding: .5%;
     margin-right: 3%;
     float: right; }
