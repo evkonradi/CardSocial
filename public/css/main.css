@@ -544,3 +544,7 @@ footer p {
 .last-xs {
   -ms-flex-order: 1;
   order: 1; }
+
+.cursor-pointer{
+    cursor: pointer;
+}

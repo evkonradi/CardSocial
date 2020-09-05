@@ -73,7 +73,7 @@ var viewMyCardHandler = function(event){
         //clicked on the QR button
         var cardCode = event.target.getAttribute("data-qr-card-code");
         var background_name = event.target.getAttribute("data-bg");
-        document.location.replace('/qr-code/'+ cardCode + '/' + background_name);
+        document.location.replace('/qr-code/'+ cardCode + '/' + background_name, {loggedIn: true});
     }
     else{
         //clicked on the card itself
@@ -82,7 +82,7 @@ var viewMyCardHandler = function(event){
         if (closestEl){
             if (closestEl.hasAttribute("data-card-code")) {
                 var cardCode = closestEl.getAttribute("data-card-code");
-                document.location.replace('/card/'+ cardCode);
+                document.location.replace('/card/'+ cardCode, {loggedIn: true});
             } 
         }
     }

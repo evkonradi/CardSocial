@@ -1,5 +1,6 @@
 const router = require('express').Router();
 var QRCode = require('qrcode');
+const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
     res.render('homepage', {loggedIn: req.session.loggedIn});
@@ -9,7 +10,7 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
   
-async function generateQR(res, code, background_name) {
+async function generateQR(req, res, code, background_name) {
   try {
 
     var opts = {
@@ -24,14 +25,14 @@ async function generateQR(res, code, background_name) {
     }
 
     const qrImage = await QRCode.toDataURL('http://localhost:3001/qr-code/' + code + '/' + background_name, opts);
-    res.render('qr-code', {qrImage, background_name});
+    res.render('qr-code', {qrImage, background_name, loggedIn: req.session.loggedIn});
   } catch (err) {
     console.error(err)
   }
 };
 
-router.get('/qr-code/:code/:background_name', (req, res) => {
-  generateQR(res, req.params.code, req.params.background_name);
+router.get('/qr-code/:code/:background_name', withAuth, (req, res) => {
+  generateQR(req, res, req.params.code, req.params.background_name);
 });
 
 
