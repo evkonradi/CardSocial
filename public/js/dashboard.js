@@ -72,7 +72,8 @@ var viewMyCardHandler = function(event){
     if (targetEl.hasAttribute("data-qr-card-code")){
         //clicked on the QR button
         var cardCode = event.target.getAttribute("data-qr-card-code");
-        document.location.replace('/qr-code/'+ cardCode);
+        var background_name = event.target.getAttribute("data-bg");
+        document.location.replace('/qr-code/'+ cardCode + '/' + background_name);
     }
     else{
         //clicked on the card itself

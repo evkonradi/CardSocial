@@ -9,7 +9,7 @@ router.get('/login', (req, res) => {
     res.render('login');
   });
   
-async function generateQR(res, code) {
+async function generateQR(res, code, background_name) {
   try {
 
     var opts = {
@@ -23,15 +23,15 @@ async function generateQR(res, code) {
       }
     }
 
-    const qrImage = await QRCode.toDataURL('http://localhost:3001/qr/' + code, opts);
-    res.render('qr-code', {qrImage});
+    const qrImage = await QRCode.toDataURL('http://localhost:3001/qr-code/' + code + '/' + background_name, opts);
+    res.render('qr-code', {qrImage, background_name});
   } catch (err) {
     console.error(err)
   }
 };
 
-router.get('/qr-code/:code', (req, res) => {
-  generateQR(res, req.params.code);
+router.get('/qr-code/:code/:background_name', (req, res) => {
+  generateQR(res, req.params.code, req.params.background_name);
 });
 
 
