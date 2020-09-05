@@ -24,7 +24,7 @@ async function generateQR(req, res, code, background_name) {
       }
     }
 
-    const qrImage = await QRCode.toDataURL('http://localhost:3001/qr-code/' + code + '/' + background_name, opts);
+    const qrImage = await QRCode.toDataURL('https://cryptic-shelf-96558.herokuapp.com/qr-code/' + code + '/' + background_name, opts);
     res.render('qr-code', {qrImage, background_name, loggedIn: req.session.loggedIn});
   } catch (err) {
     console.error(err)
@@ -35,5 +35,8 @@ router.get('/qr-code/:code/:background_name', withAuth, (req, res) => {
   generateQR(req, res, req.params.code, req.params.background_name);
 });
 
+router.get('/errorcard',  (req, res) => {
+  res.render('errorcard', {loggedIn: req.session.loggedIn});
+});
 
 module.exports = router;
