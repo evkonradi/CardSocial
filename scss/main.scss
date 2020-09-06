@@ -80,7 +80,7 @@ $white: #f2f2f2;
       color: $dark-orange;
     }
     p {
-      color: $white;
+      color: $purple;
     }
     display: flex;
     flex-direction: column;
@@ -124,6 +124,7 @@ $white: #f2f2f2;
     position: center;
     justify-content: space-around;
     z-index: -4;
+    overflow-wrap: break-word;
   }
 
   .newcard {
@@ -509,6 +510,19 @@ $white: #f2f2f2;
     // transition: color .1s;
     // margin-left: 16px;
   }
+
+  .cursor-pointer{
+    cursor: pointer;
+}
+/* validations css */
+.small-hidden{
+  visibility: hidden;
+}
+.small-visible{
+  color: #E74C3C;
+  visibility: visible;
+  display: block;
+}
 
   // FOOTER STYLES
   footer {

@@ -65,7 +65,7 @@ body, html {
   .user-card h3 {
     color: #F24405; }
   .user-card p {
-    color: #f2f2f2; }
+    color: #400135; }
 
 .build-card {
   display: flex;
@@ -87,7 +87,8 @@ body, html {
   margin: 1em;
   position: center;
   justify-content: space-around;
-  z-index: -4; }
+  z-index: -4;
+  overflow-wrap: break-word; }
   .container-info .icon {
     margin: .5em;
     position: center;
@@ -391,6 +392,18 @@ button:hover {
   font-weight: bold; }
   .btn-no-style:hover {
     background-color: #F24405; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
+/* validations css */
+.small-hidden {
+  visibility: hidden; }
+
+.small-visible {
+  color: #E74C3C;
+  visibility: visible;
+  display: block; }
 
 footer {
   background-color: #400135;
