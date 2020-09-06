@@ -1,3 +1,5 @@
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
 async function signupHandler(event) {
     event.preventDefault();
   
@@ -6,7 +8,8 @@ async function signupHandler(event) {
     const personal_email = document.querySelector('#email-signup').value.trim();
     const pwd = document.querySelector('#password-signup').value.trim();
 
-    SetAllFieldsForSuccess();
+    // validation
+    SetAllFieldsForSuccess(); 
 
     if(first_name === '') 
       setErrorFor("firstname-signup", 'First Name cannot be blank!');
@@ -14,8 +17,9 @@ async function signupHandler(event) {
     if(last_name === '') 
       setErrorFor("lastname-signup", 'Last Name cannot be blank!');
 
-    if(personal_email === '') 
-      setErrorFor("email-signup", 'Email cannot be blank!');
+    if (!personal_email.match(mailformat)){ 
+      setErrorFor("email-signup", 'Please enter Email in the email format!');
+    }
 
     if(pwd.length < 6) 
       setErrorFor("password-signup", 'Password should be at least 6 characters!');
@@ -47,8 +51,9 @@ async function loginHandler(event) {
 
   SetAllFieldsForSuccess();
 
-  if(personal_email === '') 
-    setErrorFor("email-login", 'Email cannot be blank!');
+  if (!personal_email.match(mailformat)){ 
+    setErrorFor("email-login", 'Please enter Email in the email format!');
+  }
 
   if(pwd.length === 0) 
     setErrorFor("password-login", 'Password cannot be blank!');
@@ -71,6 +76,7 @@ async function loginHandler(event) {
   }
 }
 
+//function used for validation
 function SetAllFieldsForSuccess(){
   setSuccessFor("email-login");
   setSuccessFor("password-login");

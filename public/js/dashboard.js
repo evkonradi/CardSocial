@@ -10,12 +10,49 @@ var formatPhoneForSave = function(phone) {
     if (!phone)
     return '';
 
-    console.log(phone);
     const numbers = ["0","1","2","3","4","5","6","7","8","9"];
     let formatted_phone = phone.split('').filter(num => numbers.indexOf(num)>=0).join('').toString();
 
     return formatted_phone;
 };
+
+var clientValidationError = function(){
+
+    SetAllFieldsForSuccess();
+
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let errorFlag = false;
+
+    if(document.querySelector('#firstName').value.trim() === ''){
+        setErrorFor("firstName", 'First Name cannot be blank!');
+        errorFlag = true;
+    }
+        
+    if(document.querySelector('#lastName').value.trim() === ''){
+        setErrorFor("lastName", 'Last Name cannot be blank!');
+        errorFlag = true;
+    }
+
+    if(personalEmail === ''){
+        setErrorFor("personalEmail", 'Personal Email cannot be blank!');
+        errorFlag = true;
+    }
+
+    if (!document.querySelector('#personalEmail').value.match(mailformat)){ 
+        setErrorFor("personalEmail", 'Please enter Personal Email in the email format!');
+        errorFlag = true;
+    }
+    if (!document.querySelector('#businessEmail').value.match(mailformat)){ 
+        setErrorFor("businessEmail", 'Please enter Business Email in the email format!');
+        errorFlag = true;
+    }
+    if (!document.querySelector('#junkEmail').value.match(mailformat)){ 
+        setErrorFor("junkEmail", 'Please enter Junk Email in the email format!');
+        errorFlag = true;
+    }
+
+    return errorFlag;
+}
 
 async function saveProfileHandler(event) {
     event.preventDefault();
@@ -31,6 +68,10 @@ async function saveProfileHandler(event) {
     let instagramUrl = document.querySelector('#instagramUrl').value.trim();
     let facebookUrl = document.querySelector('#facebookUrl').value.trim();
     let twitterUrl = document.querySelector('#twitterUrl').value.trim();
+
+    if (clientValidationError()){
+            return;
+    }
 
     const response = await fetch('/api/users/user', {
         method: 'put',
@@ -65,6 +106,15 @@ async function saveProfileHandler(event) {
         alert(response.statusText);
     }
 };
+
+//function used for validation
+function SetAllFieldsForSuccess(){
+    setSuccessFor("firstName");
+    setSuccessFor("lastName");
+    setSuccessFor("personalEmail");
+    setSuccessFor("businessEmail");
+    setSuccessFor("junkEmail");
+}
 
 // var viewMyCardHandler = function(event){
 // Await only valid in async function
