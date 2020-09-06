@@ -123,7 +123,7 @@
         <div class="card">
               <h4 class="card-title">Select Background</h5>
           <div class="card-body">
-            <div class="backgrounds">
+            <div class="backgrounds row around-xs">
               <img class="circle" src="./images/light_card_background.png" alt="peach background"><input type="radio" id="light_background" name="background" value="peach">
               <img class="circle" src="./images/white_background.png" alt="white background"><input type="radio" id="white_background" name="background" value="white">
               <div class="orangebackground" alt="orange background"></div><input type="radio" id="orange_background" name="background" value="orange">
@@ -147,10 +147,16 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Select Icon</h5>
-            <img title="icon-one" alt="tie-icon" src="./icons/tie.png" width="30px"><input type="radio" id="icon-four" name="icon" value="icon-one">
-            <img title="icon-two" alt="share-icon" src="./icons/share.png" width="30px"><input type="radio" id="icon-three" name="icon" value="icon-two">
-            <img title="icon-three" alt="email-icon" src="./icons/email.png" width="30px"><input type="radio" id="icon-two" name="icon" value="icon-three">
-            <img title="icon-four" alt="layers-icon" src="./icons/layers.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-four">
+             <div class="row around-xs">
+            <img title="icon-one" alt="tie-icon" src="./icon_new/arroba.png" width="30px"><input type="radio" id="icon-four" name="icon" value="icon-one">
+              <img title="icon-three" alt="email-icon" src="./icon_new/eye.png" width="30px"><input type="radio" id="icon-two" name="icon" value="icon-three">
+            <img title="icon-two" alt="share-icon" src="./icon_new/chat.png" width="30px"><input type="radio" id="icon-three" name="icon" value="icon-two">
+            </div>
+             <div class="row around-xs">
+            <img title="icon-four" alt="layers-icon" src="./icon_new/heart.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-four">
+            <img title="icon-five" alt="idea-icon" src="./icon_new/idea.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-five">
+            <img title="icon-six" alt="paperplane-icon" src="./icon_new/paper-plane.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-six">
+            </div>
           </div>
         </div>
       </div> 
@@ -182,13 +188,15 @@
       <p class="info">{{profile.slogan}}</p><input type="checkbox" id="profile_slogan">
       <p class="info">{{profile.bio}}</p><input type="checkbox" id="profile_bio">
     </div>
+    </div>
+    <br>
       <div class="row around-xs">
         <input type="text" class="info" placeholder="NAME YOUR CARD" id="card_title">
       </div>
       <div class="row around-xs">
         <button type="submit" id='cardSave'>create card</button>
       </div>
-  </div>
+  
 </div>
 </section>
 </form>

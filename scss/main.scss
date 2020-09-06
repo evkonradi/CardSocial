@@ -220,6 +220,9 @@ $white: #f2f2f2;
 
   // CARD ELEMENTS
   .card {
+    .card-body {
+      margin: .5em;
+    }
     .card-title {
       color: $purple;
       size: 24px;
@@ -236,9 +239,9 @@ $white: #f2f2f2;
     border: 1px solid $purple;
     border-radius: 5px;
     padding: 3%;
-    margin: 5%;
-    width: 320px;
-    height: 160px;
+    margin: .5em;
+    width: 380px;
+    height: 200px;
     box-shadow: 0 3px 6px 0 $purple;
     background: $white;
   }
@@ -249,8 +252,8 @@ $white: #f2f2f2;
 
   .circle {
     img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     }
     border-radius: 50%;
     display: inline-block;
@@ -277,27 +280,31 @@ $white: #f2f2f2;
   }
 
   .orangebackground {
-    width: 70px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: $light-orange;
+    border: 1px solid $dark-orange;
   }
 
   .peachbackground {
-    width: 70px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: $peach;
+    border: 1px solid $dark-orange;
   }
 
   .font-one {
     p {
+      font: "Perpetua Titling MT";
       font-family: "Perpetua Titling MT", serif;
     }
   }
 
   .font-two {
     p {
+      font: Verdana;
       font-family: Verdana, sans-serif;
     }
   }
@@ -310,19 +317,27 @@ $white: #f2f2f2;
   }
 
   .icon-one {
-    background: url("./icons/tie.png");
+    background: url("./icon_new/arroba.png");
   }
 
   .icon-two {
-    background: url("./icons/share.png");
+    background: url("./icon_new/chat.png");
   }
 
   .icon-three {
-    background: url("./icons/email.png");
+    background: url("./icon_new/eye.png");
   }
 
   .icon-four {
-    background: url("./icons/layers.png");
+    background: url("./icon_new/heart.png");
+  }
+
+  .icon-five {
+    background: url("./icon_new/idea.png");
+  }
+
+  .icon-six {
+    background: url("./icon_new/paper-plane.png");
   }
 
   .font-card input {
@@ -358,7 +373,7 @@ $white: #f2f2f2;
   box-shadow: 0 2px 4px 0 $purple;
   }
   
-  textarea {
+  textarea { 
     min-width: 50%;
     min-height: 100px;
   }
@@ -378,8 +393,8 @@ $white: #f2f2f2;
   
   .wrapper {
       img {
-        width: 3rem;
-        height: 3rem;
+        width: 3.8em;
+        height: 3.8em;
       }
     width: 100%;
     min-height: 100%;

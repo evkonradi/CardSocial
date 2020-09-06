@@ -171,11 +171,13 @@ a {
   border: 1px solid #400135;
   border-radius: 5px;
   padding: 3%;
-  margin: 5%;
-  width: 320px;
-  height: 160px;
+  margin: .5em;
+  width: 380px;
+  height: 200px;
   box-shadow: 0 3px 6px 0 #400135;
   background: #f2f2f2; }
+  .card .card-body {
+    margin: .5em; }
   .card .card-title {
     color: #400135;
     size: 24px;
@@ -195,8 +197,8 @@ a {
   display: inline-block;
   border: 1px solid #F24405; }
   .circle img {
-    width: 70px;
-    height: 70px; }
+    width: 80px;
+    height: 80px; }
 
 .light-background {
   background-image: url("/images/light_card_background.png");
@@ -214,21 +216,25 @@ a {
   background-color: #F2BB9B; }
 
 .orangebackground {
-  width: 70px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background-color: #F2620F; }
+  background-color: #F2620F;
+  border: 1px solid #F24405; }
 
 .peachbackground {
-  width: 70px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background-color: #F2BB9B; }
+  background-color: #F2BB9B;
+  border: 1px solid #F24405; }
 
 .font-one p {
+  font: "Perpetua Titling MT";
   font-family: "Perpetua Titling MT", serif; }
 
 .font-two p {
+  font: Verdana;
   font-family: Verdana, sans-serif; }
 
 .icon {
@@ -238,16 +244,22 @@ a {
   background-repeat: no-repeat; }
 
 .icon-one {
-  background: url("./icons/tie.png"); }
+  background: url("./icon_new/arroba.png"); }
 
 .icon-two {
-  background: url("./icons/share.png"); }
+  background: url("./icon_new/chat.png"); }
 
 .icon-three {
-  background: url("./icons/email.png"); }
+  background: url("./icon_new/eye.png"); }
 
 .icon-four {
-  background: url("./icons/layers.png"); }
+  background: url("./icon_new/heart.png"); }
+
+.icon-five {
+  background: url("./icon_new/idea.png"); }
+
+.icon-six {
+  background: url("./icon_new/paper-plane.png"); }
 
 .font-card input {
   float: right; }
@@ -302,8 +314,8 @@ form label {
   background-size: cover;
   background-attachment: fixed; }
   .wrapper img {
-    width: 3rem;
-    height: 3rem; }
+    width: 3.8em;
+    height: 3.8em; }
 
 header {
   background-color: #400135;

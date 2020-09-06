@@ -33,16 +33,22 @@ INSERT INTO card_social_db.background (background_name, background_color)
 VALUES('peach-background', 'green');
 
 INSERT INTO card_social_db.icon (icon_name, icon_path)
-VALUES('icon-one', '../icons/layers.png');
+VALUES('icon-one', '../icon_new/arroba.png');
 
 INSERT INTO card_social_db.icon (icon_name, icon_path)
-VALUES('icon-two', '../icons/email.png');
+VALUES('icon-two', '../icon_new/chat.png');
 
 INSERT INTO card_social_db.icon (icon_name, icon_path)
-VALUES('icon-three', '../icons/share.png');
+VALUES('icon-three', '../icon_new/eye.png');
 
 INSERT INTO card_social_db.icon (icon_name, icon_path)
-VALUES('icon-four', '../icons/tie.png');
+VALUES('icon-four', '../icon_new/heart.png');
+
+INSERT INTO card_social_db.icon (icon_name, icon_path)
+VALUES('icon-five', '../icon_new/idea.png');
+
+INSERT INTO card_social_db.icon (icon_name, icon_path)
+VALUES('icon-six', '../icon_new/paper-plane.png');
 
 INSERT INTO card_social_db.card
 (card_code, card_title, user_id, font_id, background_id, icon_id, show_first_name, show_last_name, show_nickname, show_home_address, show_business_name, show_business_address,
