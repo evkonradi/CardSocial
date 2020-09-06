@@ -3,8 +3,6 @@
   <h1>Welcome Back, {{profile.first_name}}</h1>
 <form class="user-info">
   <h2>User Dashboard</h2>
-    {{!-- image container needs to be stylized and have option to upload url
-    social accounts could be saved here and represented as icons in template --}}
 <div class="row around-xs">
   <div class="row center-xs">
     <div class="col-xs">
@@ -39,7 +37,7 @@
 </div>
 </section>
 
-{{!-- <section id="rolodex">
+{{!-- <section id="rolodex"> FOR FUTURE DEVELOPMENT
 <div class="rolodex">
     <h2>Rolodex</h2>
     <div class="user-card">
@@ -53,67 +51,17 @@
 <section id="mycards">
   <div class="saved-cards">
     <h2>My Cards</h2>
-    
-    {{!-- <div class="row around-xs">
-      <div class="col-xs"> --}}
-   {{!-- <div id ="mycards-list" class="text-align-center ul-padding"> --}}
-     {{!-- div below connectected to functionality --}}
       <div id ="mycards-list" class="row around-xs">
         {{#each cards}}
           {{> mycards-dashboard}}
         {{/each}}
       </div> 
-    {{!-- </div> --}}
-    {{!-- </div> --}}
-
-  </div>
+    </div>
 </section>
 
-{{!-- <section id="mycards">
-<div class="saved-cards">
-    <h2>My Cards</h2>
-  <div class="row around-xs"> --}}
-{{!-- card option that includes link - this could go to a page with just that number or generate QR code --}}
-{{!-- may need to created another handlebars template so this can be a repeating option like above ^^^ --}}
-  {{!-- <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Business Card</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-        <div class="row around-xs">
-        <button class="btn-no-style">card code</button>
-        </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-        <div class="row around-xs">
-        <button class="btn-no-style">card code</button>
-        </div>
-  </div>
-    <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-     <div class="row around-xs">
-        <button class="btn-no-style">card code</button>
-        </div>
-  </div>
-</div>
-</div>
-</section> --}}
+{{!-- <section id="mycards"> --}}
+  {{!-- section replaced by handlebars partial mycards-dashboard --}}
 
-    {{!-- image container needs to be stylized and have option to upload url
-    social accounts could be saved here and represented as icons in template --}}
 <section id="newcard">
 <form class="user-info">
 <div class="build-card">
@@ -163,7 +111,6 @@
     </div>     
     <h2>Choose Your Information</h2>
 <div class="row around-xs">
-  {{!-- <div class="row center-xs"> --}}
     <div class="col-xs">
       <p class="info">{{profile.first_name}}</p><input type="checkbox" id="profile_first_name" onchange="true">
       <p class="info">{{profile.last_name}}</p><input type="checkbox" id="profile_last_name" onchange="true">
