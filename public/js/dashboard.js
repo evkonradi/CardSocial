@@ -90,6 +90,12 @@ async function viewMyCardHandler(event){
             alert(response.statusText);
         }
     }
+    // Click on edit button
+    else if (targetEl.hasAttribute("data-edit-card-code")) {
+        console.log("An edit button was pressed");
+        var cardCode = event.target.getAttribute("data-edit-card-code");
+        document.location.replace('/editcard/' + cardCode, {loggedIn: true});
+    }
     else{
         //clicked on the card itself
         var closestEl = targetEl.closest("#cardCodeDiv");
