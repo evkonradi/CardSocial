@@ -167,6 +167,13 @@ a {
   a:hover {
     color: #F24405; }
 
+a.logo {
+  font-size: 1.8em; }
+
+.logo {
+  display: inline-flex;
+  align-self: center; }
+
 .card {
   border: 1px solid #400135;
   border-radius: 5px;
@@ -335,7 +342,6 @@ header {
   header .logout {
     display: inline-flex;
     padding: .5rem;
-    float: right;
     align-items: flex-end; }
 
 header h1 {
