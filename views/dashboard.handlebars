@@ -19,6 +19,11 @@
       <input type="text" class="form-control" placeholder="Personal Phone" type="tel" id="personalPhone" value="{{format_phone profile.personal_phone}}">
       <input type="text" class="form-control" placeholder="Personal Email" type="email" value="{{profile.personal_email}}" id="personalEmail">
       <input type="text" class="form-control" placeholder="Junk Email" type = "email" value="{{profile.junk_email}}" id="junkEmail">
+      <small id="firstName-error"></small>
+      <small id="lastName-error"></small>
+      <small id="personalEmail-error"></small>
+      <small id="businessEmail-error"></small>
+      <small id="junkEmail-error"></small>
     </div>
     <div class="col-xs">
       <input type="text" class="form-control" placeholder="Business Name" value="{{profile.business_name}}" id="businessName">
@@ -191,5 +196,6 @@
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="/js/validation.js"></script>
 <script src="/js/dashboard.js"></script>
 <script src="/js/mycards.js"></script>

@@ -3,7 +3,7 @@ const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //Get all users (without passwords)
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     User.findAll({
         attributes: { exclude: ['password'] }
       })

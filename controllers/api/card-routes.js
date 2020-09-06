@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const { User, Font, Background, Icon, Card } = require('../../models');
 const { createCode } = require('../../utils/code');
+const withAuth = require('../../utils/auth');
 
 // GET /api/cards
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Card.findAll()
         .then(dbCardData => res.json(dbCardData))
         .catch(err => {
@@ -13,7 +14,7 @@ router.get('/', (req, res) => {
 });
 
 // GET /api/cards/1
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
     Card.findOne({
         where: {
             id: req.params.id
@@ -33,7 +34,7 @@ router.get('/:id', (req, res) => {
 });
 
 // POST /api/cards
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Card.create({
             card_code: createCode(),
@@ -97,7 +98,7 @@ router.post('/', (req, res) => {
 });
 
 // PUT /api/cards/1
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Card.update(req.body, {
         where: {
             id: req.params.id
@@ -117,7 +118,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE /api/cards/1
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Card.destroy({
         where: {
             id: req.params.id

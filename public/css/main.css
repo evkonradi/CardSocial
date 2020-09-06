@@ -542,3 +542,17 @@ footer p {
 .last-xs {
   -ms-flex-order: 1;
   order: 1; }
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+/* validations css */
+.small-hidden{
+  visibility: hidden;
+}
+.small-visible{
+  color: #e74c3c;
+  visibility: visible;
+  display: block;
+}

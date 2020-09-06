@@ -30,8 +30,9 @@ router.get('/:card_code', (req, res) => {
             res.render('usercard', {card: card, loggedIn: req.session.loggedIn});
         })
         .catch(err => {
-          console.log(err);
-          res.status(500).json(err);
+            res.render('errorcard', {loggedIn: req.session.loggedIn});
+//          console.log(err);
+  //        res.status(500).json(err);
         });
 });
 
