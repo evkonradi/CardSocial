@@ -97,7 +97,9 @@ $white: #f2f2f2;
   }
 
   .cardCodeDiv {
-    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    // max-width: 30%;
   }
 
   .container-info {
