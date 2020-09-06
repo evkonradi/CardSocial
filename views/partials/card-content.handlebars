@@ -1,9 +1,9 @@
     <div class="user-card {{background.background_name}}">
         <div class="row .center-xs .middle-xs">
             <div class="col-xs-12">
-                <img src="{{icon.icon_path}}" />
-                <!--<h2>{{card_title}}</h2>-->
-                <h2>{{card_code}}</h2>
+                <div class="container-info">
+                <img class="icon" src="{{icon.icon_path}}" />
+                <h3>&nbsp;{{card_code}}</h3>
                 <div class="contact-info {{font.font_name}}">
                      <p>
                         {{#if show_first_name}}{{user.first_name}}{{/if}}
@@ -34,7 +34,7 @@
                      {{#if show_bio}}<p>{{user.bio}}</p>{{/if}}
                      {{#if show_slogan}}<p>{{user.slogan}}</p>{{/if}}
                 </div>
-
+            </div> 
             </div>
         </div>
     </div>

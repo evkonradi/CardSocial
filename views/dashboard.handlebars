@@ -3,8 +3,6 @@
   <h1>Welcome Back, {{profile.first_name}}</h1>
 <form class="user-info">
   <h2>User Dashboard</h2>
-    {{!-- image container needs to be stylized and have option to upload url
-    social accounts could be saved here and represented as icons in template --}}
 <div class="row around-xs">
   <div class="row center-xs">
     <div class="col-xs">
@@ -44,7 +42,7 @@
 </div>
 </section>
 
-{{!-- <section id="rolodex">
+{{!-- <section id="rolodex"> FOR FUTURE DEVELOPMENT
 <div class="rolodex">
     <h2>Rolodex</h2>
     <div class="user-card">
@@ -58,63 +56,17 @@
 <section id="mycards">
   <div class="saved-cards">
     <h2>My Cards</h2>
-    
-    <div class="row around-xs">
-      <ul id ="mycards-list" class="text-align-center ul-padding">
+      <div id ="mycards-list" class="row around-xs">
         {{#each cards}}
           {{> mycards-dashboard}}
         {{/each}}
-      </ul>
+      </div> 
     </div>
-
-  </div>
 </section>
 
-{{!-- <section id="mycards">
-<div class="saved-cards">
-    <h2>My Cards</h2>
-  <div class="row around-xs"> --}}
-{{!-- card option that includes link - this could go to a page with just that number or generate QR code --}}
-{{!-- may need to created another handlebars template so this can be a repeating option like above ^^^ --}}
-  {{!-- <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Business Card</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-        <div class="row around-xs">
-        <button class="btn-no-style">card code</button>
-        </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-        <div class="row around-xs">
-        <button class="btn-no-style">card code</button>
-        </div>
-  </div>
-    <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-     <div class="row around-xs">
-        <button class="btn-no-style">card code</button>
-        </div>
-  </div>
-</div>
-</div>
-</section> --}}
+{{!-- <section id="mycards"> --}}
+  {{!-- section replaced by handlebars partial mycards-dashboard --}}
 
-    {{!-- image container needs to be stylized and have option to upload url
-    social accounts could be saved here and represented as icons in template --}}
 <section id="newcard">
 <form class="user-info">
 <div class="build-card">
@@ -122,9 +74,9 @@
     <div class="row around-xs">
       <div class="col-sm-6">
         <div class="card">
-              <h5 class="card-title">Select Background</h5>
+              <h4 class="card-title">Select Background</h5>
           <div class="card-body">
-            <div class="backgrounds">
+            <div class="backgrounds row around-xs">
               <img class="circle" src="./images/light_card_background.png" alt="peach background"><input type="radio" id="light_background" name="background" value="peach">
               <img class="circle" src="./images/white_background.png" alt="white background"><input type="radio" id="white_background" name="background" value="white">
               <div class="orangebackground" alt="orange background"></div><input type="radio" id="orange_background" name="background" value="orange">
@@ -136,10 +88,10 @@
       <div class="col-sm-6">
         <div class="card">
             <div class="font-card">
-              <h5 class="card-title">Select Font</h5>
+              <h4 class="card-title">Select Font</h5>
             <div class="card-body" id="card-font">
-              <p class="font-one">Perpetua Example<input type="radio" id="perpetua_font" name="font" value="perpetua"></p>
-              <p class="font-two">Verdana Example<input type="radio" id="verdana_font" name="font" value="verdana"></p>
+              <p class="font-one" id="font-one">Raleway Example<input type="radio" id="perpetua_font" name="font" value="perpetua"></p>
+              <p class="font-two" id="font-two">Solway Example<input type="radio" id="verdana_font" name="font" value="verdana"></p>
             </div>
             </div>
         </div>
@@ -147,18 +99,23 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Select Icon</h5>
-            <img title="icon-one" alt="tie-icon" src="./icons/tie.png" width="30px"><input type="radio" id="icon-four" name="icon" value="icon-one">
-            <img title="icon-two" alt="share-icon" src="./icons/share.png" width="30px"><input type="radio" id="icon-three" name="icon" value="icon-two">
-            <img title="icon-three" alt="email-icon" src="./icons/email.png" width="30px"><input type="radio" id="icon-two" name="icon" value="icon-three">
-            <img title="icon-four" alt="layers-icon" src="./icons/layers.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-four">
+            <h4 class="card-title">Select Icon</h5>
+             <div class="row around-xs">
+            <img title="icon-one" alt="tie-icon" src="./icon_new/arroba.png" width="30px"><input type="radio" id="icon-four" name="icon" value="icon-one">
+              <img title="icon-three" alt="email-icon" src="./icon_new/eye.png" width="30px"><input type="radio" id="icon-two" name="icon" value="icon-three">
+            <img title="icon-two" alt="share-icon" src="./icon_new/chat.png" width="30px"><input type="radio" id="icon-three" name="icon" value="icon-two">
+            </div>
+             <div class="row around-xs">
+            <img title="icon-four" alt="layers-icon" src="./icon_new/heart.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-four">
+            <img title="icon-five" alt="idea-icon" src="./icon_new/idea.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-five">
+            <img title="icon-six" alt="paperplane-icon" src="./icon_new/paper-plane.png" width="30px"><input type="radio" id="icon-one" name="icon" value="icon-six">
+            </div>
           </div>
         </div>
       </div> 
     </div>     
     <h2>Choose Your Information</h2>
 <div class="row around-xs">
-  {{!-- <div class="row center-xs"> --}}
     <div class="col-xs">
       <p class="info">{{profile.first_name}}</p><input type="checkbox" id="profile_first_name" onchange="true">
       <p class="info">{{profile.last_name}}</p><input type="checkbox" id="profile_last_name" onchange="true">
@@ -183,13 +140,16 @@
       <p class="info">{{profile.slogan}}</p><input type="checkbox" id="profile_slogan">
       <p class="info">{{profile.bio}}</p><input type="checkbox" id="profile_bio">
     </div>
+    </div>
+    <br>
+    <br>
       <div class="row around-xs">
         <input type="text" class="info" placeholder="NAME YOUR CARD" id="card_title">
       </div>
       <div class="row around-xs">
         <button type="submit" id='cardSave'>create card</button>
       </div>
-  </div>
+  
 </div>
 </section>
 </form>

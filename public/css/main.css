@@ -112,8 +112,12 @@ a {
     color: #400135;
     size: 24px;
     text-transform: uppercase; }
-  .card h5 {
-    text-align: center; }
+  .card .card-code {
+    color: #400135;
+    size: 24px;
+  }
+  /* .card h5 {
+    text-align: center; } */
   .card body {
     display: flex;
     align-content: space-around; }
@@ -542,17 +546,3 @@ footer p {
 .last-xs {
   -ms-flex-order: 1;
   order: 1; }
-
-.cursor-pointer{
-    cursor: pointer;
-}
-
-/* validations css */
-.small-hidden{
-  visibility: hidden;
-}
-.small-visible{
-  color: #e74c3c;
-  visibility: visible;
-  display: block;
-}

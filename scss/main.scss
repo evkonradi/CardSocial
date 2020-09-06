@@ -1,21 +1,29 @@
-$font-stack: Helvetica, sans-serif, "Perpetua Titling MT", serif, Verdana, sans-serif;
+//Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Solway&family=Syne&display=swap');
+//Font Variables
+$syne: 'Syne', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$solway: 'Solway', serif;
+
+//Color Palette
 $purple: #400135;
 $dark-orange: #F24405;
 $light-orange: #F2620F;
 $peach: #F2BB9B;
 $white: #f2f2f2;
 
+
 * {
     box-sizing: border-box;
   }
   
   body, html {
-    font: 100% $font-stack;
+    font: 100% $raleway;
     display: block;
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: $raleway;
     color: $purple;
     flex-wrap: wrap;
   }
@@ -64,6 +72,16 @@ $white: #f2f2f2;
   }
 
   .user-card {
+    h2 {
+      color: $purple;
+      text-transform: uppercase;
+    }
+    h3 {
+      color: $dark-orange;
+    }
+    p {
+      color: $white;
+    }
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -71,7 +89,7 @@ $white: #f2f2f2;
     position: center;
     text-align: center;
     justify-content: space-around;
-    width: 70%;
+    width: 60%;
     margin: auto;
   }
 
@@ -84,6 +102,28 @@ $white: #f2f2f2;
     padding: 15px 15px;
     // flex-basis: auto;
     // overflow: hidden;
+  }
+
+  .cardCodeDiv {
+    display: flex;
+    flex-direction: column;
+    // max-width: 30%;
+  }
+
+  .container-info {
+    .icon{
+      margin: .5em;
+      position: center;
+      justify-content: space-around;
+    }
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    opacity: 50%;
+    margin: 1em;
+    position: center;
+    justify-content: space-around;
+    z-index: -4;
   }
 
   .newcard {
@@ -105,14 +145,80 @@ $white: #f2f2f2;
   h2 {
     color: $purple;
     text-align: center;
-    text-shadow: 1px 2px 3px $white;
+    text-transform: uppercase;
+    // text-shadow: 1px 2px 3px $white;
   }
 
+  // h1 {
+  //   color: $dark-orange;
+  //   text-align: right;
+  //   padding-right: 50px;
+  //   transform: translateY(-600px);
+  //   animation: 1.2s slideIn ease-in-out forwards 1s;
+  //   z-index: 10;
+  // }
+
   h1 {
+    font-size: 2.5em;
     color: $dark-orange;
+    transform: translateX(-600px);
+    animation: 1.2s slideIn ease-in-out forwards 1s;
+    z-index: 10;
+    opacity: 0;
     text-align: right;
     padding-right: 50px;
+    position: relative;
+    font-family: $solway;
+    // text-decoration-style: serif;
   }
+  
+
+  h1::before {
+    content: '';
+    width: 0%;
+    height: 2.5em;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: -10px;
+    animation: 1s underline ease-in-out forwards 2s;
+    mix-blend-mode: screen;
+    font-family: $solway;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    transform: scale(.5);
+    animation: .5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+}
+
+@keyframes skewBg {
+  0% {
+    transform: scale(.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes underline {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
   
   a {
     text-decoration: none;
@@ -123,8 +229,20 @@ $white: #f2f2f2;
     color: $dark-orange; }
   }
 
+  a.logo {
+    font-size: 1.8em;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-self: center;
+  }
+
   // CARD ELEMENTS
   .card {
+    .card-body {
+      margin: .5em;
+    }
     .card-title {
       color: $purple;
       size: 24px;
@@ -132,6 +250,7 @@ $white: #f2f2f2;
     }
     h5{
       text-align: center;
+      color: $purple;
     }
     body {
       display: flex;
@@ -140,9 +259,9 @@ $white: #f2f2f2;
     border: 1px solid $purple;
     border-radius: 5px;
     padding: 3%;
-    margin: 5%;
-    width: 320px;
-    height: 160px;
+    margin: .5em;
+    width: 380px;
+    height: 200px;
     box-shadow: 0 3px 6px 0 $purple;
     background: $white;
   }
@@ -153,8 +272,8 @@ $white: #f2f2f2;
 
   .circle {
     img {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     }
     border-radius: 50%;
     display: inline-block;
@@ -164,6 +283,7 @@ $white: #f2f2f2;
   .light-background {
     background-image: url("/images/light_card_background.png");
     background-size: cover;
+    z-index: -1;
   }
 
   .white-background {
@@ -180,29 +300,29 @@ $white: #f2f2f2;
   }
 
   .orangebackground {
-    width: 70px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: $light-orange;
+    border: 1px solid $dark-orange;
   }
 
   .peachbackground {
-    width: 70px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: $peach;
+    border: 1px solid $dark-orange;
   }
 
-  .font-one {
-    p {
-      font-family: "Perpetua Titling MT", serif;
-    }
+  p.font-one {
+      font: $syne;
+      font-family: $syne;
   }
 
-  .font-two {
-    p {
-      font-family: Verdana, sans-serif;
-    }
+  p.font-two {
+      font: $solway;
+      font-family: $solway;
   }
 
   .icon {
@@ -213,19 +333,27 @@ $white: #f2f2f2;
   }
 
   .icon-one {
-    background: url("./icons/tie.png");
+    background: url("./icon_new/arroba.png");
   }
 
   .icon-two {
-    background: url("./icons/share.png");
+    background: url("./icon_new/chat.png");
   }
 
   .icon-three {
-    background: url("./icons/email.png");
+    background: url("./icon_new/eye.png");
   }
 
   .icon-four {
-    background: url("./icons/layers.png");
+    background: url("./icon_new/heart.png");
+  }
+
+  .icon-five {
+    background: url("./icon_new/idea.png");
+  }
+
+  .icon-six {
+    background: url("./icon_new/paper-plane.png");
   }
 
   .font-card input {
@@ -261,7 +389,7 @@ $white: #f2f2f2;
   box-shadow: 0 2px 4px 0 $purple;
   }
   
-  textarea {
+  textarea { 
     min-width: 50%;
     min-height: 100px;
   }
@@ -281,8 +409,8 @@ $white: #f2f2f2;
   
   .wrapper {
       img {
-        width: 3rem;
-        height: 3rem;
+        width: 3.8em;
+        height: 3.8em;
       }
     width: 100%;
     min-height: 100%;
@@ -297,6 +425,10 @@ $white: #f2f2f2;
   }
 
   header { 
+      .h1 {
+        color: $peach;
+        display: inline-flex;
+      }
       nav {
         display: inline-block;
         padding: .5%;
@@ -307,8 +439,9 @@ $white: #f2f2f2;
       .logout {
         display: inline-flex;
         padding: .5rem;
-        float: right;
+        // float: right;
         align-items: flex-end;
+        font-family: $raleway;
       }
     background-color: $purple;
     display: flex;
@@ -332,7 +465,7 @@ $white: #f2f2f2;
   // BUTTON STYLES
 
   button {
-    background-color: $dark-orange;
+    background-color: $purple;
     border: 0;
     padding: 1.5%;
     color: $white;
@@ -345,7 +478,7 @@ $white: #f2f2f2;
   }
   
   button:hover {
-    background-color: $purple;
+    background-color: $dark-orange;
   }
 
   .logout {
