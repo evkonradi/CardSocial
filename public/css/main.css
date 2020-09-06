@@ -65,7 +65,9 @@ body, html {
   .user-card h3 {
     color: #F24405; }
   .user-card p {
-    color: #400135; }
+    color: #400135;
+    font-weight: bold;
+   }
 
 .build-card {
   display: flex;
@@ -83,7 +85,7 @@ body, html {
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
-  opacity: 50%;
+  opacity: 60%;
   margin: 1em;
   position: center;
   justify-content: space-around;
