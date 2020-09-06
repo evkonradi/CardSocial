@@ -1,21 +1,29 @@
-$font-stack: Helvetica, sans-serif, "Perpetua Titling MT", serif, Verdana, sans-serif;
+//Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&family=Solway&family=Syne&display=swap');
+//Font Variables
+$syne: 'Syne', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$solway: 'Solway', serif;
+
+//Color Palette
 $purple: #400135;
 $dark-orange: #F24405;
 $light-orange: #F2620F;
 $peach: #F2BB9B;
 $white: #f2f2f2;
 
+
 * {
     box-sizing: border-box;
   }
   
   body, html {
-    font: 100% $font-stack;
+    font: 100% $raleway;
     display: block;
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    font-family: $raleway;
     color: $purple;
     flex-wrap: wrap;
   }
@@ -151,7 +159,7 @@ $white: #f2f2f2;
   // }
 
   h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     color: $dark-orange;
     transform: translateX(-600px);
     animation: 1.2s slideIn ease-in-out forwards 1s;
@@ -160,18 +168,21 @@ $white: #f2f2f2;
     text-align: right;
     padding-right: 50px;
     position: relative;
+    font-family: $solway;
+    // text-decoration-style: serif;
   }
   
 
   h1::before {
     content: '';
     width: 0%;
-    height: 3em;
+    height: 2.5em;
     background-color: var(--secondary-color);
     position: absolute;
     bottom: -10px;
     animation: 1s underline ease-in-out forwards 2s;
     mix-blend-mode: screen;
+    font-family: $solway;
 }
 
 .overlay {
@@ -304,18 +315,14 @@ $white: #f2f2f2;
     border: 1px solid $dark-orange;
   }
 
-  .font-one {
-    p {
-      font: "Perpetua Titling MT";
-      font-family: "Perpetua Titling MT", serif;
-    }
+  p.font-one {
+      font: $syne;
+      font-family: $syne;
   }
 
-  .font-two {
-    p {
-      font: Verdana;
-      font-family: Verdana, sans-serif;
-    }
+  p.font-two {
+      font: $solway;
+      font-family: $solway;
   }
 
   .icon {
@@ -434,6 +441,7 @@ $white: #f2f2f2;
         padding: .5rem;
         // float: right;
         align-items: flex-end;
+        font-family: $raleway;
       }
     background-color: $purple;
     display: flex;
