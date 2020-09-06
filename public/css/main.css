@@ -112,10 +112,6 @@ a {
     color: #400135;
     size: 24px;
     text-transform: uppercase; }
-  .card .card-code {
-    color: #400135;
-    size: 24px;
-  }
   .card h5 {
     text-align: center; }
   .card body {
@@ -248,12 +244,14 @@ header {
   position: -webkit-sticky;
   position: sticky; }
   header nav {
-    /*display: inline-block;*/
+    display: inline-block;
     padding: .5%;
-    margin-right: 3%;
-    float: right; }
-  header .logo {
-    display: inline-flex; }
+    margin-right: 3%; }
+  header .logout {
+    display: inline-flex;
+    padding: .5rem;
+    float: right;
+    align-items: flex-end; }
 
 header h1 {
   font-size: 1.5rem; }
