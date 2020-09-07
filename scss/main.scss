@@ -12,6 +12,12 @@ $light-orange: #F2620F;
 $peach: #F2BB9B;
 $white: #f2f2f2;
 
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 * {
     box-sizing: border-box;
@@ -20,14 +26,79 @@ $white: #f2f2f2;
   body, html {
     font: 100% $raleway;
     display: block;
-    height: 100%;
-    padding: 0;
+    min-height: 100%;
     margin: 0;
+    padding: 0;
     font-family: $raleway;
     color: $purple;
     flex-wrap: wrap;
   }
 
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .wrapper {
+    img {
+      width: 3.8em;
+      height: 3.8em;
+    }
+  width: 100%;
+  min-height: 100%;
+  // max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/dark_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: $purple;
+}
+
+header { 
+    .h1 {
+      color: $peach;
+      display: inline-flex;
+    }
+    nav {
+      display: inline-block;
+      padding: .5%;
+      margin-right: 3%;
+      // float: right;
+      // align-items: flex-end;
+    }
+    .logout {
+      display: inline-flex;
+      padding: .5rem;
+      // float: right;
+      align-items: flex-end;
+      font-family: $raleway;
+    }
+  background-color: $purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 2% 0;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+main {
+  flex: 1;
+  padding: 5%;
+  height: 100vh;
+  width: 100vw;
+}
+
+// SECTION STYLES 
   .connection-login {
     display: flex;
     flex-direction: column;
@@ -84,6 +155,7 @@ $white: #f2f2f2;
     }
     p {
       color: $purple;
+      font-weight: bold;
     }
     display: flex;
     flex-direction: column;
@@ -92,8 +164,10 @@ $white: #f2f2f2;
     position: center;
     text-align: center;
     justify-content: space-around;
-    width: 60%;
+    width: 50%;
     margin: auto;
+    // top: 25%;
+    // @include centerer;
   }
 
   .build-card {
@@ -105,6 +179,7 @@ $white: #f2f2f2;
     padding: 15px 15px;
     // flex-basis: auto;
     // overflow: hidden;
+    // flex-wrap: wrap;
   }
 
   .cardCodeDiv {
@@ -122,12 +197,13 @@ $white: #f2f2f2;
     display: flex;
     flex-direction: column;
     background-color: $white;
-    opacity: 50%;
+    opacity: 80%;
     margin: 1em;
     position: center;
     justify-content: space-around;
     z-index: -4;
     overflow-wrap: break-word;
+    // top: 25%;
   }
 
   .newcard {
@@ -264,10 +340,11 @@ $white: #f2f2f2;
     border-radius: 5px;
     padding: 3%;
     margin: .5em;
-    width: 380px;
-    height: 200px;
+    // width: 380px;
+    // height: 200px;
     box-shadow: 0 3px 6px 0 $purple;
     background: $white;
+    overflow-wrap: break-word;
   }
 
   .backgrounds {
@@ -373,6 +450,7 @@ $white: #f2f2f2;
     position: relative;
     color: $purple;
     font: Helvetica;
+    overflow-wrap: break-word;
   }
 
   label, input {
@@ -391,6 +469,7 @@ $white: #f2f2f2;
   min-height: 1.5rem;
   position: relative;
   box-shadow: 0 2px 4px 0 $purple;
+  overflow-wrap: break-word;
   }
 
   .info_placeholder{
@@ -413,61 +492,6 @@ $white: #f2f2f2;
 
   .signup-form {
     justify-content: center;
-  }
-  
-  .wrapper {
-      img {
-        width: 3.8em;
-        height: 3.8em;
-      }
-    width: 100%;
-    min-height: 100%;
-    // max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../images/dark_background.png");
-    background-size: cover;
-    // background-position: center;
-    background-attachment: fixed;
-  }
-
-  header { 
-      .h1 {
-        color: $peach;
-        display: inline-flex;
-      }
-      nav {
-        display: inline-block;
-        padding: .5%;
-        margin-right: 3%;
-        // float: right;
-        // align-items: flex-end;
-      }
-      .logout {
-        display: inline-flex;
-        padding: .5rem;
-        // float: right;
-        align-items: flex-end;
-        font-family: $raleway;
-      }
-    background-color: $purple;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2% 2% 0;
-    position: -webkit-sticky;
-    position: sticky;
-
-  }
-  
-  header h1 {
-    font-size: 1.5rem;
-  }
-  
-  main {
-    flex: 1;
-    padding: 5%;
   }
 
   // BUTTON STYLES
@@ -531,6 +555,10 @@ $white: #f2f2f2;
   display: block;
 }
 
+.info_placeholder{
+  color: gray;
+}
+
   // FOOTER STYLES
 
   footer {
@@ -564,9 +592,21 @@ $white: #f2f2f2;
     font-size: small;
   }
 
+  .smallerTextFooter {
+    font-size: 70%;
+  }
+
+  .mycard-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   // FLEXBOX STYLES
 
   .row {
+    position: relative;
     box-sizing: border-box;
     margin: 0 auto;
     width: 100%;
@@ -721,8 +761,8 @@ $white: #f2f2f2;
     box-sizing: border-box;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    // max-width: 50%;
-    padding: 1rem;
+    max-width: 50%;
+    // padding: 1rem;
   }
   
   .col-xs-offset-6 {

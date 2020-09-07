@@ -5,12 +5,63 @@
 body, html {
   font: 100% "Raleway", sans-serif;
   display: block;
-  height: 100%;
-  padding: 0;
+  min-height: 100%;
   margin: 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
   color: #400135;
   flex-wrap: wrap; }
+
+body {
+  height: 100vh;
+  width: 100vw; }
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/dark_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #400135; }
+  .wrapper img {
+    width: 3.8em;
+    height: 3.8em; }
+
+header {
+  background-color: #400135;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 2% 0;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%; }
+  header .h1 {
+    color: #F2BB9B;
+    display: inline-flex; }
+  header nav {
+    display: inline-block;
+    padding: .5%;
+    margin-right: 3%; }
+  header .logout {
+    display: inline-flex;
+    padding: .5rem;
+    align-items: flex-end;
+    font-family: "Raleway", sans-serif; }
+
+header h1 {
+  font-size: 1.5rem; }
+
+main {
+  flex: 1;
+  padding: 5%;
+  height: 100vh;
+  width: 100vw; }
 
 .connection-login {
   display: flex;
@@ -60,7 +111,7 @@ body, html {
   position: center;
   text-align: center;
   justify-content: space-around;
-  width: 60%;
+  width: 50%;
   margin: auto; }
   .user-card h2 {
     color: #400135;
@@ -68,7 +119,8 @@ body, html {
   .user-card h3 {
     color: #F24405; }
   .user-card p {
-    color: #400135; }
+    color: #400135;
+    font-weight: bold; }
 
 .build-card {
   display: flex;
@@ -86,7 +138,7 @@ body, html {
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
-  opacity: 50%;
+  opacity: 80%;
   margin: 1em;
   position: center;
   justify-content: space-around;
@@ -186,10 +238,9 @@ a.logo {
   border-radius: 5px;
   padding: 3%;
   margin: .5em;
-  width: 380px;
-  height: 200px;
   box-shadow: 0 3px 6px 0 #400135;
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  overflow-wrap: break-word; }
   .card .card-body {
     margin: .5em; }
   .card .card-title {
@@ -286,7 +337,8 @@ textarea, input {
   min-height: 5%;
   position: relative;
   color: #400135;
-  font: Helvetica; }
+  font: Helvetica;
+  overflow-wrap: break-word; }
 
 label, input {
   display: inline-block;
@@ -302,7 +354,8 @@ label, input {
   margin: 1.5%;
   min-height: 1.5rem;
   position: relative;
-  box-shadow: 0 2px 4px 0 #400135; }
+  box-shadow: 0 2px 4px 0 #400135;
+  overflow-wrap: break-word; }
 
   .info_placeholder{
     color: gray;
@@ -321,47 +374,6 @@ form label {
 
 .signup-form {
   justify-content: center; }
-
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  background-image: url("../images/dark_background.png");
-  background-size: cover;
-  background-attachment: fixed; }
-  .wrapper img {
-    width: 3.8em;
-    height: 3.8em; }
-
-header {
-  background-color: #400135;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2% 2% 0;
-  position: -webkit-sticky;
-  position: sticky; }
-  header .h1 {
-    color: #F2BB9B;
-    display: inline-flex; }
-  header nav {
-    display: inline-block;
-    padding: .5%;
-    margin-right: 3%; }
-  header .logout {
-    display: inline-flex;
-    padding: .5rem;
-    align-items: flex-end;
-    font-family: "Raleway", sans-serif; }
-
-header h1 {
-  font-size: 1.5rem; }
-
-main {
-  flex: 1;
-  padding: 5%; }
 
 button {
   background-color: #400135;
@@ -412,6 +424,9 @@ button:hover {
   visibility: visible;
   display: block; }
 
+.info_placeholder {
+  color: gray; }
+
 footer {
   background-color: #400135;
   display: flex;
@@ -435,13 +450,25 @@ footer {
   font-size: 110%;
   color: #F2BB9B; }
 
+<<<<<<< HEAD
 /*footer p {
     color: $peach;
   }*/
 .smallerTextFooter {
   font-size: small; }
+=======
+.smallerTextFooter {
+  font-size: 70%; }
+
+.mycard-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+>>>>>>> feature/mobile
 
 .row {
+  position: relative;
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
@@ -572,7 +599,7 @@ footer {
   box-sizing: border-box;
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
-  padding: 1rem; }
+  max-width: 50%; }
 
 .col-xs-offset-6 {
   margin-left: 50%; }

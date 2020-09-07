@@ -15,16 +15,21 @@
     margin: 0 auto; }
   .card {
     border: 1px solid #400135;
-    border-radius: 5px;
+    border-radius: 3px;
     padding: 3%;
     margin: .5em;
-    /* width: 380px; */
+    min-width: 80%;
     /* height: 200px; */
     box-shadow: 0 3px 6px 0 #400135;
     background: #f2f2f2; }
   .user-field {
-    max-width: 90%;
+    max-width: 100%;
     margin: auto; }
+  .new-card {
+    flex-wrap: wrap; }
+  .container-info {
+    width: 90%;
+    top: 25%; }
   .col-sm {
     box-sizing: border-box;
     -ms-flex-positive: 1;
@@ -161,8 +166,35 @@
     order: 1; } }
 
 @media only screen and (min-width: 65rem) {
+  .div {
+    display: flex; }
+  footer .p {
+    font-size: 25%; }
   .wrapper {
-    width: 0; }
+    background-color: #400135; }
+  h1 {
+    padding-right: 10px; }
+  .row.between-sx {
+    justify-content: center;
+    margin: 0 auto; }
+  .col-xs {
+    justify-content: center;
+    margin: 0 auto; }
+  .card {
+    border: 1px solid #400135;
+    border-radius: 5px;
+    padding: 3%;
+    margin: .5em;
+    /* width: 380px; */
+    /* height: 200px; */
+    box-shadow: 0 3px 6px 0 #400135;
+    background: #f2f2f2; }
+  .user-field {
+    max-width: 100%;
+    margin: auto; }
+  .container-info {
+    width: 90%;
+    top: 25%; }
   .col-md {
     box-sizing: border-box;
     -ms-flex-positive: 1;
@@ -299,6 +331,32 @@
     order: 1; } }
 
 @media only screen and (min-width: 91rem) {
+  .div {
+    display: flex; }
+  footer .p {
+    font-size: 25%; }
+  .wrapper {
+    background-color: #400135; }
+  h1 {
+    padding-right: 10px; }
+  .row.between-sx {
+    justify-content: center;
+    margin: 0 auto; }
+  .col-xs {
+    justify-content: center;
+    margin: 0 auto; }
+  .card {
+    border: 1px solid #400135;
+    border-radius: 5px;
+    padding: 3%;
+    margin: .5em;
+    /* width: 380px; */
+    /* height: 200px; */
+    box-shadow: 0 3px 6px 0 #400135;
+    background: #f2f2f2; }
+  .user-field {
+    width: 100%;
+    margin: auto; }
   .col-lg {
     box-sizing: border-box;
     -ms-flex-positive: 1;
