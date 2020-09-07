@@ -119,26 +119,43 @@
     <div class="col-xs">
       <p class="info">{{profile.first_name}}</p><input type="checkbox" id="profile_first_name" onchange="true">
       <p class="info">{{profile.last_name}}</p><input type="checkbox" id="profile_last_name" onchange="true">
-      <p class="info">{{profile.nickname}}</p><input type="checkbox" id="profile_nickname">
-      <p class="info">{{profile.home_address}}</p><input type="checkbox" id="profile_home_address">
-      <p class="info">{{profile.linkedin_url}}</p><input type="checkbox" id="profile_linkedin_url">
-      <p class="info">{{profile.instagram_url}}</p><input type="checkbox" id="profile_instagram_url">
-      <p class="info">{{profile.facebook_url}}</p><input type="checkbox" id="profile_facebook_url">
-      <p class="info">{{profile.twitter_url}}</p><input type="checkbox" id="profile_twitter_url">
-      <p class="info">{{format_phone profile.personal_phone}}</p><input type="checkbox" id="profile_personal_phone">
+      {{#if profile.nickname}}<p class="info">{{profile.nickname}}</p><input type="checkbox" id="profile_nickname">{{/if}}
+      {{#unless profile.nickname}}<p class="info info_placeholder">Nickname</p><input type="checkbox" id="profile_nickname" disabled="true">{{/unless}}
+      {{#if rofile.home_address}}<p class="info">{{profile.home_address}}</p><input type="checkbox" id="profile_home_address">{{/if}}
+      {{#unless rofile.home_address}}<p class="info info_placeholder">Home Address</p><input type="checkbox" id="profile_home_address" disabled="true">{{/unless}}
+      {{#if profile.linkedin_url}}<p class="info">{{profile.linkedin_url}}</p><input type="checkbox" id="profile_linkedin_url">{{/if}}
+      {{#unless profile.linkedin_url}}<p class="info info_placeholder">LinkedIn url</p><input type="checkbox" id="profile_linkedin_url" disabled="true">{{/unless}}
+      {{#if profile.instagram_url}}<p class="info">{{profile.instagram_url}}</p><input type="checkbox" id="profile_instagram_url">{{/if}}
+      {{#unless profile.instagram_url}}<p class="info info_placeholder">Instagram url</p><input type="checkbox" id="profile_instagram_url" disabled="true">{{/unless}}
+      {{#if profile.facebook_url}}<p class="info">{{profile.facebook_url}}</p><input type="checkbox" id="profile_facebook_url">{{/if}}
+      {{#unless profile.facebook_url}}<p class="info info_placeholder">Facebook url</p><input type="checkbox" id="profile_facebook_url" disabled="true">{{/unless}}
+      {{#if profile.twitter_url}}<p class="info">{{profile.twitter_url}}</p><input type="checkbox" id="profile_twitter_url">{{/if}}
+      {{#unless profile.twitter_url}}<p class="info info_placeholder">Twitter url</p><input type="checkbox" id="profile_twitter_url" disabled="true">{{/unless}}
+      {{#if profile.personal_phone}}<p class="info">{{format_phone profile.personal_phone}}</p><input type="checkbox" id="profile_personal_phone">{{/if}}
+      {{#unless profile.personal_phone}}<p class="info info_placeholder">Personal Phone</p><input type="checkbox" id="profile_personal_phone" disabled="true">{{/unless}}
       <p class="info">{{profile.personal_email}}</p><input type="checkbox" id="profile_personal_email">
-      <p class="info">{{profile.junk_email}}</p><input type="checkbox" id="profile_junk_email">
+      {{#if profile.junk_email}}<p class="info">{{profile.junk_email}}</p><input type="checkbox" id="profile_junk_email">{{/if}}
+      {{#unless profile.junk_email}}<p class="info info_placeholder">Junk Email</p><input type="checkbox" id="profile_junk_email" disabled="true">{{/unless}}
     </div>
     <div class="col-xs">
-      <p class="info">{{profile.business_name}}</p><input type="checkbox" id="profile_business_name">
-      <p class="info">{{profile.position}}</p><input type="checkbox" id="profile_position">
-      <p class="info">{{profile.business_address}}</p><input type="checkbox" id="profile_business_address">
-      <p class="info">{{format_phone profile.business_phone}}</p><input type="checkbox" id="profile_business_phone">
-      <p class="info">{{profile.business_phone_ext}}</p><input type="checkbox" id="profile_business_phone_ext">
-      <p class="info">{{profile.business_email}}</p><input type="checkbox" id="profile_business_email">
-      <p class="info">{{profile.business_url}}</p><input type="checkbox" id="profile_business_url">
-      <p class="info">{{profile.slogan}}</p><input type="checkbox" id="profile_slogan">
-      <p class="info">{{profile.bio}}</p><input type="checkbox" id="profile_bio">
+      {{#if profile.business_name}}<p class="info">{{profile.business_name}}</p><input type="checkbox" id="profile_business_name">{{/if}}
+      {{#unless profile.business_name}}<p class="info info_placeholder">Business Name</p><input type="checkbox" id="profile_business_name" disabled="true">{{/unless}}
+      {{#if profile.position}}<p class="info">{{profile.position}}</p><input type="checkbox" id="profile_position">{{/if}}
+      {{#unless profile.position}}<p class="info info_placeholder">Position</p><input type="checkbox" id="profile_position" disabled="true">{{/unless}}
+      {{#if profile.business_address}}<p class="info">{{profile.business_address}}</p><input type="checkbox" id="profile_business_address">{{/if}}
+      {{#unless profile.business_address}}<p class="info info_placeholder">Business Address</p><input type="checkbox" id="profile_business_address" disabled="true">{{/unless}}
+      {{#if profile.business_phone}}<p class="info">{{format_phone profile.business_phone}}</p><input type="checkbox" id="profile_business_phone">{{/if}}
+      {{#unless profile.business_phone}}<p class="info info_placeholder">Business Phone</p><input type="checkbox" id="profile_business_phone" disabled="true" disabled="true">{{/unless}}
+      {{#if profile.business_phone_ext}}<p class="info">{{profile.business_phone_ext}}</p><input type="checkbox" id="profile_business_phone_ext">{{/if}}
+      {{#unless profile.business_phone_ext}}<p class="info info_placeholder">Business Phone Ext.</p><input type="checkbox" id="profile_business_phone_ext" disabled="true">{{/unless}}
+      {{#if profile.business_email}}<p class="info">{{profile.business_email}}</p><input type="checkbox" id="profile_business_email">{{/if}}
+      {{#unless profile.business_email}}<p class="info info_placeholder">Business Email</p><input type="checkbox" id="profile_business_email" disabled="true">{{/unless}}
+      {{#if profile.business_url}}<p class="info">{{profile.business_url}}</p><input type="checkbox" id="profile_business_url">{{/if}}
+      {{#unless profile.business_url}}<p class="info info_placeholder">Business Website</p><input type="checkbox" id="profile_business_url" disabled="true">{{/unless}}
+      {{#if profile.slogan}}<p class="info">{{profile.slogan}}</p><input type="checkbox" id="profile_slogan">{{/if}}
+      {{#unless profile.slogan}}<p class="info info_placeholder">Business Slogan</p><input type="checkbox" id="profile_slogan" disabled="true">{{/unless}}
+      {{#if profile.bio}}<p class="info">{{profile.bio}}</p><input type="checkbox" id="profile_bio">{{/if}}
+      {{#unless profile.bio}}<p class="info info_placeholder">Short Bio</p><input type="checkbox" id="profile_bio" disabled="true">{{/unless}}
     </div>
     </div>
     <br>

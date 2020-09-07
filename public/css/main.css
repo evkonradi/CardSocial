@@ -304,6 +304,10 @@ label, input {
   position: relative;
   box-shadow: 0 2px 4px 0 #400135; }
 
+  .info_placeholder{
+    color: gray;
+  }
+
 textarea {
   min-width: 50%;
   min-height: 100px; }
