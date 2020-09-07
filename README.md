@@ -25,7 +25,7 @@
   > Handlebars - Sass - Node-Sass - CSS - HTML - Javascript - Jquery
 
   >**Back-end:**
-  > Express - Node.js - Mysql - Sequilize - Express-handlebars - Express-session - Connect-session-sequelize - qrcode
+  > Express - Node.js - Mysql - Sequelize - Express-handlebars - Express-session - Connect-session-sequelize - qrcode
 
   ## Presentation
   https://www.canva.com/design/DAEGB4dewtY/view
