@@ -19,9 +19,10 @@ $white: #f2f2f2;
 
 // MEDIA SIZE
 
+
 // Small devices (landscape phones, 576px and up)
 // at 656px
-@media only screen and (min-width: 41rem) {
+@media only screen and (min-width: 25rem) {
 .div {
   display: flex;
 }
@@ -51,10 +52,19 @@ h1 {
 }
 
 .card {
-  width: 180px;
-  height: 280px;
-  flex-wrap: wrap;
+  border: 1px solid #400135;
+    border-radius: 5px;
+    padding: 3%;
+    margin: .5em;
+    /* width: 380px; */
+    /* height: 200px; */
+    box-shadow: 0 3px 6px 0 #400135;
+    background: #f2f2f2;
+}
 
+.user-field {
+  max-width: 90%;
+  margin: auto;
 }
     .col-sm {
       box-sizing: border-box;
