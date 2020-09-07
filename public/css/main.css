@@ -450,13 +450,6 @@ footer {
   font-size: 110%;
   color: #F2BB9B; }
 
-<<<<<<< HEAD
-/*footer p {
-    color: $peach;
-  }*/
-.smallerTextFooter {
-  font-size: small; }
-=======
 .smallerTextFooter {
   font-size: 70%; }
 
@@ -465,7 +458,6 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
->>>>>>> feature/mobile
 
 .row {
   position: relative;
