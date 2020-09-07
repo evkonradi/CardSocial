@@ -9,6 +9,14 @@
 //           border-radius: $width/2;
 // }
 // @import "node_modules/bootstrap/scss/grid";
+
+//Color Palette
+$purple: #400135;
+$dark-orange: #F24405;
+$light-orange: #F2620F;
+$peach: #F2BB9B;
+$white: #f2f2f2;
+
 // MEDIA SIZE
 
 // Small devices (landscape phones, 576px and up)
@@ -24,9 +32,29 @@ footer {
   }
 }
 
+.wrapper {
+  background-color: $purple;
+}
+
+h1 {
+  padding-right: 10px;
+}
+
 .row.between-sx {
   justify-content: center;
   margin: 0 auto;
+}
+
+.col-xs {
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.card {
+  width: 180px;
+  height: 280px;
+  flex-wrap: wrap;
+
 }
     .col-sm {
       box-sizing: border-box;
@@ -202,6 +230,10 @@ footer {
   // Medium devices (tablets, 768px and up)
   // at 1040px
   @media only screen and (min-width: 65rem) {
+
+    .wrapper {
+      width: 0;
+    }
     .col-md {
       box-sizing: border-box;
       -ms-flex-positive: 1;
