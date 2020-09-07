@@ -179,6 +179,7 @@ main {
     padding: 15px 15px;
     // flex-basis: auto;
     // overflow: hidden;
+    // flex-wrap: wrap;
   }
 
   .cardCodeDiv {
@@ -339,8 +340,8 @@ main {
     border-radius: 5px;
     padding: 3%;
     margin: .5em;
-    width: 380px;
-    height: 200px;
+    // width: 380px;
+    // height: 200px;
     box-shadow: 0 3px 6px 0 $purple;
     background: $white;
   }

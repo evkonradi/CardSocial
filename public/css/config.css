@@ -18,13 +18,15 @@
     border-radius: 3px;
     padding: 3%;
     margin: .5em;
-    width: 100%;
+    min-width: 80%;
     /* height: 200px; */
     box-shadow: 0 3px 6px 0 #400135;
     background: #f2f2f2; }
   .user-field {
     max-width: 100%;
     margin: auto; }
+  .new-card {
+    flex-wrap: wrap; }
   .container-info {
     width: 90%;
     top: 25%; }
