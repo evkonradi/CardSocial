@@ -415,17 +415,17 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 2%;
-  font-size: 80%; }
+  font-size: 90%; }
 
 footer p {
-  /* font-size: 110%; */
+  font-size: 90%;
   color: #F2BB9B; }
 
 /*footer p {
   color: #F2BB9B; }*/
 
 .smallerTextFooter{
-    font-size: small;
+    font-size: 80%;
 }
 
 .row {
