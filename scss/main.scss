@@ -52,8 +52,10 @@ $white: #f2f2f2;
   flex-direction: column;
   background-image: url("../images/dark_background.png");
   background-size: cover;
-  // background-position: center;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-attachment: fixed;
+  background-color: $purple;
 }
 
 header { 
@@ -547,6 +549,10 @@ main {
   display: block;
 }
 
+.info_placeholder{
+  color: gray;
+}
+
   // FOOTER STYLES
   footer {
     background-color: $purple;
@@ -731,7 +737,7 @@ main {
     box-sizing: border-box;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    // max-width: 50%;
+    max-width: 50%;
     padding: 1rem;
   }
   

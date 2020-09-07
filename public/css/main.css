@@ -24,7 +24,10 @@ body {
   flex-direction: column;
   background-image: url("../images/dark_background.png");
   background-size: cover;
-  background-attachment: fixed; }
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #400135; }
   .wrapper img {
     width: 3.8em;
     height: 3.8em; }
@@ -418,6 +421,9 @@ button:hover {
   visibility: visible;
   display: block; }
 
+.info_placeholder {
+  color: gray; }
+
 footer {
   background-color: #400135;
   display: flex;
@@ -571,6 +577,7 @@ footer p {
   box-sizing: border-box;
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
+  max-width: 50%;
   padding: 1rem; }
 
 .col-xs-offset-6 {
