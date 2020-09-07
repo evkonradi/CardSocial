@@ -526,15 +526,21 @@ $white: #f2f2f2;
 
   // FOOTER STYLES
   footer {
-    background-color: $purple;
+    background-color: #400135;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 2%;
     font-size: 110%;
-  }
+    color: #F2BB9B;  }
 
-  footer p {
+  /*footer p {
     color: $peach;
+  }*/
+
+  .smallerTextFooter{
+    font-size: small;
   }
 
   // FLEXBOX STYLES
