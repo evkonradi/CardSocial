@@ -20,7 +20,10 @@ body, html {
   position: center;
   padding: 15px 15px;
   text-align: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 25%; }
 
 .user-field {
   display: flex;
@@ -65,9 +68,7 @@ body, html {
   .user-card h3 {
     color: #F24405; }
   .user-card p {
-    color: #400135;
-    font-weight: bold;
-   }
+    color: #400135; }
 
 .build-card {
   display: flex;
@@ -85,7 +86,7 @@ body, html {
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
-  opacity: 60%;
+  opacity: 50%;
   margin: 1em;
   position: center;
   justify-content: space-around;
@@ -303,6 +304,10 @@ label, input {
   position: relative;
   box-shadow: 0 2px 4px 0 #400135; }
 
+  .info_placeholder{
+    color: gray;
+  }
+
 textarea {
   min-width: 50%;
   min-height: 100px; }
@@ -410,12 +415,22 @@ button:hover {
 footer {
   background-color: #400135;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 2%;
-  font-size: 110%; }
+  font-size: 90%; }
 
 footer p {
+  font-size: 90%;
   color: #F2BB9B; }
+
+/*footer p {
+  color: #F2BB9B; }*/
+
+.smallerTextFooter{
+    font-size: 80%;
+}
 
 .row {
   box-sizing: border-box;
@@ -652,3 +667,10 @@ footer p {
 .last-xs {
   -ms-flex-order: 1;
   order: 1; }
+
+.mycard-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

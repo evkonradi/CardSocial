@@ -42,13 +42,21 @@ var clientValidationError = function(){
         setErrorFor("personalEmail", 'Please enter Personal Email in the email format!');
         errorFlag = true;
     }
-    if (!document.querySelector('#businessEmail').value.match(mailformat)){ 
-        setErrorFor("businessEmail", 'Please enter Business Email in the email format!');
-        errorFlag = true;
+
+    if(!document.querySelector('#businessEmail').value.trim() === '')
+    {
+        if (!document.querySelector('#businessEmail').value.match(mailformat)){ 
+            setErrorFor("businessEmail", 'Please enter Business Email in the email format!');
+            errorFlag = true;
+        }
     }
-    if (!document.querySelector('#junkEmail').value.match(mailformat)){ 
-        setErrorFor("junkEmail", 'Please enter Junk Email in the email format!');
-        errorFlag = true;
+
+    if(!document.querySelector('#junkEmail').value.trim() === '')
+    {
+        if (!document.querySelector('#junkEmail').value.match(mailformat)){ 
+            setErrorFor("junkEmail", 'Please enter Junk Email in the email format!');
+            errorFlag = true;
+        }
     }
 
     return errorFlag;

@@ -1,4 +1,30 @@
-@media only screen and (min-width: 41rem) {
+@media only screen and (min-width: 25rem) {
+  .div {
+    display: flex; }
+  footer .p {
+    font-size: 25%; }
+  .wrapper {
+    background-color: #400135; }
+  h1 {
+    padding-right: 10px; }
+  .row.between-sx {
+    justify-content: center;
+    margin: 0 auto; }
+  .col-xs {
+    justify-content: center;
+    margin: 0 auto; }
+  .card {
+    border: 1px solid #400135;
+    border-radius: 5px;
+    padding: 3%;
+    margin: .5em;
+    /* width: 380px; */
+    /* height: 200px; */
+    box-shadow: 0 3px 6px 0 #400135;
+    background: #f2f2f2; }
+  .user-field {
+    max-width: 90%;
+    margin: auto; }
   .col-sm {
     box-sizing: border-box;
     -ms-flex-positive: 1;
@@ -135,6 +161,8 @@
     order: 1; } }
 
 @media only screen and (min-width: 65rem) {
+  .wrapper {
+    width: 0; }
   .col-md {
     box-sizing: border-box;
     -ms-flex-positive: 1;
