@@ -344,6 +344,7 @@ main {
     // height: 200px;
     box-shadow: 0 3px 6px 0 $purple;
     background: $white;
+    overflow-wrap: break-word;
   }
 
   .backgrounds {
