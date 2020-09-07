@@ -548,6 +548,16 @@ $white: #f2f2f2;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    font-size: 110%;
+    color: #F2BB9B;
+  }
+
+  /*footer p {
+    color: $peach;
+  }*/
+
+  .smallerTextFooter{
+    font-size: small;
   }
 
   // FLEXBOX STYLES
@@ -836,3 +846,11 @@ $white: #f2f2f2;
     -ms-flex-order: 1;
         order: 1;
   }
+
+.mycard-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
