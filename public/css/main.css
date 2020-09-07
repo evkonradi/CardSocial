@@ -410,12 +410,19 @@ button:hover {
 footer {
   background-color: #400135;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 2%;
-  font-size: 110%; }
-
-footer p {
+  font-size: 110%;
   color: #F2BB9B; }
+
+/*footer p {
+  color: #F2BB9B; }*/
+
+.smallerTextFooter{
+    font-size: small;
+}
 
 .row {
   box-sizing: border-box;
@@ -652,3 +659,11 @@ footer p {
 .last-xs {
   -ms-flex-order: 1;
   order: 1; }
+
+.mycard-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
