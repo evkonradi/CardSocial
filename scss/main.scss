@@ -829,3 +829,10 @@ $white: #f2f2f2;
     -ms-flex-order: 1;
         order: 1;
   }
+
+  .mycard-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
