@@ -361,7 +361,7 @@
     box-shadow: 0 3px 6px 0 #400135;
     background: #f2f2f2; }
   .user-field {
-    max-width: 90%;
+    width: 100%;
     margin: auto; }
   .user-card {
     width: 100%;

@@ -110,7 +110,11 @@ main {
   justify-content: space-around;
   width: 50%;
   margin: auto;
-  top: 25%; }
+  top: 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
   .user-card h2 {
     color: #400135;
     text-transform: uppercase; }
@@ -442,6 +446,7 @@ footer p {
   align-items: center; }
 
 .row {
+  position: relative;
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
