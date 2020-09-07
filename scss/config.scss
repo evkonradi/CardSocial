@@ -8,12 +8,26 @@
 //      -moz-border-radius: $width/2;
 //           border-radius: $width/2;
 // }
-@import "node_modules/bootstrap/scss/grid";
+// @import "node_modules/bootstrap/scss/grid";
 // MEDIA SIZE
 
 // Small devices (landscape phones, 576px and up)
 // at 656px
 @media only screen and (min-width: 41rem) {
+.div {
+  display: flex;
+}
+
+footer {
+  .p {
+    font-size: 25%;
+  }
+}
+
+.row.between-sx {
+  justify-content: center;
+  margin: 0 auto;
+}
     .col-sm {
       box-sizing: border-box;
       -ms-flex-positive: 1;

@@ -20,7 +20,10 @@ body, html {
   position: center;
   padding: 15px 15px;
   text-align: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 25%; }
 
 .user-field {
   display: flex;
@@ -65,9 +68,7 @@ body, html {
   .user-card h3 {
     color: #F24405; }
   .user-card p {
-    color: #400135;
-    font-weight: bold;
-   }
+    color: #400135; }
 
 .build-card {
   display: flex;
@@ -85,7 +86,7 @@ body, html {
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
-  opacity: 60%;
+  opacity: 50%;
   margin: 1em;
   position: center;
   justify-content: space-around;
@@ -412,7 +413,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 2%;
-  font-size: 110%; }
+  font-size: 80%; }
 
 footer p {
   color: #F2BB9B; }

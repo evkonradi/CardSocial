@@ -1,4 +1,11 @@
 @media only screen and (min-width: 41rem) {
+  .div {
+    display: flex; }
+  footer .p {
+    font-size: 25%; }
+  .row.between-sx {
+    justify-content: center;
+    margin: 0 auto; }
   .col-sm {
     box-sizing: border-box;
     -ms-flex-positive: 1;
