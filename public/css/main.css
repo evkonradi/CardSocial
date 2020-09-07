@@ -109,12 +109,7 @@ main {
   text-align: center;
   justify-content: space-around;
   width: 50%;
-  margin: auto;
-  top: 25%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
+  margin: auto; }
   .user-card h2 {
     color: #400135;
     text-transform: uppercase; }
@@ -145,8 +140,7 @@ main {
   position: center;
   justify-content: space-around;
   z-index: -4;
-  overflow-wrap: break-word;
-  top: 25%; }
+  overflow-wrap: break-word; }
   .container-info .icon {
     margin: .5em;
     position: center;

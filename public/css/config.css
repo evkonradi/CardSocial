@@ -25,10 +25,6 @@
   .user-field {
     max-width: 100%;
     margin: auto; }
-  .user-card {
-    width: 100%;
-    position: absolute;
-    top: 25%; }
   .container-info {
     width: 90%;
     top: 25%; }
@@ -194,10 +190,6 @@
   .user-field {
     max-width: 100%;
     margin: auto; }
-  .user-card {
-    width: 100%;
-    position: absolute;
-    top: 25%; }
   .container-info {
     width: 90%;
     top: 25%; }
@@ -363,14 +355,6 @@
   .user-field {
     width: 100%;
     margin: auto; }
-  .user-card {
-    width: 100%;
-    position: absolute;
-    top: 25%; }
-  .container-info {
-    width: 100%;
-    position: absolute;
-    top: 25%; }
   .col-lg {
     box-sizing: border-box;
     -ms-flex-positive: 1;

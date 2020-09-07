@@ -164,8 +164,8 @@ main {
     justify-content: space-around;
     width: 50%;
     margin: auto;
-    top: 25%;
-    @include centerer;
+    // top: 25%;
+    // @include centerer;
   }
 
   .build-card {
@@ -200,7 +200,7 @@ main {
     justify-content: space-around;
     z-index: -4;
     overflow-wrap: break-word;
-    top: 25%;
+    // top: 25%;
   }
 
   .newcard {
