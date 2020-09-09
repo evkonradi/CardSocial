@@ -355,7 +355,12 @@ header {
     display: inline-flex;
     padding: .5rem;
     align-items: flex-end;
-    font-family: "Raleway", sans-serif; }
+    font-family: "Raleway", sans-serif; 
+}
+
+header .logout:hover {
+  background-color: #400135;
+}
 
 header h1 {
   font-size: 1.5rem; }
