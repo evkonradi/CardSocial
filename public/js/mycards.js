@@ -23,8 +23,12 @@ async function saveCardHandler(event) {
         icon = 2;
     } else if (document.querySelector('#icon-three').checked) {
         icon = 3;
-    } else {
+    } else if (document.querySelector('#icon-four').checked) {
         icon = 4;
+    } else if (document.querySelector('#icon-five').checked) {
+        icon = 5;
+    } else {
+        icon = 6;
     };
 
     const response = await fetch('/api/cards', {

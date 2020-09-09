@@ -302,7 +302,8 @@ label, input {
   margin: 1.5%;
   min-height: 1.5rem;
   position: relative;
-  box-shadow: 0 2px 4px 0 #400135; }
+  box-shadow: 0 2px 4px 0 #400135; 
+  overflow-wrap: break-word;}
 
   .info_placeholder{
     color: gray;

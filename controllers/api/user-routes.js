@@ -85,20 +85,22 @@ router.put('/user', withAuth, (req, res) => {
     const modelFields = Object.keys(User.rawAttributes).filter( s => !fieldsToExclude.includes(s));
 
     User.update(req.body, {
-        fields: modelFields,
-        where: {id: req.session.user_id}
+      fields: modelFields,
+      where: {id: req.session.user_id}
     })
-      .then(dbUserData => {
-        if (!dbUserData[0]) {
-          res.status(404).json({ message: 'No user found with this id' });
-          return;
-        }
-        res.json(dbUserData);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
+    .then(dbUserData => {
+      if (!dbUserData[0]) {
+        //res.status(404).json({ message: 'No user found with this id' });
+        res.sendStatus(200);
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+    
 });
 
 module.exports = router;
