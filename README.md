@@ -2,12 +2,12 @@
 
   ## Description
   
-  Card Social was created for people who are want to constantly exchange personal, social, or business information.
+  Card Social was made for people who want to constantly exchange personal, social, or business information. It allows to create personal, business, or social card with just the information you want to be displayed on this card. Then you can share the card code or QR code with your friends, business partners or new acquaintances so that they could easily retrieve your information when they need it.
   
   ## Usage  
   You can access from your _favorite browser on your **computer, ipad, or mobile phone**_. 
 
-  Creating your **personal, business, or social card**. Registering is simple, just use your email and create a password. Once logged in, you can store all of your information and then decide which information you want to appear on a specific card. 
+  Create your **personal, business, or social card**. Registering is simple, just use your email and create a password. Once logged in, you can store all of your information and then decide which information you want to appear on a specific card. 
 
   Users can either type in a card code or simply scan the QR code to connect with other users. 
     
